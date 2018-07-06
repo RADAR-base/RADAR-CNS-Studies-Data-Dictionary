@@ -134,6 +134,7 @@ phone_brand,study_devices,,dropdown,"Merk telefoon","1, Samsung | 2, HTC | 3, So
 phone_model,study_devices,,text,"Model telefoon",,,,,,,,y,,,,,
 old_mobile_device,study_devices,,text,"Oude telefoon",,"(indien de deelnemer telefoon heeft geupgrade)",,,,,,,,,,,
 phone_imei_number,study_devices,,text,"IMEI number studie telefoon",,,,,,,"[phone_status] = '1' or [phone_status] = '2'",y,,,,,
+android_version,study_devices,,text,"Android versie",,,,,,,,,,,,,
 phone_email_used,study_devices,,radio,"Email gebruikt op telefoon","1, Studie email | 2, Persoonlijke gmail","Eerste email account gebruikt op telefoon",,,,,"[phone_status] = '1' or [phone_status] = '2'",,,,,,
 contract_provided,study_devices,,radio,"Telefooncontract gegeven?","0, No | 1, Yes",,,,,,,,,,,,
 contract_start,study_devices,,text,"Startdatum telefooncontract",,,date_dmy,2017-11-28,2022-11-28,,"[contract_provided] = '1'",,,,,,
