@@ -22,7 +22,7 @@ name,contact_info,,text,Name,,"First Name (name used on auto generated emails)",
 pref_name,contact_info,,text,"Preferred Name",,"Name preferred to be used (could be used on Survey auto generated email)",,,,y,,,,,,,"Preferred Name"
 email,contact_info,,text,"Email Address",,"email used to distribute surveys to the participants",email,,,y,,y,,,,,
 phone_number,contact_info,,text,"Phone Number",,,,,,y,,,,,,,"phone number for participant"
-landline,contact_info,,text,Landline,,,,,,,,,,,,,
+landline,contact_info,,text,Landline,,,,,,y,,,,,,,
 preferred_means_of_contact,contact_info,,radio,"Preferred means of contact","1, Email | 2, Mobile phone | 3, Landline",,,,,,,,,,,,
 address,contact_info,,text,Address,,,,,,y,,,,,,,"address for participant"
 best_contact_name,contact_info,,text,"Best Contact Name",,,,,,y,,,,,,,"Contact information for friend or family who we can contact if the participant becomes unreachable (moves house, etc)."
@@ -582,7 +582,7 @@ tam_usefulness_5,technology_assessment_measurement_fast_form,,radio,"Overall, I 
 tam_usefulness_6,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Useful | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Useless",,,,,,,,,,,,
 tam_ease_of_use_1,technology_assessment_measurement_fast_form,"Ease of Use",radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Easy to learn | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Difficult to learn",,,,,,,,,,,,
 tam_ease_of_use_2,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Easy to manipulate | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Difficult to manipulate",,,,,,,,,,,,
-tam_ease_of_use_3,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Clear to interact with | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Obscure to interact with interact with",,,,,,,,,,,,
+tam_ease_of_use_3,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Clear to interact with | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Obscure to interact with",,,,,,,,,,,,
 tam_ease_of_use_4,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Flexible to interact with | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Rigid to interact with",,,,,,,,,,,,
 tam_ease_of_use_5,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Easy to master | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Difficult to master",,,,,,,,,,,,
 tam_ease_of_use_6,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Usable | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Cumbersome",,,,,,,,,,,,
