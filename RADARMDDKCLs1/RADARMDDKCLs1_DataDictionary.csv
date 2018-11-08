@@ -279,40 +279,40 @@ ldasr_32,lifetime_depression_assessment_self_report,,checkbox,"Have you ever had
 ldasr_32a,lifetime_depression_assessment_self_report,,text,"If you ever had any other treatment, please specify",,,,,,,"[ldasr_32(7)] = '1'",,,,,,
 ldasr_33,lifetime_depression_assessment_self_report,,text,"What is your height in cm? Please round your answer to the nearest whole number.",,cm,integer,,,,,,,,,,
 ldasr_34,lifetime_depression_assessment_self_report,,text,"What is your weight in kg? Please round your answer to the nearest whole number.",,kg,integer,,,,,,,,,,
-ids_date_of_completion,risk_assessment_and_episode_confirmation,,text,"Date of IDS",,,date_dmy,,,,,,,,,,
-ids_score,risk_assessment_and_episode_confirmation,,radio,"IDS score","1, 2: I think of suicide or death several times a week for several minutes | 2, 3: I think of suicide or death several times a day in some detail, or have actually planned to take my life",,,,,,,,,,,,
-researcher_doing_risk_asse,risk_assessment_and_episode_confirmation,,dropdown,"Researcher doing risk assessment","1, Alina | 2, Katie | 3, Faith | 4, Jessica",,,,,,,,,,,,
-date_of_ids_risk_follow_up,risk_assessment_and_episode_confirmation,,text,"Date of IDS risk follow-up",,,date_dmy,,,,,,,,,,
-suicide_plans,risk_assessment_and_episode_confirmation,,notes,"1. Change from normal? 
+ids_date_of_completion,suicidality,,text,"Date of IDS",,,date_dmy,,,,,,,,,,
+ids_score,suicidality,,radio,"IDS score","1, 2: I think of suicide or death several times a week for several minutes | 2, 3: I think of suicide or death several times a day in some detail, or have actually planned to take my life",,,,,,,,,,,,
+researcher_doing_risk_asse,suicidality,,dropdown,"Researcher doing risk assessment","1, Alina | 2, Katie | 3, Faith | 4, Jessica",,,,,,,,,,,,
+date_of_ids_risk_follow_up,suicidality,,text,"Date of IDS risk follow-up",,,date_dmy,,,,,,,,,,
+suicide_plans,suicidality,,notes,"1. Change from normal? 
 Is it a constant state? Or has anything happened recently to cause these thoughts?",,,,,,,,,,,,,
-suicide_plans2,risk_assessment_and_episode_confirmation,,notes,"2. Plans and availability of methods
+suicide_plans2,suicidality,,notes,"2. Plans and availability of methods
 a) Any current plans about committing suicide?
  YES - have you taken any actions towards pursuing these plans (eg, bought medication)?
 b) Anything stopping you from doing this?",,,,,,,,,,,,,
-suicide_thoughts_atypical,risk_assessment_and_episode_confirmation,,notes,"3. Self-harm and recurrence
+suicide_thoughts_atypical,suicidality,,notes,"3. Self-harm and recurrence
 a) Have you self-harmed in the past?
 b) How long ago was the last suicide attempt?",,,,,,,,,,,,,
-suicide_support,risk_assessment_and_episode_confirmation,,notes,"4. Professional support
+suicide_support,suicidality,,notes,"4. Professional support
 Are you in touch with mental health services/GP about this? When did you see them last? What kind of support are you receiving?",,,,,,,,,,,,,
-access_to_services,risk_assessment_and_episode_confirmation,,notes,"5. Family / social support
+access_to_services,suicidality,,notes,"5. Family / social support
 Is there someone else you can talk to about these feelings?",,,,,,,,,,,,,
-notes_access_to_services,risk_assessment_and_episode_confirmation,,notes,"6. Feeling safe?
+notes_access_to_services,suicidality,,notes,"6. Feeling safe?
 Do you feel safe? What do you do if you don't?",,,,,,,,,,,,,
-feeling_safe,risk_assessment_and_episode_confirmation,,notes,"*7. Reasons
+feeling_safe,suicidality,,notes,"*7. Reasons
 If a reason for suicide comes up ask for details",,,,,,,,,,,,,
-other_suicidal,risk_assessment_and_episode_confirmation,,notes,"Other notes on suicidal thoughs",,,,,,,,,,,,,
-actions_taken_by_the_team,risk_assessment_and_episode_confirmation,,notes,"Actions taken by the team following the risk assessment",," (ie emailing info, letter to GP, no action taken, etc)",,,,,,,,,,,
-assessment_date,risk_assessment_and_episode_confirmation,,text,"Date of assessment",,,date_dmy,,,,,,,,,,
-depr_epi_verified,risk_assessment_and_episode_confirmation,,yesno,"Depression episode verified?",,,,,,,,,,,,,
-depressed_frequently,risk_assessment_and_episode_confirmation,,yesno,"In the past <U>three months</U> (or from the date that they answered the OA), has there been a period of time where you were feeling depressed or down most of the day or nearly every day?",,,,,,,,,,,,,
-depression_period,risk_assessment_and_episode_confirmation,,text,"When has this period roughly started and finished? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
-depr_interest,risk_assessment_and_episode_confirmation,,yesno,"During that time, did you have less interest or pleasure in things you usually enjoyed?",,,,,,,"[depressed_frequently] = '1'",,,,,,
-less_interest,risk_assessment_and_episode_confirmation,,text,"Has this lasted for as long as two weeks? ",,,,,,,"[depr_interest] = '1'",,,,,,
-sleep_appetite,risk_assessment_and_episode_confirmation,,yesno,"Focusing on the worst 2 week period, have you had any change in sleeping or appetite? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
-phys_ill,risk_assessment_and_episode_confirmation,,text,"Just before this period of symptoms began, were you physically ill?",,,,,,,"[sleep_appetite] = '1'",,,,,,
-epi_medication,risk_assessment_and_episode_confirmation,,yesno,"Were you taking any medications? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
-med_change,risk_assessment_and_episode_confirmation,,text,"Has there been any changes to the amount you were taking?",,,,,,,"[epi_medication] = '1'",,,,,,
-depri_help,risk_assessment_and_episode_confirmation,,text,"Have you sought help from anyone to help deal with these feelings (e.g. GP)? Do you have a plan going forward?",,,,,,,"[depressed_frequently] = '1'",,,,,,
+other_suicidal,suicidality,,notes,"Other notes on suicidal thoughs",,,,,,,,,,,,,
+actions_taken_by_the_team,suicidality,,notes,"Actions taken by the team following the risk assessment",," (ie emailing info, letter to GP, no action taken, etc)",,,,,,,,,,,
+assessment_date,suicidality,,text,"Date of assessment",,,date_dmy,,,,,,,,,,
+depr_epi_verified,suicidality,,yesno,"Depression episode verified?",,,,,,,,,,,,,
+depressed_frequently,suicidality,,yesno,"In the past <U>three months</U> (or from the date that they answered the OA), has there been a period of time where you were feeling depressed or down most of the day or nearly every day?",,,,,,,,,,,,,
+depression_period,suicidality,,text,"When has this period roughly started and finished? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
+depr_interest,suicidality,,yesno,"During that time, did you have less interest or pleasure in things you usually enjoyed?",,,,,,,"[depressed_frequently] = '1'",,,,,,
+less_interest,suicidality,,text,"Has this lasted for as long as two weeks? ",,,,,,,"[depr_interest] = '1'",,,,,,
+sleep_appetite,suicidality,,yesno,"Focusing on the worst 2 week period, have you had any change in sleeping or appetite? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
+phys_ill,suicidality,,text,"Just before this period of symptoms began, were you physically ill?",,,,,,,"[sleep_appetite] = '1'",,,,,,
+epi_medication,suicidality,,yesno,"Were you taking any medications? ",,,,,,,"[depressed_frequently] = '1'",,,,,,
+med_change,suicidality,,text,"Has there been any changes to the amount you were taking?",,,,,,,"[epi_medication] = '1'",,,,,,
+depri_help,suicidality,,text,"Have you sought help from anyone to help deal with these feelings (e.g. GP)? Do you have a plan going forward?",,,,,,,"[depressed_frequently] = '1'",,,,,,
 ids_1,ids_sr,"Please indicate the one response to each item that best describes you for the past seven days. ",radio,"1. Falling asleep ","0, I never take longer than 30 minutes to fall asleep | 1, I take at least 30 minutes to fall asleep, less than half the time | 2, I take at least 30 minutes to fall asleep, more than half the time | 3, I take more than 60 minutes to fall asleep, more than half the time",,,,,,,,,,,,
 ids_2,ids_sr,,radio,"2. Sleep during the night","0, I do not wake up at night | 1, I have a restless, light sleep with a few brief awakenings each night | 2, I wake up at least once a night, but I go back to sleep easily | 3, I awaken more than once a night and stay awake for 20 minutes or more, more than half the time",,,,,,,,,,,,
 ids_3,ids_sr,,radio,"3. Waking up too early","0, Most of the time, I awaken no more than 30 minutes before I need to get up | 1, More than half the time, I awaken more than 30 minutes before I need to get up | 2, I almost always awaken at least one hour or so before I need to, but I go back to sleep eventually | 3, I awaken at least one hour before I need to, and can not go back to sleep",,,,,,,,,,,,
