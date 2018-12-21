@@ -265,7 +265,8 @@ cidi_date_of_completion,suicidality,,text,"Datum CIDI ingevuld",,,date_dmy,,,,,,
 cidi_score,suicidality,,radio,"CIDI item gedachten aan de dood met ja beantwoord?","1, Ja | 0, Nee",,,,,,,,,,,,
 riskass_callmade,suicidality,,radio,"Is respondent gebeld? ","1, Ja | 0, Nee",,,,,,,,,,,,
 researcher_doing_risk_asse,suicidality," Instructie: Schat mate van ernst in aan de hand van de volgende gespreksonderwerpen:
-Hoe ziet u de toekomst?Denkt u wel eens aan de dood, wat voor gedachten heeft u dan?
+Hoe ziet u de toekomst?
+Denkt u wel eens aan de dood, wat voor gedachten heeft u dan?
 Heeft u plannen om zelfmoord te plegen? Zo ja hoe zien die er uit?
 Wilt u dit op korte termijn doen?
 Weten andere mensen van uw gedachten/plannen af?
@@ -289,7 +290,8 @@ sleep_appetite,suicidality,,radio,"Is er een verandering opgetreden in uw slaapg
 phys_ill,suicidality,,text,"Was u lichamelijk ziek net voordat deze klachten begonnen?",,,,,,,"[sleep_appetite] = '1'",,,,,,
 epi_medication,suicidality,,radio,"Heeft u medicijnen ingenomen?","1, Ja | 0, Nee",,,,,,"[depressed_frequently] = '1'",,,,,,
 med_change,suicidality,,text,"Zo ja, is de hoeveelheid medicijnen die u neemt gewijzigd?",,,,,,,"[epi_medication] = '1'",,,,,,
-depri_help,suicidality,,text,"Heeft u hulp bij iemand gezocht voor deze klachten/gevoelens bijvoorbeeld bij de huisarts?Heeft u een plan om met de klachten/gevoelens om te gaan?",,,,,,,"[depressed_frequently] = '1'",,,,,,
+depri_help,suicidality,,text,"Heeft u hulp bij iemand gezocht voor deze klachten/gevoelens bijvoorbeeld bij de huisarts
+Heeft u een plan om met de klachten/gevoelens om te gaan?",,,,,,,"[depressed_frequently] = '1'",,,,,,
 ids_1,ids_sr,"Kruis bij elke vraag het antwoord aan dat de afgelopen zeven dagen het meest op u van toepassing was",radio,"1. In slaap vallen:","0, Het duurt nooit langer dan 30 minuten om in slaap te vallen | 1, Het duurt tenminste 30 minuten om in slaap te vallen, minder dan de helft van de week | 2, Het duurt tenminste 30 minuten om in slaap te vallen, meer dan de helft van de week. | 3, Het duurt tenminste 60 minuten om in slaap te vallen, meer dan de helft van de week.",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Slaap gedurende de nacht:","0, Ik word 's nachts niet wakker. | 1, Ik slaap onrustig en licht en word een aantal keren per nacht even wakker. | 2, Ik ben tenminste één keer per nacht klaar wakker, maar val weer gemakkelijk in slaap | 3, Ik word vaker dan één keer per nacht wakker en blijf dan 20 minuten of langer wakker, meer dan de helft van de week.",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Te vroeg wakker worden:","0, Meestal word ik niet eerder dan 30 minuten voordat ik op moet staan, wakker. | 1, Ik word meer dan 30 minuten voordat ik op moet staan wakker, meer dan de helft van de tijd. | 2, Ik word tenminste 1 uur voordat ik op moet staan wakker, meer dan de helft van de tijd. | 3, Ik word tenminste 2 uur voordat ik op moet staan wakker, meer dan de helft van de tijd.",,,,,,,y,,,,,
