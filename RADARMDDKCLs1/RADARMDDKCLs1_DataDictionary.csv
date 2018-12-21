@@ -33,6 +33,7 @@ source_field_other,contact_info,,text,"Other source",,,,,,,"[source_field] = '6'
 participant_initiated_source,contact_info,,radio,"Participant-initiated source","1, Website | 2, Twitter | 3, MQ Mental Health | 4, Unsure | 5, Other",,,,,,"[source_field] = '5'",,,,,,
 other_participant_intiated_source,contact_info,,text,"Other ",,,,,,,"[participant_initiated_source] = '5'",,,,,,
 contact_info_notes,contact_info,"Enrolment notes",notes,"Contact Notes",,,,,,,,,,,,,
+remote_enrolment,contact_info,,yesno,"Remote enrolment?",,,,,,,,,,,,,
 enrolment_notes_field,contact_info,,notes,"Enrolment notes",,,,,,,,,,,,,
 gp_letter_sent,contact_info,"GP letter",yesno,"GP Letter Sent ",,,,,,,,,,,,,
 date_gp_letter_sent,contact_info,,text,"Date GP Letter Sent",,,date_dmy,,,,,,,,,,
