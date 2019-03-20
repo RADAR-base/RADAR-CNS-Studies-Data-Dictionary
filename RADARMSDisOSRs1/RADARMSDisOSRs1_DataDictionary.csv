@@ -45,7 +45,7 @@ mh_date_onset,medical_history,,text,"Data di inizio",,,date_dmy,,,,"[mh_psycond_
 mh_end_date,medical_history,,text,"Data di fine",,,date_dmy,,,,"[mh_psycond_clincond] = '1'",y,,,,,
 ms_mh_first_sympt,ms_medical_history,,text,"1. Data dei primi sintomi SM",,,date_dmy,,,,,y,,,,,
 ms_mh_diagnos_date,ms_medical_history,,text,"2. Data della diagnosi di SM (se possibile)",,,date_dmy,,,,,y,,,,,
-ms_mh_phenotype,ms_medical_history,,radio,"3. Fenotipo della SM","0,RRMS | 1,SPMS",,,,,,,y,,,,,
+ms_mh_phenotype,ms_medical_history,,radio,"3. Fenotipo della SM","0, RRMS | 1, SPMS",,,,,,,y,,,,,
 ms_mh_date_onset_progress,ms_medical_history,,text,"Date of Onset of Progression",,,date_dmy,,,,"[ms_mh_phenotype] = '1'",y,,,,,
 ms_mh_date_most_recent_ms_relapse,ms_medical_history,,text,"4. Data della ricaduta di SM più recente (se possibile)",,,date_dmy,,,,,y,,,,,
 ms_mh_date_last_steroids,ms_medical_history,,text,"Date of last course of steroids",,,date_dmy,,,,,y,,,,,
