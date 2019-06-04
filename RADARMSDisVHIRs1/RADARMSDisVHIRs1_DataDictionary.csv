@@ -541,7 +541,7 @@ pasat_trial_completed,pasat_msfc,,text,"Para un PASAT 3'' completo, registrar cu
 pasat_trial_no_completed_reasons,pasat_msfc,,radio,"En caso de que no haber finalizado el PASAT 3'' (marcar una opción)","0, Incapaz de finalizar la prueba debido a limitaciones de carácter físico | 1, Otra",,,,,,,,,,,,
 pasat_trial_no_completed_reason_spec1,pasat_msfc,,text,"Especificar las limitaciones físicas",,,,,,,"[pasat_trial_no_completed_reasons] = '0'",,,,,,
 pasat_trial_no_completed_reason_spec2,pasat_msfc,,text,"Especificar otro",,,,,,,"[pasat_trial_no_completed_reasons] = '1'",,,,,,
-six_min_walk_test_score,mw2,,text,"Puntuación en metros",,,,,,,,,,,,,
+six_min_walk_test_score,mw6,,text,"Puntuación en metros",,,,,,,,,,,,,
 pyramidal_score,expanded_disability_status_scale,,radio,"Pyramidal functions (weakness)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score,expanded_disability_status_scale,,radio,"Cerebellar functions (ataxia, loss of coordination)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score_x,expanded_disability_status_scale,,checkbox,"Pyramidal weakness (BMRC grade 3 or worse in limb strength) or sensory deficits interfere with cerebellar testing","1, X",,,,,,,,RH,,,,
