@@ -9,11 +9,13 @@ initiated_by,contact_log,,dropdown,"Initiated By","0, Participant | 1, Study Tea
 team_member,contact_log,,text,"Team Member",,,,,,,"[enrolment_arm_1][initiated_by] <> 0",y,,,,,
 subject,contact_log,,text,Subject,,,,,,,,,,,,,
 contact_notes,contact_log,,notes,"Contact Notes",,,,,,,,,,,,,"Add Any extra details about the contact here"
+contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 feedback_date,participant_feedback,,text,"Feedback date",,,date_dmy,,,,,,,,,,
 feedback_title,participant_feedback,,text,"Feedback subject",,,,,,,,,,,,,
 feedback_collected,participant_feedback,,dropdown,"When was the feedback collected?","1, at enrolment | 2, 3 day call | 3, 1 week call | 4, 1 month call | 5, 3 month call | 6, 6 month call | 7, 9 month call | 8, 1 year call | 9, 15 month call | 10, participant contact | 11, during interview",,,,,,,,,,,,
 type_of_feedback,participant_feedback,,dropdown,"Type of feedback","1, Text | 2, Email | 3, Verbal",,,,,,,,,,,,
 feedback_subject,participant_feedback,,notes,Feedback,,,,,,,,,,,,,
+participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 surname,contact_info,,text,Surname,,Surname,,,,y,,y,,,,,Surname
 name,contact_info,,text,Name,,"First Name (name used on auto generated emails)",,,,y,,y,,,,,"First Name"
 pref_name,contact_info,,text,"Preferred Name",,"Name preferred to be used (could be used on Survey auto generated email)",,,,y,,,,,,,"Preferred Name"
@@ -115,16 +117,19 @@ withdrawal_interview_interested,contact_info,"Withdrawal Interview",yesno,Intere
 withdrawal_interview_booked,contact_info,,yesno,"Interview Booked?",,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_by,contact_info,,dropdown,"Interview By","1, Faith | 2, Alina | 3, Katie | 4, Jessica",,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_notes,contact_info,,notes,Notes,,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
+contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 consent_date,consent,,text,"Consent date",,,date_dmy,,,,,y,,,,,
 consent_taken_by,consent,,radio,"Consent taken by","1, Alina | 2, Katie | 3, Jessica | 4, Faith",,,,,,,y,,,,,
 consent_permission,consent,"Consent items",yesno,"I give permission for my medical records to be looked at",,,,,,,,,,,,,
 consent_future_studies,consent,,yesno,"I agree to be contacted about future studies",,,,,,,,,,,,,
+consent_ts,consent,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 study,study,,radio,Study,"1, MDD | 2, Epilepsy | 3, MS(depression) | 4, MS(Disability) | 5, Test",,,,,,,y,,,,,
 enrolment_date,study,,text,"Enrolment Date",,"Date DD-MM-YY of enrolment into study (this field will be used to calculate survey schedules)",date_dmy,,,,,y,,,,,
 main_contact_person,study,,radio,"Main contact person","1, Alina | 2, Katie | 3, Jessica",,,,,,,,,,,,
 enable_survey_invite,study,,yesno,"Send automatic survey invitation?",,"Set this ""no"" if the participant should not receive surveys",,,,,,y,,,,,
 visit,study,,text,Visit,,,integer,,,,,,,,,,
 month,study,,text,"Month in study",,,integer,,,,,,,,,,
+study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 fitbit_email,study_devices,FitBit,text,"FitBit Email Registration",,,email,,,,,,,,,,
 fitbit_password,study_devices,,text,"FitBit email Password",,,,,,,,,,,,,
 fitbit_firstname,study_devices,,text,"FitBit email first name",,,,,,,,,,,,,
@@ -149,9 +154,11 @@ thincit_installed,study_devices,,yesno,"THINC-it app installed",,,,,,,,,,,,,
 mindstrong_installed,study_devices,,yesno,"Discovery by Mindstrong installed",,,,,,,,,,,,,
 apps_notes,study_devices,,notes,"Notes on apps installed",,,,,,,,,,,,,
 tech_literacy_notes,study_devices,,notes,"Tech literacy",,,,,,,,,,,,,
+study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 adv_react_contact_date,adverse_reaction_and_missing_data,,text,"Contact date",,,date_dmy,,,,,,,,,,
 adv_react_subj_id,adverse_reaction_and_missing_data,,text,Subject,,,,,,,,,,,,,
 adv_react_notes,adverse_reaction_and_missing_data,,notes,Notes,,,,,,,,,,,,,
+adv_react_ts,adverse_reaction_and_missing_data,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 dob,socio_demographics,"Participant ID: [subject_id]",text,"What is your date of birth?",,,date_dmy,,1999-10-15,,,y,,,,,
 age,socio_demographics,,text,"What was your age at enrolment?",,,integer,18,,,,y,,,,,
 gender,socio_demographics,,radio,"Are you:","0, Male | 1, Female",,,,,,,y,,,,,
@@ -181,8 +188,10 @@ income_contribution,socio_demographics,,text,"How many people contribute to the 
 accommodation,socio_demographics,Accommodation,radio,"In which of these ways do you occupy your accommodation?","0, Own outright | 1, Buying it with the help of a mortgage or loan | 2, Share Pay part rent and part mortgage (shared ownership) | 3, Rent it from Local Authority | 4, Rent it from Voluntary sector | 5, Rent it from Private landlord | 6, Live here rent-free (including rent-free in relatives/friends property, excluding squatting) | 7, Squatting",,,,,,,y,,,,,
 accommodation_satisfaction,socio_demographics,,radio,"How satisfied are you with this accommodation?","0,Very dissatisfied|1,Slightly dissatisfied|2,Neither satisfied nor dissatisfied|3,Fairly satisfied|4,Very satisfied",,,,,,,y,,,,,
 utilities,socio_demographics,,checkbox,"Have there been times during the past year when you were seriously behind in paying within the time allowed for any of these items","0,Rent|1,Gas|2,Electricity|3,Water|4,Goods on hire purchase|5,Mortgage repayments|6,Council Tax|7,Credit card payments|8,Telephone|9,Other loans|10,None of these",,,,,,,y,,,,,
+socio_demographics_ts,socio_demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 contacts_weekly,social_environment,,checkbox,"In a typical week, how many of the following people do you come into contact with? By contact we mean talking either face-to-face or by phone","0, Partner | 1, Parent | 2, Brother/sister | 3, In-laws | 4, Other relatives | 5, Close friends | 6, Neighbours | 7, Co-workers | 8, Boss/supervisor | 9, Other acquaintances | 10, Helping professionals | 11, Member of the same group or club | 12, None",,,,,,,y,,,,,
 contacts_help,social_environment,,radio,"If you were in trouble or needed help, is there someone you could contact who would help you?","0,No|1,Yes",,,,,,,y,,,,,
+social_environment_ts,social_environment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 mh_family_depr,medical_history,,checkbox,"Have any of the following family members ever had depression","0, Parents | 1, Siblings | 2, Children | 3, None",,,,,,,y,,,,,
 mh_relatives_depr,medical_history,,radio,"Have any other relatives ever had depression?","0,No|1,Yes",,,,,,,y,,,,,
 mh_relatives_depr_who,medical_history,,text,"If any other relatives ever had depression, who",,,,,,,"[mh_relatives_depr] = '1'",y,,,,,
@@ -197,6 +206,7 @@ mh_cancer_type,medical_history,,text,"Please specify cancer",,,,,,,"[mh_longst_i
 mh_illness_type,medical_history,,text,"If you have any other long-standing illness or disability, please specify",,,,,,,"[mh_longst_illness_type(18)] = '1'",y,,,,,
 mh_srious_illness,medical_history,,radio,"Which of the long-standing illness or abilities is the most serious or important to you?","0,Asthma|1,Chronic bronchitis|2,Other chest trouble|3,Diabetes|4a,Depression|4,Stomach or other digestive disorder|5,Liver trouble|6,Kidney trouble|7,Rheumatoid arthritis|8,Osteoarthritis|9,Heart trouble|10,Cancer|11,High blood pressure|12,Multiple Sclerosis|13,Epilepsy/fits|14,Stroke|15,Other neurological trouble|16,Migraine|17,Back trouble|18,Other",,,,,,"[mh_longst_illness]=""1""",y,,,,,
 mh_ilness_onset_age,medical_history,,text,"How old were you when this illness started?",,,integer,,,,"[mh_longst_illness]=""1""",y,,,,,
+mh_ts,medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 own_smartphone,technology_usage,,radio,"Do you currently own a smartphone?","0, No | 1, Yes",,,,,,,y,,,,,
 smartphone_type,technology_usage,,radio,"If yes, what kind of smartphone do you own?","0, Android | 1, iPhone",,,,,,"[own_smartphone]=""1""",y,,,,,
 android_model,technology_usage,,text,"If Android smartphone, please specify make/model",,,,,,,"[smartphone_type]=""0""",y,,,,,
@@ -213,6 +223,7 @@ fitness_tracker_stopped,technology_usage,,text,"If no, why did you stop using a 
 fitness_tracker_st_time,technology_usage,,text,"How long ago did you stop using your wearable fitness tracker?  (in months)",,,,,,,"[fitness_tracker_used]=""1"" and [fitness_tracker_using]=""0""",y,,,,,
 wearable_at_job,technology_usage,,radio,"Do you have a job that would prevent you from using a wrist-worn wearble during working hours?","0, No | 1, Yes",,,,,,,y,,,,,
 mobile_phone_at_job,technology_usage,,radio,"Do you have a job that prevents you from using a mobile phone for long periods of time?","0, No | 1, Yes",,,,,,,y,,,,,
+technology_usage_ts,technology_usage,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sapas_1,standardised_assessment_of_personality,"Please tick a response if you think the description applies most of the time and in most situations.",radio,"In general, do you have difficulty making and keeping friends?","0, No | 1, Yes",,,,,,,y,,,sapas,,
 sapas_2,standardised_assessment_of_personality,,radio,"Would you normally describe yourself as a loner?","0, No | 1, Yes",,,,,,,y,,,sapas,,
 sapas_3,standardised_assessment_of_personality,,radio,"In general, do you trust other people?","0, No | 1, Yes",,,,,,,y,,,sapas,,
@@ -221,6 +232,7 @@ sapas_5,standardised_assessment_of_personality,,radio,"Are you normally an impul
 sapas_6,standardised_assessment_of_personality,,radio,"Are you normally a worrier?","0, No | 1, Yes",,,,,,,y,,,sapas,,
 sapas_7,standardised_assessment_of_personality,,radio,"In general, do you depend on others a lot?","0, No | 1, Yes",,,,,,,y,,,sapas,,
 sapas_8,standardised_assessment_of_personality,,radio,"In general, are you a perfectionist?","0, No | 1, Yes",,,,,,,y,,,sapas,,
+sapas_ts,standardised_assessment_of_personality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 lte_1,lte_sr,"Please tell us whether of the following have happened in the last year, or ever in your lifetime",radio,"You yourself suffered a serious illness, injury or an assault.","0, No | 1, Yes - in the last year | 2, Yes - ever",,,,,,,y,,,lte,,
 lte_2,lte_sr,,radio,"A serious illness, injury or assault happened to a close relative.","0, No | 1, Yes - in the last year | 2, Yes - ever",,,,,,,y,,,lte,,
 lte_3,lte_sr,,radio,"Your parent, child or partner died.","0, No | 1, Yes - in the last year | 2, Yes - ever",,,,,,,y,,,lte,,
@@ -234,6 +246,7 @@ lte_10,lte_sr,,radio,"You had a major financial crisis.","0, No | 1, Yes - in th
 lte_11,lte_sr,,radio,"You had problems with the police and a court appearance.","0, No | 1, Yes - in the last year | 2, Yes - ever",,,,,,,y,,,lte,,
 lte_12a,lte_sr,,radio,"Something you valued was lost or stolen (at least one such event in the last 3 months)","0, No | 1, Yes",,,,,,,y,,,lte_12ab,,
 lte_12b,lte_sr,,radio,"Something you valued was lost or stolen  (at least one such event in the last 6 months)","0, No | 1, Yes",,,,,,,y,,,lte_12ab,,
+lte_sr_ts,lte_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ldasr_1,lifetime_depression_assessment_self_report,"The next questions are about periods of sadness and depression in your life.",radio,"Have you ever had a time in your life when you felt sad, empty or depressed for two weeks or longer?","0, Yes | 1, No",,,,,,,y,,,,,
 ldasr_2,lifetime_depression_assessment_self_report,,radio,"For the next question, think about a period of two weeks in your life when these feelings were worst. During this period of two weeks, how often did you feel this way?","0, Almost every day, most of the day | 1, Less often",,,,,,"[ldasr_1]=""0""",y,,,,,
 ldasr_3,lifetime_depression_assessment_self_report,,radio,"Have you ever had a time in your life lasting two weeks or more when you lost interest in most things like hobbies, work, or activities that usually give you pleasure?","0, Yes | 1, No",,,,,,"[ldasr_1] = '1' or [ldasr_2]='1'",y,,,,,
@@ -272,6 +285,7 @@ ldasr_32,lifetime_depression_assessment_self_report,,checkbox,"Have you ever had
 ldasr_32a,lifetime_depression_assessment_self_report,,text,"If you ever had any other treatment, please specify",,,,,,,"[ldasr_32(7)] = '1'",y,,,,,
 ldasr_33,lifetime_depression_assessment_self_report,,text,"What is your height in cm? Please round your answer to the nearest whole number.",,cm,integer,,,,,y,,,,,
 ldasr_34,lifetime_depression_assessment_self_report,,text,"What is your weight in kg? Please round your answer to the nearest whole number.",,kg,integer,,,,,y,,,,,
+ldasr_ts,lifetime_depression_assessment_self_report,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ids_date_of_completion,suicidality,,text,"Date of IDS",,,date_dmy,,,,,,,,,,
 ids_score,suicidality,,radio,"IDS score","1, 2: I think of suicide or death several times a week for several minutes | 2, 3: I think of suicide or death several times a day in some detail, or have actually planned to take my life",,,,,,,,,,,,
 researcher_doing_risk_asse,suicidality,,dropdown,"Researcher doing risk assessment","1, Alina | 2, Katie | 3, Faith | 4, Jessica",,,,,,,,,,,,
@@ -305,6 +319,7 @@ phys_ill,suicidality,,text,"Just before this period of symptoms began, were you 
 epi_medication,suicidality,,yesno,"Were you taking any medications? ",,,,,,,,,,,,,
 med_change,suicidality,,text,"Has there been any changes to the amount you were taking?",,,,,,,,,,,,,
 depri_help,suicidality,,text,"Have you sought help from anyone to help deal with these feelings (e.g. GP)? Do you have a plan going forward?",,,,,,,,,,,,,
+suicidality_ts,suicidality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ids_1,ids_sr,"Please indicate the one response to each item that best describes you for the past seven days. ",radio,"1. Falling asleep ","0, I never take longer than 30 minutes to fall asleep | 1, I take at least 30 minutes to fall asleep, less than half the time | 2, I take at least 30 minutes to fall asleep, more than half the time | 3, I take more than 60 minutes to fall asleep, more than half the time",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Sleep during the night","0, I do not wake up at night | 1, I have a restless, light sleep with a few brief awakenings each night | 2, I wake up at least once a night, but I go back to sleep easily | 3, I awaken more than once a night and stay awake for 20 minutes or more, more than half the time",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Waking up too early","0, Most of the time, I awaken no more than 30 minutes before I need to get up | 1, More than half the time, I awaken more than 30 minutes before I need to get up | 2, I almost always awaken at least one hour or so before I need to, but I go back to sleep eventually | 3, I awaken at least one hour before I need to, and can not go back to sleep",,,,,,,y,,,,,
@@ -337,6 +352,7 @@ ids_27,ids_sr,,radio,"29. Panic/phobic symptoms","0, I have no spells of panic o
 ids_28,ids_sr,,radio,"30. Constipation/diarrhoea","0, There is no change in my usual bowel habits | 1, I have intermittent constipation or diarrhoea which is mild | 2, I have intermittent constipation or diarrhoea most of the time but it does not interfere with my day-to-day functioning | 3, I have constipation or diarrhoea for which I take medicating or which interferes with my day-to-day activities",,,,,,,y,,,,,
 ids_29,ids_sr,,radio,"31. Interpersonal sensitivity","0, I have not felt easily rejected, slighted, criticised or hurt by others at all | 1, I have occasionally felt rejected, slighted, criticised or hurt by others | 2, I have often felt rejected, slighted, criticised or hurt by others, but these feelings have only had slight effects on my relationships or work | 3, I have often felt rejected, slighted, criticised or hurt by others and these feelings have impaired my relationships and work",,,,,,,y,,,,,
 ids_30,ids_sr,,radio,"32. Leaden paralysis/physical energy. ","0, I have not experienced the physical sensation of feeling weighted down and without physical energy | 1, I have occasionally experienced periods of feeling physically weighted down and without physical energy, but without a negative effect on work, school, or activity level | 2, I feel physically weighted down (without physical energy) more than half the time | 3, I feel physically weighted down (without physical energy) most of the time, several hours per day, several days per week",,,,,,,y,,,,,
+ids_sr_ts,ids_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cidi_1,cidi_sf,"These questions are about periods of sadness or depression you might have experienced since your last assessment.",radio,"Since your last assessment, has there been a period when you felt sad, empty or depressed for two weeks or longer?","0, Yes | 1, No",,,,,,,y,,,,,
 cidi_2,cidi_sf,,radio,"Think about a period of two weeks since your last assessment when feeling sad, empty or depressed was worst. During this period of two weeks, how often did you feel this way?","0, Almost every day, most of the day | 1, Less often",,,,,,"[cidi_1]=""0""",y,,,,,
 cidi_3,cidi_sf,,radio,"Since your last assessment, has there been a period lasting two weeks or more when you lost interest in most things like hobbies, work, or activities that usually give you pleasure?","0, Yes | 1, No",,,,,,"[cidi_1] = '1' or [cidi_2]='1'",y,,,,,
@@ -370,6 +386,7 @@ cidi_28a,cidi_sf,,text,"If, since your last assessment, you have received treatm
 cidi_29,cidi_sf,,checkbox,"Have you received any of the following treatments. You can tick multiple answers.","0, Antidepressants | 1, Psychotherapy (for example cognitive behavioural therapy, interpersonal therapy or other consults with a psychologist or psychotherapist) | 2, Online help program or e-health intervention | 3, Running therapy or physical activity | 4, Light therapy | 5, Hospitalization in psychiatric hospital | 6, Electroconvulsive therapy (ECT) | 7, Other | 8, None of these treatments",,,,,,"[cidi_28(0)] = '1' or [cidi_28(1)] = '1' or [cidi_28(2)] = '1' or [cidi_28(3)] = '1' or [cidi_28(4)] = '1' or [cidi_28(5)] = '1' or [cidi_28(6)] = '1' or [cidi_28(7)] = '1' or [cidi_28(8)] = '1' or [cidi_28(9)] = '1' or [cidi_28(10)] = '1' or [cidi_28(11)] = '1' or [cidi_28(12)] = '1' or [cidi_28(13)] = '1' or [cidi_27(13)] = '1'",y,,,,,
 cidi_29a,cidi_sf,,text,"If, since your last assessment, you had any other treatment, please specify",,,,,,,"[cidi_29(7)]=""1""",y,,,,,
 cidi_30,cidi_sf,,text,"What is your weight in kg? (Please round your answer to the nearest whole number.)",,kg,integer,,,,"[cidi_29(0)] = '1' or [cidi_29(1)] = '1' or [cidi_29(2)] = '1' or [cidi_29(3)] = '1' or [cidi_29(4)] = '1' or [cidi_29(5)] = '1' or [cidi_29(6)] = '1' or [cidi_29(7)] = '1' or [cidi_29(8)] = '1'",y,,,,,
+cidi_sf_ts,cidi_sf,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 gad7_1,gad7,"Over the past two weeks, how often have you been bothered by any of the following problems ",radio,"Feeling nervous, anxious or on edge","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
 gad7_2,gad7,,radio,"Not being able to stop or control worrying","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
 gad7_3,gad7,,radio,"Worrying too much about different things","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
@@ -377,12 +394,14 @@ gad7_4,gad7,,radio,"Trouble relaxing","0, Not at all | 1, Several days | 2, More
 gad7_5,gad7,,radio,"Being so restless that it's hard to sit still","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
 gad7_6,gad7,,radio,"Becoming easily annoyed or irritable","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
 gad7_7,gad7,,radio,"Feeling afraid as if something awful might happen","0, Not at all | 1, Several days | 2, More than half the days | 3, Nearly every day",,,,,,,y,,,gad7,,
+gad7_ts,gad7,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 wsas_0,wsas,,radio,"Are you retired or do you choose not to have a job for reasons unrelated to your depression?","0,Yes|1,No",,,,,,,y,,,,,
 wsas_1,wsas,,radio,"Because of my depression, my ability to work is impaired.","0, 0 Not at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Very severely, to the point where cannot work",,,,,,,y,,,,,
 wsas_2,wsas,,radio,"Because of my depression, my home management (cleaning, tidying, shopping, cooking, looking after home or children, paying bills) is impaired.","0, 0 Not at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Very severely",,,,,,,y,,,,,
 wsas_3,wsas,,radio,"Because of my depression, my social leisure activities (with people, e.g. parties, bars, clubs, outings, visits, dating, home entertaining) are impaired.","0, 0 Not at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Very severely",,,,,,,y,,,,,
 wsas_4,wsas,,radio,"Because of my depression, my private leisure activities (done alone, such as reading, gardening, collecting, sewing, walking alone) are impaired.","0, 0 Not at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Very severely",,,,,,,y,,,,,
 wsas_5,wsas,,radio,"Because of my depression, my ability to form and maintain close relationships with others, including those I live with, is impaired.","0, 0 Not at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Very severely",,,,,,,y,,,,,
+wsas_ts,wsas,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 bipq_1,bipq,"For the following questions, please mark the number that best corresponds to your views: ",radio,"How much does your depression affect your life?","0, 0 No affect at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10  Severely affects my life",,,,,,,y,,,,,
 bipq_2,bipq,,radio,"How long do you think your depression will continue?","0, 0 A very short time | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Forever",,,,,,,y,,,,,
 bipq_3,bipq,,radio,"How much control do you feel you have over your depression?","0, 0 Absolutely no control | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Extreme amount of control",,,,,,,y,,,,,
@@ -391,6 +410,7 @@ bipq_5,bipq,,radio,"How much do you experience symptoms from your depression?","
 bipq_6,bipq,,radio,"How concerned are you about your depression?","0, 0 Not at all concerned | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Extremely concerned",,,,,,,y,,,,,
 bipq_7,bipq,,radio,"How well do you feel you understand your depression?","0, 0 Do not understand it at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Understand very clearly",,,,,,,y,,,,,
 bipq_8,bipq,,radio,"How much does your depression affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?","0, 0 Not at all affected emotionally | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Extremely affected emotionally",,,,,,,y,,,,,
+bipq_ts,bipq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ltefu_1,life_events,"Since your last assement, have any of the following happened:",radio,"You yourself suffered a serious illness, injury or an assault","0, No | 1, Yes",,,,,,,y,,,ltefu,,
 ltefu_2,life_events,,radio,"A serious illness, injury or assault happened to a close relative","0, No | 1, Yes",,,,,,,y,,,ltefu,,
 ltefu_3,life_events,,radio,"Your parent, child or partner died","0, No | 1, Yes",,,,,,,y,,,ltefu,,
@@ -404,6 +424,7 @@ ltefu_10,life_events,,radio,"You had a major financial crisis","0, No | 1, Yes",
 ltefu_11,life_events,,radio,"You had problems with the police and a court appearance","0, No | 1, Yes",,,,,,,y,,,ltefu,,
 ltefu_12,life_events,,radio,"Something you valued was lost or stolen","0, No | 1, Yes",,,,,,,y,,,ltefu,,
 ltefu_13,life_events,,notes,"Is there anything else that  has changed in the last 3 months that might make a change to your everyday routine? ",,,,,,,,y,,,,,
+life_events_ts,life_events,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 audit_1,audit,"Please select the answer that is correct for you",radio,"1. How often do you have a drink containing alcohol?","1, Never | 2, Monthly or less| 3, 2-4 times a month | 4, 2-3 times a week | 5, 4 or more times a week",,,,,,,y,,,,,
 audit_2,audit,,radio,"2. How many standard drinks containing alcohol do you have on a typical day when drinking?","1, 1 or 2 | 2, 3 or 4 | 3, 5 or 6 | 4, 7 to 9 | 5, 10 or more",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
 audit_3,audit,,radio,"3. How often do you have six or more drinks on one occasion?","1,Never|2,Less than monthly|3,Monthly|4,Weekly|5,Daily or almost daily",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
@@ -414,6 +435,7 @@ audit_7,audit,,radio,"7. During the past year how often have you had a feeling o
 audit_8,audit,,radio,"8. During the past year have you been unable to remember what happened the night before because you had been drinking?","1,Never|2,Less than monthly|3,Monthly|4,Weekly|5,Daily or almost daily",,,,,,"([audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5') and ([audit_4]='2' or [audit_4]='2' or [audit_4]='3' or [audit_4]='4' or [audit_4]='5')",y,,,,,
 audit_9,audit,,radio,"9. Have you or someone else been injured as a result of your drinking?","1, No | 2, Yes,  but not in the past year| 3, Yes, during the past year",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
 audit_10,audit,,radio,"10. Has a relative or friend doctor or other health worker been concerned about your drinking or suggested you cut down?","1, No | 2, Yes,  but not in the past year| 3, Yes, during the past year",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
+audit_ts,audit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 audit_fu_1,audit_fu,"Please select the answer that is correct for you",radio,"1. How often do you have a drink containing alcohol?","1, Never | 2, Monthly or less| 3, 2-4 times a month | 4, 2-3 times a week | 5, 4 or more times a week",,,,,,,y,,,,,
 audit_fu_2,audit_fu,,radio,"2. How many standard drinks containing alcohol do you have on a typical day when drinking?","1, 1 or 2 | 2, 3 or 4 | 3, 5 or 6 | 4, 7 to 9 | 5, 10 or more",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
 audit_fu_3,audit_fu,,radio,"3. How often do you have six or more drinks on one occasion?","1,Never|2,Less than monthly|3,Monthly|4,Weekly|5,Daily or almost daily",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
@@ -424,6 +446,7 @@ audit_fu_7,audit_fu,,radio,"7. During the last 3 months  how often have you had 
 audit_fu_8,audit_fu,,radio,"8. During the last 3 months  have you been unable to remember what happened the night before because you had been drinking?","1,Never|2,Less than monthly|3,Monthly|4,Weekly|5,Daily or almost daily",,,,,,"([audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5') and ([audit_fu_4]='2' or [audit_fu_4]='3' or [audit_fu_4]='4' or [audit_fu_4]='5')",y,,,,,
 audit_fu_9,audit_fu,,radio,"9. Have you or someone else been injured as a result of your drinking?","1, No | 2, Yes, but not in the last 3 months | 3, Yes, during the last 3 months",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
 audit_fu_10,audit_fu,,radio,"10. Has a relative or friend doctor or other health worker been concerned about your drinking or suggested you cut down?","1, No | 2, Yes, but not in the last 3 months | 3, Yes, during the last 3 months",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
+audit_fu_ts,audit_fu,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 csri_1,csri,,checkbox,"In the last 3 months, have you used the service of a:","0, General Practioner (GP) | 1, Neurologist | 2, Psychiatrist | 3, Another doctor | 4, Practice nurse | 5, Pharmacist | 6, Psychologist/therapist | 7, Physiotherapist | 8, Social worker | 9, Community mental health worker | 10, Acupuncturist | 11, Osteopath | 12, Homeopath/herbalist | 13, Occupational therapist | 14, Other | 15, None",,,,,,,y,,,,,
 csri_1_1d2,csri,,text,"Please specify the service of another doctor",,,,,,,"[csri_1(3)] = '1'",y,,,,,
 csri_1_1o2,csri,,text,"Please specify the service of other care givers",,,,,,,"[csri_1(14)] = '1'",y,,,,,
@@ -532,6 +555,7 @@ csri_7,csri,"Current employment status",radio,"What is your current employment s
 csri_7a,csri,,text,"If your current employment status is ""Other"", please specify",,,,,,,"[csri_7]=""12""",y,,,,,
 csri_8,csri,"How many days (if any) have you had off work in the last 3 months because of",text,"Any physical health problems?",,,integer,,,,,y,,,,,
 csri_9,csri,,text,"Any mental health problems?",,,integer,,,,,y,,,,,
+csri_ts,csri,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 current_medication_dep,depression_medication_adherence,,radio,"Are you currently taking medication?","0, No | 1, Yes",,,,,,,y,,,,,
 depression_medication,depression_medication_adherence,,radio,"Are you currently taking medication for depression?","0, No | 1, Yes",,,,,,"[current_medication_dep] = '1'",y,,,,,
 dep_med_1,depression_medication_adherence,"People often do not take their medication for several reasons.",radio,"I forget to take my depression medication","1, Always | 2, Often | 3, Sometimes | 4, Rarely | 5, Never",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
@@ -539,6 +563,7 @@ dep_med_2,depression_medication_adherence,,radio,"I change the dosage of my depr
 dep_med_3,depression_medication_adherence,,radio,"I stop taking my depression medication for a while","1, Always | 2, Often | 3, Sometimes | 4, Rarely | 5, Never",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
 dep_med_4,depression_medication_adherence,,radio,"I decide to skip my depression medication dosages","1, Always | 2, Often | 3, Sometimes | 4, Rarely | 5, Never",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
 dep_med_5,depression_medication_adherence,,radio,"I take a lower dosage than prescribed","1, Always | 2, Often | 3, Sometimes | 4, Rarely | 5, Never",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
+dep_med_adh_ts,depression_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 pssuq_1,pssuq,"Please think about all aspects of the RADAR system (the apps and wearable fitness tracker) and answer the following questions. If you would like to provide specific feedback about a particular part of the system, please use the comments box provided. ",radio,"Overall, I am satisfied with how easy it is to use this system.","1, 1 Strongly agree | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Strongly disagree",,,,,,,y,,,,,
 pssuq_1_c,pssuq,,text,Comments:,,,,,,,,y,,,,,
 pssuq_2,pssuq,,radio,"It was simple to use this system.","1, 1 Strongly agree | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Strongly disagree",,,,,,,y,,,,,
@@ -577,6 +602,7 @@ pssuq_18,pssuq,,radio,"This system has all the functions and capabilities I expe
 pssuq_18_c,pssuq,,text,Comments:,,,,,,,,y,,,,,
 pssuq_19,pssuq,,radio,"Overall, I am satisfied with this system.","1, 1 Strongly agree | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Strongly disagree",,,,,,,y,,,,,
 pssuq_19_c,pssuq,,text,Comments:,,,,,,,,y,,,,,
+pssuq_ts,pssuq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 tam_usefulness_1,technology_assessment_measurement_fast_form,"Please think about all aspects of the RADAR system (the apps and wearable fitness tracker) and answer the following questions.<br><br>Usefulness",radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Efficient | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Inefficient",,,,,,,y,,,,,
 tam_usefulness_2,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Performance enhancing | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Performance degrading",,,,,,,y,,,,,
 tam_usefulness_3,technology_assessment_measurement_fast_form,,radio,"Overall, I feel the RADAR-CNS system is:","0, 0 Productivity increasing | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Productivity decreasing",,,,,,,y,,,,,
@@ -593,3 +619,4 @@ tam_usage_1,technology_assessment_measurement_fast_form,"Predicted Usage. For th
 tam_usage_2,technology_assessment_measurement_fast_form,,radio,"If I need to monitor my health and the choice was up to me, I would expect to use RADAR-CNS.","0, Agree | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Disagree",,,,,,,y,,,tam_usage,,
 tam_usage_3,technology_assessment_measurement_fast_form,,radio,"If asked, I would likely recommend RADAR-CNS as a health monitoring platform.","0, Agree | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Disagree",,,,,,,y,,,tam_usage,,
 tam_usage_4,technology_assessment_measurement_fast_form,,radio,"For future health monitoring tasks that are totally within my control, I would probably use RADAR-CNS as a platform.","0, Agree | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Disagree",,,,,,,y,,,tam_usage,,
+tam_ts,technology_assessment_measurement_fast_form,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
