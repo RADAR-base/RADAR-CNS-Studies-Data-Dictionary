@@ -10,13 +10,13 @@ initiated_by,contact_log,,dropdown,"Iniciado por","0, Participante | 1, Miembro 
 team_member,contact_log,,text,"Miembro del estudio",,,,,,,"[enrolment_arm_1][initiated_by] <> 0",y,,,,,
 subject,contact_log,,text,Asunto,,,,,,,,,,,,,
 contact_notes,contact_log,,notes,"Notas de contacto",,,,,,,,,,,,,"Add Any extra details about the contact here"
-contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 feedback_date,participant_feedback,,text,"Fecha del feedback",,,date_dmy,,,,,,,,,,
 feedback_title,participant_feedback,,text,"Tema del feedback",,,,,,,,,,,,,
 feedback_collected,participant_feedback,,dropdown,"¿Cuándo fue recogido el feedback?","1, visita basal | 2, llamada 3 días | 3, llamada 1 semana| 4, llamada 1 mes | 5, llamada 3 meses | 6, llamada 6 meses| 7, llamada 9 meses | 8, llamada 1 años | 9, llamada 15 meses| 10, participante ha contactado | 11, durante la entrevista",,,,,,,,,,,,
 type_of_feedback,participant_feedback,,dropdown,"Tipo de feedback","1, Texto | 2, Email | 3, Verbal",,,,,,,,,,,,
 feedback_subject,participant_feedback,,notes,Feedback,,,,,,,,,,,,,
-participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 surname,contact_info,,text,Apellidos,,Apellido,,,,y,,,,,,,Apellidos
 name,contact_info,,text,Nombre,,"Nombre (nombre usado en correos electrónicos generados automáticamente)",,,,y,,y,,,,,"Nombre (nombre empleado en los correos electrónicos automáticos)"
 pref_name,contact_info,,text,"Nombre preferido",,"Nombre preferido (podría ser utilizado en el correo electrónico autogenerado por la encuesta)",,,,y,,,,,,,"Nombre que prefiere usarse (podría utilizarse en el correo electrónico generado automáticamente por la encuesta)"
@@ -113,14 +113,14 @@ withdrawal_interview_interested,contact_info,"Entrevista por abandonar el estudi
 withdrawal_interview_booked,contact_info,,yesno,"¿Se ha reservado para la entrevista?",,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_by,contact_info,,dropdown,"Entrevistado por","1, Sara | 3, Federica",,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_notes,contact_info,,notes,Notas,,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
-contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 study,study,,radio,Estudio,"1, Trastorno depresivo mayor (TDM) | 2, Epilepsia | 3, Esclerosis múltiple (depresión) | 4, Esclerosis múltiple (discapacidad) | 5, Test",,,,,,,y,,,,,
 enrolment_date,study,,text,"Fecha de inclusión en el estudio",,"Fecha (día-mes-año) de la inclusión en el estudio (este campo se utilizará para calcular los calendarios de las encuestas)",date_dmy,,,,,y,,,,,
 main_contact_person,study,,radio,"Contacto principal:","1, Sara | 2, Paula | 3, Federica",,,,,,,,,,,,
 enable_survey_invite,study,,yesno,"¿Enviar una invitación automática a la encuesta?",,"Seleccione <<no>> en caso de que el participante no deba recibir encuestas",,,,,,y,,,,,
 visit,study,,text,Visita,,,integer,,,,,,,,,,
 month,study,,text,"Mes en el estudio",,,integer,,,,,,,,,,
-study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 fitbit_email,study_devices,FitBit,text,"FitBit Email Usuario",,,email,,,,,,,,,,
 fitbit_password,study_devices,,text,"FitBit email Contraseña",,,,,,,,,,,,,
 fitbit_firstname,study_devices,,text,"FitBit email Nombre",,,,,,,,,,,,,
@@ -144,11 +144,11 @@ prmt_installed,study_devices,,yesno,"Instalación pRMT",,,,,,,,,,,,,
 thincit_installed,study_devices,,yesno,"Instalación THINC-it app",,,,,,,,,,,,,
 apps_notes,study_devices,,notes,"Notas sobre apps instaladas",,,,,,,,,,,,,
 tech_literacy_notes,study_devices,,notes,"Conocimientos tecnológicos",,,,,,,,,,,,,
-study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 adv_react_contact_date,adverse_reaction,,text,"Fecha de contacto",,,date_dmy,,,,,,,,,,
 adv_react_subj_id,adverse_reaction,,text,Sujeto,,,,,,,,,,,,,
 adv_react_notes,adverse_reaction,,notes,Notas,,,,,,,,,,,,,
-adv_react_contact_ts,adverse_reaction,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+adv_react_contact_ts,adverse_reaction,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 dob,socio_demographics,"Código Participante: [subject_id]",text,"¿Cuál es su fecha de nacimiento?",,,date_dmy,,1999-10-15,,,y,,,,,
 age,socio_demographics,,text,"¿Qué edad tenía al empezar el estudio?",,,integer,18,,,,y,,,,,
 gender,socio_demographics,,radio,"Usted es:","0, Hombre | 1, Mujer",,,,,,,y,,,,,
@@ -169,10 +169,8 @@ people_in_house,socio_demographics,,text,"¿Cuántas personas viven en el hogar?
 accommodation,socio_demographics,Alojamiento,radio,"¿Qué situación tiene con respecto a su vivienda?","0, Es de mi propiedad | 1, Es de mi propiedad pagando hipoteca o préstamo | 2, Alquiler en un piso compartido o hipoteca compartida | 3, Alquiler a piso de protección oficial | 4, Alquiler a dueño privado | 5, Vivo aquí sin pagar alquiler (incluye vivir en la propiedad de familiares o amigos sin pagar alquiler; excluye ocupación ilegal) | 6, Ocupación ilegal | 7, Otras",,,,,,,y,,,,,
 accommodation_satisfaction,socio_demographics,,radio,"¿En qué medida está satisfecho/a con su alojamiento?","0, Muy insatisfecho/a | 1, Algo insatisfecho/a | 2, Ni satisfecho ni insatisfecho | 3, Bastante satisfecho | 4, Muy satisfecho",,,,,,,y,,,,,
 utilities,socio_demographics,,checkbox,"¿Ha habido veces en el último año en las que ha tenido serios problemas para pagar las siguientes facturas?:","0, Alquiler | 1, Gas | 2, Electricidad | 3, Agua | 4, Pago a plazos de bienes | 5, Hipoteca | 6, Impuestos municipales | 7, Pagos con tarjetas de crédito | 8, Teléfono/Internet | 9, Otros préstamos | 10, Ninguno de estos",,,,,,,y,,,,,
-socio_demographics_ts,socio_demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 contacts_weekly,social_environment,,checkbox,"En una semana normal, ¿con cuántas de las siguientes personas tiene contacto? Entendiendo por contacto tanto el contacto directo como el telefónico","0, Pareja | 1, Padres | 2, Hermano/a | 3, Familia política | 4, Otros parientes | 5, Amigos cercanos | 6, Vecinos | 7, Compañeros de trabajo | 8, Jefe/supervisor | 9, Otros conocidos | 10, Profesionales de la asistencia | 11, Miembros del mismo grupo o club | 12, Nadie",,,,,,,y,,,,,
 contacts_help,social_environment,,radio,"Si tuviera problemas o necesitara ayuda, ¿tendría a quien recurrir para pedir ayuda?","0, No | 1, Sí",,,,,,,y,,,,,
-social_environment_ts,social_environment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 mh_family_depr,medical_history,,checkbox,"¿Alguno de estos miembros de la familia ha tenido alguna vez depresión?","0, Padres | 1, Hermanos | 2, Hijos",,,,,,,,,,,,
 mh_relatives_depr,medical_history,,radio,"¿Algún otro familiar ha tenido alguna vez depresión?","0, No | 1, Sí",,,,,,,y,,,,,
 mh_relatives_depr_who,medical_history,,text,"En caso afirmativo, quién:",,,,,,,"[mh_relatives_depr] = '1'",y,,,,,
@@ -187,7 +185,6 @@ mh_cancer_type,medical_history,,text,"Por favor especificar el tipo de cáncer",
 mh_illness_type,medical_history,,text,"Si tiene alguna otra enfermedad o discapacidad de larga duración, por favor especifique",,,,,,,"[mh_longst_illness_type(18)] = '1'",y,,,,,
 mh_srious_illness,medical_history,,radio,"¿Cuál de estas condiciones es la más importante o grave para usted?","0, Asma | 1, Bronquitis crónica | 2, Otro problema pulmonar | 3, Diabetes | 4, Estómago u otros problemas digestivos | 5, Problemas de hígado | 6, Problemas de riñón | 7, Artritis reumatoide | 8, Osteoartritis | 9, Problemas de corazón | 10, Cáncer | 11, Hipertensión | 12, Esclerosis múltiple | 13, Epilepsia/convulsiones | 14, Ictus | 15, Otro problema neurológico | 16, Migraña | 17, Problemas de espalda | 18, Otro",,,,,,"[mh_longst_illness]=""1""",y,,,,,
 mh_ilness_onset_age,medical_history,,text,"  ¿Cuántos años tenía cuando empezó esta condición?",,,integer,,,,"[mh_longst_illness]=""1""",y,,,,,
-mh_ts,medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 own_smartphone,technology_usage,,radio,"1. ¿Posee actualmente un smartphone?","0, No | 1, Sí",,,,,,,y,,,,,
 smartphone_type,technology_usage,,radio,"2. En caso de respuesta afirmativa, ¿qué tipo de smartphone?","0, Android | 1, iPhone",,,,,,"[own_smartphone]=""1""",y,,,,,
 android_model,technology_usage,,text,"2a. En caso de que disponga de un smartphone Android, especifique marca y modelo",,,,,,,"[smartphone_type]=""0""",y,,,,,
@@ -204,7 +201,6 @@ fitness_tracker_stopped,technology_usage,,text,"12. Si no, ¿por qué dejó de u
 fitness_tracker_st_time,technology_usage,,text,"13. ¿Cuánto tiempo hace que dejó de usarla?",,,,,,,"[fitness_tracker_used]=""1"" and [fitness_tracker_using]=""0""",,,,,,
 wearable_at_job,technology_usage,,radio,"14. ¿Tiene un trabajo que le impediría llevar la pulsera de actividad durante las horas de trabajo?","0, No | 1, Sí",,,,,,,y,,,,,
 mobile_phone_at_job,technology_usage,,radio,"15. ¿Tiene un trabajo que le impediría usar el teléfono móvil durante largos períodos de tiempo?","0, No | 1, Sí",,,,,,,y,,,,,
-technology_usage_ts,technology_usage,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sapas_1,standardised_assessment_of_personality," Marque únicamente una respuesta si  piensa que esa descripción se ajusta a  la mayoría de las veces y en la mayoría de las situaciones",radio,"En general, ¿Tiene dificultad en hacer y mantener amigos?","0, No | 1, Sí",,,,,,,y,,,sapas,,
 sapas_2,standardised_assessment_of_personality,,radio,"¿Se describiría normalmente como una persona solitaria?","0, No | 1, Sí",,,,,,,y,,,sapas,,
 sapas_3,standardised_assessment_of_personality,,radio,"En general, ¿confía en los demás?","0, No | 1, Sí",,,,,,,y,,,sapas,,
@@ -213,7 +209,6 @@ sapas_5,standardised_assessment_of_personality,,radio,"¿Es usted normalmente un
 sapas_6,standardised_assessment_of_personality,,radio,"¿Se preocupa normalmente por todo?","0, No | 1, Sí",,,,,,,y,,,sapas,,
 sapas_7,standardised_assessment_of_personality,,radio,"En general, ¿depende mucho de los demás?","0, No | 1, Sí",,,,,,,y,,,sapas,,
 sapas_8,standardised_assessment_of_personality,,radio,"En general, ¿Es usted perfeccionista?","0, No | 1, Sí",,,,,,,y,,,sapas,,
-sapas_ts,standardised_assessment_of_personality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 lte_1,lte_sr," Por favor, díganos si le ha ocurrido alguno de los siguientes en el último año, o alguna vez en su vida",radio,"Ha padecido usted mismo una enfermedad, lesión o agresión graves.","0, No | 1, Sí, en el último año | 2, Sí, alguna vez",,,,,,,y,,,lte,,
 lte_2,lte_sr,,radio,"Ha sufrido un pariente cercano una enfermedad, lesión o ataque graves.","0, No | 1, Sí, en el último año | 2, Sí, alguna vez",,,,,,,y,,,lte,,
 lte_3,lte_sr,,radio,"Su padre/madre, hijo/a o pareja ha fallecido.","0, No | 1, Sí, en el último año | 2, Sí, alguna vez",,,,,,,y,,,lte,,
@@ -227,7 +222,6 @@ lte_10,lte_sr,,radio,"Ha tenido una crisis económica importante.","0, No | 1, S
 lte_11,lte_sr,,radio,"Ha tenido problemas con la policía y ha tenido que comparecer ante la justicia","0, No | 1, Sí, en el último año | 2, Sí, alguna vez",,,,,,,y,,,lte,,
 lte_12a,lte_sr,,radio,"Ha perdido o le han robado algo valioso para usted: al menos uno de estos casos en los últimos 3 meses.","0, No | 1, Si",,,,,,,,RH,,,,
 lte_12b,lte_sr,,radio,"Ha perdido o le han robado algo valioso para usted: Al menos esto ha ocurrido en los últimos 6 meses","0, No | 1, Si",,,,,,,,RH,,,,
-lte_sr_ts,lte_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ldasr_1,lifetime_depression_assessment_self_report,"Las siguientes preguntas se refieren a periodos de tristeza y depresión en su vida.",radio,"¿Alguna vez ha tenido una temporada en su vida en la que se sintió triste, vacío/a o deprimido/a durante dos semanas o más?","0, Sí | 1, No",,,,,,,,,,,,
 ldasr_2,lifetime_depression_assessment_self_report,,radio,"Para la siguiente pregunta, piense en un período de dos semanas en su vida en el que estos sentimientos fueron peores. Durante este período de dos semanas, ¿con qué frecuencia se sintió de esta manera?","0, Casi cada día, la mayor parte del día |1, Con menos frecuencia que lo anterior",,,,,,"[ldasr_1]=""0""",,,,,,
 ldasr_3,lifetime_depression_assessment_self_report,,radio,"Ha tenido alguna vez en su vida un período de 2 semanas o más en el que perdió el interés en la mayoría de cosas como hobbies, trabajo, o actividades que normalmente le eran placenteras?","0, Sí | 1, No",,,,,,"[ldasr_1] = '1' or [ldasr_2]='1'",,,,,,
@@ -266,7 +260,6 @@ ldasr_32,lifetime_depression_assessment_self_report,,checkbox,"¿Alguna vez ha r
 ldasr_32a,lifetime_depression_assessment_self_report,,text,"Si alguna vez recibió otro tratamiento, especifique",,,,,,,"[ldasr_32(7)] = '1'",,,,,,
 ldasr_33,lifetime_depression_assessment_self_report,,text,"¿Cuánto mide en centímetros? Por favor, redondee su respuesta al número entero más próximo",,cm,integer,,,,,,,,,,
 ldasr_34,lifetime_depression_assessment_self_report,,text,"¿Cuánto pesa en Kilogramos? Por favor, redondee su respuesta al número entero más próximo.",,kg,integer,,,,,,,,,,
-ldasr_ts,lifetime_depression_assessment_self_report,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ids_date_of_completion,suicidality,,text,"Fecha de ideación suicida",,,date_dmy,,,,,,,,,,
 ids_score,suicidality,,radio,"Puntuación ideación suicida","1, 2: Pienso en el suicidio o la muerte varias veces a la semana, durante varios minutos | 2, 3: Pienso detenidamente en el suicidio o la muerte varias veces al día o he hecho planes específicos para suicidarme, o incluso he intentado quitarme la vida.",,,,,,,,,,,,
 researcher_doing_risk_asse,suicidality,,dropdown,"Investigador/a que evalúa el riesgo de suicidio","1, Sara | 2, Otro",,,,,,,,,,,,
@@ -300,7 +293,7 @@ phys_ill,suicidality,,text,"Justo antes de que comenzara este período, ¿Estaba
 epi_medication,suicidality,,yesno,"¿Estaba tomando algúna medicación?",,,,,,,"[depressed_frequently] = '1'",,,,,,
 med_change,suicidality,,text,"¿Ha habido algún cambio en la cantidad que estaba tomando?",,,,,,,"[epi_medication] = '1'",,,,,,
 depri_help,suicidality,,text,"¿Ha buscado la ayuda de alguien para ayudar a lidiar con estos sentimientos (por ejemplo, psiquiatra psicólogo)? ¿Tiene planeado buscar ayuda?",,,,,,,"[depressed_frequently] = '1'",,,,,,
-suicidality_ts,suicidality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+suicidality_ts,suicidality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ids_1,ids_sr,"Por favor, indique la respuesta a cada cuestión que mejor define su experiencia de los últimos siete días. ",radio,"1. A la hora de dormirse:","0, Nunca tardo más de 30 minutos en dormirme | 1, Menos de la mitad de las veces (máximo 3 de los 7 días), tardo como mínimo 30 minutos en quedarme dormido/a | 2, Más de la mitad de las veces (mínimo 4 de los 7 días), tardo como mínimo 30 minutos en quedarme dormido/a | 3, Más de la mitad de las veces, tardo más de 60 minutos en quedarme dormido/a.",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Sueño nocturno:","0, No me despierto por la noche | 1, Tengo un sueño intranquilo y ligero, de hecho todas las noches me despierto momentáneamente unas pocas veces | 2, Me despierto al menos una vez cada noche pero me vuelvo a dormir con facilidad | 3, Me despierto más de una vez por la noche y tardo 20 minutos o más en volver a dormirme, más de la mitad de las veces",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Despertarse demasiado pronto:","0, La mayoría de las veces no me despierto con más de 30 minutos de antelación a la hora que necesito levantarme. | 1, Más de la mitad de las veces, me despierto con más de 30 minutos de antelación a la hora que necesito levantarme. | 2, Casi siempre me despierto por lo menos una hora antes de lo necesario, pero al final me vuelvo a dormir. | 3, Me despierto por lo menos una hora antes de lo necesario y soy incapaz de quedarme dormido/a otra vez",,,,,,,y,,,,,
@@ -333,7 +326,6 @@ ids_27,ids_sr,,radio,"29. Síntomas de pánico / fobias:","0, No tengo ataques d
 ids_28,ids_sr,,radio,"30. Estreñimiento / diarrea:","0, Mis hábitos intestinales siguen siendo los mismos | 1, Tengo estreñimiento o diarrea de forma intermitente pero leve | 2, Sufro diarrea o estreñimiento la mayor parte del tiempo pero no interfiere con mi funcionamiento diario | 3, Sufro estreñimiento o diarrea y tengo que tomar medicamentos o interfiere en mis actividades cotidianas",,,,,,,y,,,,,
 ids_29,ids_sr,,radio,"31. Sensibilidad hacia otras personas:","0, No es fácil en absoluto que me sienta rechazado/a, menospreciado/a, criticado/a o herido/a por los demás | 1, De vez en cuando me he sentido rechazado/a, menospreciado/a, criticado/a o herido/a por los demás | 2, A menudo me he sentido rechazado/a menospreciado/a, criticado/a herido/a por los demás, pero estos sentimientos han influido muy poco en mis relaciones o en mi trabajo | 3, A menudo me he sentido rechazado/a, menospreciado/a, criticado/a o herido/a por los demás y estos sentimientos han perjudicado mis relaciones y mi trabajo",,,,,,,y,,,,,
 ids_30,ids_sr,,radio,"32. Fatiga paralizante/Energía física:","0, No he tenido la sensación física de decaimiento ni la falta de energía física | 1, De vez en cuando he vivido periodos en los que me he sentido decaído y sin energía física pero no ha tenido ninguna consecuencia negativa en mi trabajo, en mis estudios ni en mi nivel de actividad | 2, Me siento decaído físicamente (sin energía), más de la mitad del tiempo (mínimo 4 de los 7 días) | 3, Me siento decaído físicamente (sin energía) la mayoría del tiempo, varias horas al día y varios días a la semana",,,,,,,y,,,,,
-ids_sr_ts,ids_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cidi_1,cidi_sf,"Las siguientes preguntas se refieren a periodos de tristeza y depresión que podría haber experimentado durante los últimos 3 meses.",radio,"En los últimos 3 meses, ¿ha habido algún período en el que se sintió triste, vacío/a o deprimido/a durante dos semanas o más?","0, Sí | 1, No",,,,,,,y,,,,,
 cidi_2,cidi_sf,,radio,"Para la siguiente pregunta, piense en el período de dos semanas de los últimos 3 meses en en el que estos sentimientos fueron peores. Durante este período de dos semanas, ¿con qué frecuencia se sintió de esta manera?","0, Casi cada día, la mayor parte del día | 1, Con menos frecuencia que lo anterior",,,,,,"[cidi_1]=""0""",y,,,,,
 cidi_3,cidi_sf,,radio,"En los últimos 3 meses, ¿ha habido algún período de 2 semanas o más en el que perdió el interés en la mayoría de cosas como hobbies, trabajo, o actividades que normalmente le eran placenteras?","0, Sí | 1, No",,,,,,"[cidi_1] = '1' or [cidi_2]='1'",y,,,,,
@@ -367,7 +359,6 @@ cidi_28a,cidi_sf,,text,"Si, en los últimos 3 meses, ha recibido tratamiento por
 cidi_29,cidi_sf,,checkbox,"¿Ha recibido alguno de los siguientes tratamientos? Puede marcar múltiples respuestas.","0,Antidepresivos|1, Psicoterapia (por ejemplo terapia cognitivo conductual, terapia interpersonal u otras consultas con un/a psicólogo/a o psicoterapeuta)|2, Programa on-line de ayuda o intervención e-salud (e-health)|3, Terapia ""Running"" o ejercicio físico|4, Terapia luminosa|5, Hospitalización en un hospital psiquiátrico|6, Terapia electroconvulsiva|7, Otro|8, Ninguno de estos tratamientos",,,,,,"[cidi_28(0)] = '1' or [cidi_28(1)] = '1' or [cidi_28(2)] = '1' or [cidi_28(3)] = '1' or [cidi_28(4)] = '1' or [cidi_28(5)] = '1' or [cidi_28(6)] = '1' or [cidi_28(7)] = '1' or [cidi_28(8)] = '1' or [cidi_28(9)] = '1' or [cidi_28(10)] = '1' or [cidi_28(11)] = '1' or [cidi_28(12)] = '1' or [cidi_28(13)] = '1' or [cidi_27(13)] = '1'",,,,,,
 cidi_29a,cidi_sf,,text,"Si, en los últimos 3 meses, tuvo algún otro tratamiento, especifique",,,,,,,"[cidi_29(7)]=""1""",y,,,,,
 cidi_30,cidi_sf,,text,"¿Cuánto pesa en Kilogramos? Por favor, redondee su respuesta al número entero más próximo.",,kg,integer,,,,"[cidi_29(0)] = '1' or [cidi_29(1)] = '1' or [cidi_29(2)] = '1' or [cidi_29(3)] = '1' or [cidi_29(4)] = '1' or [cidi_29(5)] = '1' or [cidi_29(6)] = '1' or [cidi_29(7)] = '1' or [cidi_29(8)] = '1'",y,,,,,
-cidi_sf_ts,cidi_sf,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 gad7_1,gad7,"En las últimas dos semanas, ¿con qué frecuencia le han molestado los siguientes problemas?",radio,"1. Se ha sentido nervioso, ansioso o muy alterado","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
 gad7_2,gad7,,radio,"2. No ha podido dejar de preocuparse","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
 gad7_3,gad7,,radio,"3. Se ha preocupado excesivamente por diferentes cosas","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
@@ -375,14 +366,12 @@ gad7_4,gad7,,radio,"4. Ha tenido dificultad para relajarse","0, Nunca | 1, Menos
 gad7_5,gad7,,radio,"5. Se ha sentido tan intranquilo que no podía estar quieto","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
 gad7_6,gad7,,radio,"6. Se ha irritado o enfadado con facilidad","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
 gad7_7,gad7,,radio,"7. Ha sentido miedo, como si fuera a suceder algo terrible","0, Nunca | 1, Menos de la mitad de los días | 2, Más de la mitad de los días | 3, Casi todo los días",,,,,,,y,,,gad7,,
-gad7_ts,gad7,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 wsas_0,wsas,,radio,"Si usted está jubilado/a o ha escogido no trabajar por otros motivos no relacionados con su depresión, márquelo aquí","0, Sí | 1, No",,,,,,,y,,,,,
 wsas_1,wsas,,radio,"1. Mi habilidad para trabajar está deteriorada a causa de mi depresión.","0, 0 Para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Extremadamente, hasta el punto que no puedo trabajar",,,,,,,y,,,,,
 wsas_2,wsas,,radio,"2. A causa de mi depresión, mis tareas del hogar (limpiar, ordenar, comprar, cocinar, cuidar de mis hijos, pagar las facturas) están deterioradas","0, 0 Para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Extremadamente",,,,,,,y,,,,,
 wsas_3,wsas,,radio,"3. A causa de mi depresión, mis actividades de ocio (con gente, por ej. Fiestas, bares, clubes, salidas, visitas, citas, entretenimiento en casa) están deterioradas","0, 0 Para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Extremadamente",,,,,,,y,,,,,
 wsas_4,wsas,,radio,"4. A causa de mi depresión, mis actividades privadas de ocio (realizadas solo/a, como leer, jardinería, coleccionismo, costura, caminar) están deterioradas.","0, 0 Para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Extremadamente",,,,,,,y,,,,,
 wsas_5,wsas,,radio,"5. A causa de mi depresión, mi capacidad para formar o mantener relaciones cercanas con otros, incluidas aquellos con los que vivo, están deterioradas.","0, 0 Para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Extremadamente",,,,,,,y,,,,,
-wsas_ts,wsas,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 bipq_1,bipq,"Para las siguientes preguntas, por favor marque el número que mejor se corresponda con lo que piensa: ",radio,"¿En qué medida la depresión afecta su vida?","0, 0 No le afecta en absoluto | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Le afecta gravemente",,,,,,,y,,,,,
 bipq_2,bipq,,radio,"¿Cuánto tiempo cree que durará su depresión?","0, 0 Muy poco tiempo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Toda la vida",,,,,,,y,,,,,
 bipq_3,bipq,,radio,"¿Cuánto control cree que tiene sobre su depresión?","0, Ningún control | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Control absoluto","Control absoluto",,,,,,y,,,,,
@@ -391,7 +380,6 @@ bipq_5,bipq,,radio,"¿En qué medida nota síntomas o molestias por su depresió
 bipq_6,bipq,,radio,"¿Cuánto le preocupa su depresión?","0, 0 No me preocupada nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Me preocupa muchísimo",,,,,,,y,,,,,
 bipq_7,bipq,,radio,"¿Hasta qué punto comprende en qué consiste la depresión?","0, 0 No la comprendo para nada | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 La comprendo claramente",,,,,,,y,,,,,
 bipq_8,bipq,,radio,"¿Cuánto le afecta su depresión a nivel emocional? (por ejemplo, ¿le hace sentir enfadado/a, asustado/a, alterado/a o deprimido/a?","0, 0 No me afecta para nada emocionalmente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Me afecta muchisímo emocionalmente",,,,,,,y,,,,,
-bipq_ts,bipq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ltefu_1,life_events,"Desde su última evaluación, le han sucedido alguna de las siguientes cosas:",radio,"Ha tenido una enfermedad, lesión o agresión grave","0, No | 1, Sí",,,,,,,y,,,ltefu,,
 ltefu_2,life_events,,radio,"Un familiar cercano ha tenido una enfermedad, lesión o agresión grave","0, No | 1, Sí",,,,,,,y,,,ltefu,,
 ltefu_3,life_events,,radio,"Ha fallecido su pareja o alguno de sus padres o hijos","0, No | 1, Sí",,,,,,,y,,,ltefu,,
@@ -405,7 +393,6 @@ ltefu_10,life_events,,radio,"Ha tenido una crisis económica  importante","0, No
 ltefu_11,life_events,,radio,"Ha tenido problemas con la policía o que comparecer ante la justicia","0, No | 1, Sí",,,,,,,y,,,ltefu,,
 ltefu_12,life_events,,radio,"Le han robado o ha perdido algo de valor","0, No | 1, Sí",,,,,,,y,,,ltefu,,
 ltefu_13,life_events,,notes,"Le ha ocurrido algo en los últimos 3 meses que puede haber cambiado su rutina diaria",,,,,,,,,,,,,
-life_events_ts,life_events,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 audit_1,audit,,radio,"1. ¿Con qué frecuencia consume alguna bebida alcohólica?","0, Nunca | 1, Una o menos veces al mes | 2, De 2 a 4 veces al mes | 3, De 2 a 3 más  veces a la semana | 4, 4 o más veces a la semana",,,,,,,y,,,,,
 audit_2,audit,,radio,"2. ¿Cuantas  consumiciones de bebidas alcohólicas suele realizar en un día de consumo normal? ","0, 1 o 2 | 1, 3 o 4 | 2, 5 o 6 | 3, De 7 a 9 | 4, 10 o más",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
 audit_3,audit,,radio,"3. ¿Con qué frecuencia toma 6 o más bébidas alcohólicas en un solo día?","0, Nunca | 1, Menos de una vez al mes | 2, Mensualmente | 3, Semanalmente | 4, A diario o casi a diario",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
@@ -416,7 +403,6 @@ audit_7,audit,,radio,"7.¿Con qué frecuencia en el curso del último año ha te
 audit_8,audit,,radio,"8.¿Con qué frecuencia en el curso del último año no ha podido recordar lo que sucedió la noche anterior porque había estado bebiendo?","0, Nunca | 1, Menos de una vez al mes | 2, Mensualmente | 3, Semanalmente | 4, A diario o casi a diario",,,,,,"([audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5') and ([audit_4]='2' or [audit_4]='2' or [audit_4]='3' or [audit_4]='4' or [audit_4]='5')",y,,,,,
 audit_9,audit,,radio,"9. ¿Usted o alguna otra persona ha resultado herido porque usted había bebido?","0, No | 1, Sí pero no en el curso del último año | 2, Sí, el último año",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
 audit_10,audit,,radio,"10. ¿Algún familiar,  amigo, médico o profesional sanitario ha mostrado preocupación por consumo de bebidas alcohólicas o le ha sugerido que deje de beber?","0, No | 1, Sí pero no en el curso del último año | 2, Si, el último año",,,,,,"[audit_1]='2' or [audit_1]='3' or [audit_1]='4' or [audit_1]='5'",y,,,,,
-audit_ts,audit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 audit_fu_1,audit_fu,,radio,"1. ¿Con qué frecuencia consume alguna bebida alcohólica?","0, Nunca | 1, Una o menos veces al mes | 2, De 2 a 4 veces al mes | 3, De 2 a 3 más  veces a la semana | 4, 4 o más veces a la semana",,,,,,,y,,,,,
 audit_fu_2,audit_fu,,radio,"2. ¿Cuantas  consumiciones de bebidas alcohólicas suele realizar en un día de consumo normal? ","0, 1 o 2 | 1, 3 o 4 | 2, 5 o 6 | 3, De 7 a 9 | 4, 10 o más",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
 audit_fu_3,audit_fu,,radio,"3. ¿Con qué frecuencia toma 6 o más bébidas alcohólicas en un solo día?","0, Nunca | 1, Menos de una vez al mes | 2, Mensualmente | 3, Semanalmente | 4, A diario o casi a diario",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
@@ -427,7 +413,6 @@ audit_fu_7,audit_fu,,radio,"7.¿Con qué frecuencia en el curso de los últimos 
 audit_fu_8,audit_fu,,radio,"8.¿Con qué frecuencia en el curso de los últimos 3 meses no ha podido recordar lo que sucedió la noche anterior porque había estado bebiendo?","0, Nunca | 1, Menos de una vez al mes | 2, Mensualmente | 3, Semanalmente | 4, A diario o casi a diario",,,,,,"([audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5') and ([audit_fu_4]='2' or [audit_fu_4]='2' or [audit_fu_4]='3' or [audit_fu_4]='4' or [audit_fu_4]='5')",y,,,,,
 audit_fu_9,audit_fu,,radio,"9. ¿Usted o alguna otra persona ha resultado herido porque usted había bebido?","0, No | 1, Sí, pero no en el curso de los últimos 3 meses | 2, Sí, en el curso de los últimos 3 meses",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
 audit_fu_10,audit_fu,,radio,"10. ¿Algún familiar,  amigo, médico o profesional sanitario ha mostrado preocupación por consumo de bebidas alcohólicas o le ha sugerido que deje de beber?","0, No | 1, Sí, pero no en el curso de los últimos 3 meses | 2, Sí, en el curso de los últimos 3 meses",,,,,,"[audit_fu_1]='2' or [audit_fu_1]='3' or [audit_fu_1]='4' or [audit_fu_1]='5'",y,,,,,
-audit_fu_ts,audit_fu,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 csri_1,csri,,checkbox,"En los últimos 3 meses, ¿Ha tenido consulta con algunos de estos profesionales sanitarios?","0, Médico de cabecera | 1, Neurólogo | 2, Psiquiatra | 3, Otro médico | 4, Enfermero/a | 5, Farmacéutico/a | 6, Psicólogo/a o terapueta | 7, Psicoterapeuta | 8, Trabajador social | 9, Trabajador de salud mental de la comunidad | 10, Acupunturista | 11, Osteópata | 12, Homeópata/herbolista | 13, Terapeuta ocupacional | 14, Otros | 15, Ningúno",,,,,,,y,,,,,
 csri_1_1d2,csri,,text,"Por favor, especifique si ha tenido consulta con otro profesional sanitario",,,,,,,"[csri_1(3)] = '1'",y,,,,,
 csri_1_1o2,csri,,text,"Por favor, especifique el tipo de servicio utilizado",,,,,,,"[csri_1(14)] = '1'",y,,,,,
@@ -536,7 +521,6 @@ csri_7,csri,"Situación laboral actual",radio,"¿Cuál es su situación laboral 
 csri_7a,csri,,text,"Si su situación laboral actual es ""Otros"", por favor especifique:",,,,,,,"[csri_7]=""12""",,,,,,
 csri_8,csri,"¿Cuántos días (si es que los hubo) ha estado sin trabajar en los últimos 3 meses",text,"porque tenía algún problema de salud física?",,,integer,,,,,y,,,,,
 csri_9,csri,,text,"porque tenía algún problema de salud mental?",,,integer,,,,,y,,,,,
-csri_ts,csri,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 current_medication_dep,depression_medication_adherence,,radio,"¿Está tomando actualmente alguna medicación?","0, No | 1, Sí",,,,,,,y,,,,,
 depression_medication,depression_medication_adherence,,radio,"¿Está tomando actualmente medicación para la depresión?","0, No | 1, Sí",,,,,,"[current_medication_dep] = '1'",y,,,,,
 dep_med_1,depression_medication_adherence,"Las personas con frecuencia no toman sus medicamentos por varias razones.",radio,"Me olvido de tomar mi medicación para la depresión","1, Siempre | 2, Con frecuencia | 3, A veces | 4, Raras veces | 5, Nunca",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
@@ -544,7 +528,6 @@ dep_med_2,depression_medication_adherence,,radio,"Cambio la dosis de mi medicaci
 dep_med_3,depression_medication_adherence,,radio,"Dejo de tomar mi medicación para depresión durante un tiempo","1, Siempre | 2, Con frecuencia | 3, A veces | 4, Raras veces | 5, Nunca",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
 dep_med_4,depression_medication_adherence,,radio,"Decido saltarme dosis de mi medicación para la depresión","1, Siempre | 2, Con frecuencia | 3, A veces | 4, Raras veces | 5, Nunca",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
 dep_med_5,depression_medication_adherence,,radio,"Tomo una dosis menor que la prescrita","1, Siempre | 2, Con frecuencia | 3, A veces | 4, Raras veces | 5, Nunca",,,,,,"[depression_medication] = '1'",y,,,dep_med,,
-dep_med_adh_ts,depression_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 pssuq_1,pssuq,"Por favor, piense en todos los aspectos del sistema RADAR (las aplicaciones y la pulsera inteligente""fitbit"") y responda las siguientes preguntas. Si desea proporcionar comentarios específicos sobre un aspecto en concreto del sistema, utilice el recuadro de comentarios proporcionado.",radio,"1. En general, estoy satisfecho/a con la facilidad para usar el sistema.","1, 1 Totalmente de acuerdo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente en desacuerdo",,,,,,,y,,,,,
 pssuq_1_c,pssuq,,text,Comentarios:,,,,,,,,,,,,,
 pssuq_2,pssuq,,radio,"2. Usar este sistema me resultó sencillo.","1, 1 Totalmente de acuerdo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente en desacuerdo",,,,,,,y,,,,,
@@ -583,7 +566,6 @@ pssuq_18,pssuq,,radio,"18. El sistema cuenta con todas las funciones y herramien
 pssuq_18_c,pssuq,,text,Comentarios:,,,,,,,,,,,,,
 pssuq_19,pssuq,,radio,"19. En general, estoy satisfecho con el sistema.","1, 1 Totalmente de acuerdo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente en desacuerdo",,,,,,,y,,,,,
 pssuq_19_c,pssuq,,text,Comentarios:,,,,,,,,,,,,,
-pssuq_ts,pssuq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 tam_usefulness_1,technology_assessment_measurement_fast_form,"Utilidad percibida",radio,"En general, creo que el Sistema RADAR-CNS es:","0, 0 Eficiente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Ineficiente",,,,,,,y,,,,,
 tam_usefulness_2,technology_assessment_measurement_fast_form,,radio,"En general, creo que el Sistema RADAR-CNS es:","0, 0 Mejora el rendimiento | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Empeora el rendimiento",,,,,,,y,,,,,
 tam_usefulness_3,technology_assessment_measurement_fast_form,,radio,"En general, creo que el Sistema RADAR-CNS es:","0, 0 Aumenta la productividad | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Reduce la productividad",,,,,,,y,,,,,
@@ -600,4 +582,3 @@ tam_usage_1,technology_assessment_measurement_fast_form,"Para las siguientes pre
 tam_usage_2,technology_assessment_measurement_fast_form,,radio,"2. Si necesitase monitorizar mi salud y pudiera elegir, me gustaría utilizar RADAR-CNS.","0, De acuerdo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, En desacuerdo",,,,,,,y,,,tam_usage,,
 tam_usage_3,technology_assessment_measurement_fast_form,,radio,"3. Si me preguntaran, es muy probable que recomiende RADAR-CNS como plataforma de monitorización de la salud.","0, De acuerdo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, En desacuerdo",,,,,,,y,,,tam_usage,,
 tam_usage_4,technology_assessment_measurement_fast_form,,radio,"4. Para tareas futuras de monitorización de salud que estén totalmente bajo mi control, usaría con mucha probabilidad RADAR-CNS como plataforma.","0, De acuerdo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, En desacuerdo",,,,,,,y,,,tam_usage,,
-tam_ts,technology_assessment_measurement_fast_form,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"

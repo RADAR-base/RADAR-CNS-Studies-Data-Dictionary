@@ -8,7 +8,7 @@ name,contact_info,,text,Nome,,"Nome (utilizzato per autogenerare indirizzo e-mai
 pref_name,contact_info,,text,"Nome preferito",,"Nome prefertio da utilizzare ( potrebbe essere utilizzato per generazione indirizzo e-mail per sondaggio)",,,,y,,,,,,,"Nome preferito"
 email,contact_info,,text,"Indirizzo e-mail:",,"e-mail utilizzata per opzione ''survey""",email,,,y,,y,,,,,
 hospital_num,contact_info,,text,"Numero dell'Ospedale",,,,,,,,,,,,,
-contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 yob,socio_demographics,"ID del partecipante [subject_id]",text,"Qual è la Sua data di nascita?",,,date_dmy,,,,,y,,,,,
 age,socio_demographics,,text,"Qual era la Sua età all'ultimo compleanno?",,,integer,18,,,,y,,,,,
 gender,socio_demographics,,radio,"Lei è:","0, Maschio | 1, Femmina | 2, Altro",,,,,,,y,,,,,
@@ -33,28 +33,25 @@ income_contribution,socio_demographics,,text,"Quante persone contribuiscono al r
 accommodation,socio_demographics,Sistemazione,radio,"In quali di questi modi occupa il suo alloggio? ","0, Proprietario/a | 1, Acquistato con l'aiuto di un mutuo o prestito | 2, Sistemazione residenziale (non ospedaliera) | 3, Affittato da Enti locali | 4, Affittato da Settori del volontariato | 5, Affittato da Locatore privato | 6, Gratuitamente (incluso l'affitto gratuito nella proprietà  del suo parente/amico; escluso l'abusivismo) | 7, Abusivamente",,,,,,,y,,,,,
 accommodation_satisfaction,socio_demographics,,radio,"Quanto è soddisfatto/a di questa sistemazione?","0, Molto insoddisfatto/a | 1, Leggermente insoddisfatto/a | 2, Nè soddisfatto/a nè insoddisfatto/a | 3, Abbastanza soddisfatto/a | 4, Molto soddisfatto/a",,,,,,,y,,,,,
 utilities,socio_demographics,,checkbox,"Ci sono stati periodi entro lo scorso anno in cui è stato/a seriamente in difficoltà nel pagamento in tempo di una di questi pagamenti: ","0, Affitto | 1, Gas | 2, Elettricità | 3, Acqua | 4, Acquisto di beni | 5, Rate del mutuo | 6, Tasse comunali | 7, Pagamenti con carta di credito | 8, Telefono | 9, Altri finanziamenti | 10, Nessuno di questi",,,,,,,y,,,,,
-socio_demographics_ts,socio_demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 study,study,,radio,Studio,"1, MDD | 2, Epilessia | 3, SM (Depressione) | 4, SM (Disabilità) | 5, Test",,,,,,,y,,,,,
 enrolment_date,study,,text,"Data di arruolamento",,"Data DD-MM-YY di arruolamento allo studio (questo campo viene usato per definire il calendario di sondaggio)",date_dmy,,,,,y,,,,,
 enable_survey_invite,study,,yesno,"Invia sondaggio automatico?",,"Inserire ''no'' se il partecipante non desidera ricevere l'opzione sondaggio",,,,,,y,,,,,
 visit,study,,text,Visita,,,integer,,,,,,,,,,
 month,study,,text,"Mese nello studio",,,integer,,,,,,,,,,
-study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 contacts_weekly,social_environment,,checkbox,"In una settimana tipo, con quante delle seguenti persone interagisce? Si intendono contatti sia faccia a faccia che telefonici","0, Fratelli/sorelle | 1, Parenti acquisiti | 2, Altri parenti | 3, Amici | 4, Vicini  | 5, Colleghi/e | 6, Capo/Supervisore  | 7, Altre conoscenze | 8, Professionisti | 9, Membri di uno stesso gruppo o club",,,,,,,y,,,,,
 contacts_help,social_environment,,radio,"In caso di difficoltà o bisogno di aiuto, c'è qualcuno che potrebbe contattare e che l'aiuterà?","0, No | 1, Si",,,,,,,y,,,,,
-social_environment_ts,social_environment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 mh_psycond_clincond,medical_history,,radio,"1. Lei ha sperimentato una condizione psichiatrica o una condizione clinicamente significativa negli ultimi due anni:","0, No | 1, Si",,,,,,,y,,,,,
 mh_diagnosis,medical_history,,text,Diagnosi,,,,,,,"[mh_psycond_clincond] = '1'",y,,,,,
 mh_date_onset,medical_history,,text,"Data di inizio",,,date_dmy,,,,"[mh_psycond_clincond] = '1'",y,,,,,
 mh_end_date,medical_history,,text,"Data di fine",,,date_dmy,,,,"[mh_psycond_clincond] = '1'",y,,,,,
-mh_ts,medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ms_mh_first_sympt,ms_medical_history,,text,"1. Data dei primi sintomi SM",,,date_dmy,,,,,y,,,,,
 ms_mh_diagnos_date,ms_medical_history,,text,"2. Data della diagnosi di SM (se possibile)",,,date_dmy,,,,,y,,,,,
 ms_mh_phenotype,ms_medical_history,,radio,"3. Fenotipo della SM","0, RRMS | 1, SPMS",,,,,,,y,,,,,
 ms_mh_date_onset_progress,ms_medical_history,,text,"Date of Onset of Progression",,,date_dmy,,,,"[ms_mh_phenotype] = '1'",y,,,,,
 ms_mh_date_most_recent_ms_relapse,ms_medical_history,,text,"4. Data della ricaduta di SM più recente (se possibile)",,,date_dmy,,,,,y,,,,,
 ms_mh_date_last_steroids,ms_medical_history,,text,"Date of last course of steroids",,,date_dmy,,,,,y,,,,,
-ms_mh_ts,ms_medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ms_mh_ts,ms_medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 own_smartphone,technology_usage,,radio,"1. Possiede attualmente uno smartphone? ","0, No | 1, Si",,,,,,,y,,,,,
 smartphone_type,technology_usage,,radio,"1a. Se si, di quale tipologia?","0, Android | 1, iPhone",,,,,,"[own_smartphone]=""1""",y,,,,,
 android_model,technology_usage,,text,"1b. Se ha uno smartphone Android, specificare modello/marca",,,,,,,"[smartphone_type]=""0""",y,,,,,
@@ -71,7 +68,6 @@ fitness_tracker_stopped,technology_usage,,text,"8c. Se no, perchè ha smesso di 
 fitness_tracker_st_time,technology_usage,,text,"8d. Quanto tempo fa  ha smesso di utilizzarlo?",,,,,,,"[fitness_tracker_used]=""1"" and [fitness_tracker_using]=""0""",y,,,,,
 wearable_at_job,technology_usage,,radio,"9. Lei ha un lavoro che le impedisce di utilizzare un dispositivo indossabile al polso durante le ore lavorative? ","0, No | 1, Si",,,,,,,y,,,,,
 mobile_phone_at_job,technology_usage,,radio,"10. Lei ha un lavoro che le impedisce di utilizzare il telefono cellulare per lunghi periodi di tempo? ","0, No | 1, Si",,,,,,,y,,,,,
-technology_usage_ts,technology_usage,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 pssuq_1,pssuq,,radio,"1. In generale, sono soddisfatto/a a riguardo della facillità  di utilizzo di questo sistema","1, 1 Totalmente d' accordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente in disaccordo",,,,,,,y,,,,,
 pssuq_1_c,pssuq,,text,Commenti:,,,,,,,,y,,,,,
 pssuq_2,pssuq,,radio,"2. E' stato semplice utilizzare il sistema?","1, 1 Totalmente d' accordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente in disaccordo",,,,,,,y,,,,,
@@ -110,7 +106,6 @@ pssuq_18,pssuq,,radio,"18. Questo sistema ha tutte le funzioni e funzionalità 
 pssuq_18_c,pssuq,,text,Commenti:,,,,,,,,y,,,,,
 pssuq_19,pssuq,,radio,"19. In generale, sono soddisfatto/a di questo sistema.","1, 1 Totalmente d' accordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Totalmente in disaccordo",,,,,,,y,,,,,
 pssuq_19_c,pssuq,,text,Commenti:,,,,,,,,y,,,,,
-pssuq_ts,pssuq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 tam_usefulness_1,technology_assessment_measurement_fast_form,"Utilità  percepita",radio,"In generale, sento che il sistema RADAR-CNS è:","0, 0 Efficiente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Inefficiente",,,,,,,y,,,,,
 tam_usefulness_2,technology_assessment_measurement_fast_form,,radio,"In generale, sento che il sistema RADAR-CNS è:","0, 0 Migliora le prestazioni | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Peggiora le prestazioni",,,,,,,y,,,,,
 tam_usefulness_3,technology_assessment_measurement_fast_form,,radio,"In generale, sento che il sistema RADAR-CNS è:","0, 0 Aumenta la produttività | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Diminuisce la produttività",,,,,,,y,,,,,
@@ -127,7 +122,6 @@ tam_usage_1,technology_assessment_measurement_fast_form,"Utilizzo previsto. Per 
 tam_usage_2,technology_assessment_measurement_fast_form,,radio,"2. Se avessi bisogno di monitorare la mia salute e la scelta ricadesse su di me, io sceglierei RADAR-CNS","0, D' accordo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, In disaccordo",,,,,,,y,,,tam_usage,,
 tam_usage_3,technology_assessment_measurement_fast_form,,radio,"3. Se richiesto, probabilmente suggerirei RADR-CNS come piattaforma di monitoraggio dello stato di salute","0, D' accordo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, In disaccordo",,,,,,,y,,,tam_usage,,
 tam_usage_4,technology_assessment_measurement_fast_form,,radio,"4. In futuro per gli aspetti del monitoraggio dello stato di salute che dipenderanno da me, probabilmente utilizzerei RADAR-CNS","0, D' accordo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, In disaccordo",,,,,,,y,,,tam_usage,,
-tam_ts,technology_assessment_measurement_fast_form,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 fss_1,fatigue_severity_scale,"Durante la scorsa settimana, ho notato che:",radio,"1. La mia motivazione è minore quando sono affaticato.","1,1 Forte disaccordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Forte Accordo",,,,,,,,,,,,
 fss_2,fatigue_severity_scale,,radio,"2. L'esercizio mi comporta fatica","1,1 Forte disaccordo |2,2|3,3|4,4|5,5|6,6|7,7 Forte Accordo",,,,,,,,,,,,
 fss_3,fatigue_severity_scale,,radio,"3. Sono facilmente affaticato.","1,1 Forte disaccordo |2,2|3,3|4,4|5,5|6,6|7,7 Forte Accordo",,,,,,,,,,,,
@@ -137,7 +131,6 @@ fss_6,fatigue_severity_scale,,radio,"6. La fatica mi impedisce l'attività fisic
 fss_7,fatigue_severity_scale,,radio,"7. La fatica interferisce con certi miei impegni e responsabilità.","1,1 Forte disaccordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Forte Accordo",,,,,,,,,,,,
 fss_8,fatigue_severity_scale,,radio,"8. La fatica è fra i miei tre sintomi più disabilitanti.","1,1 Forte disaccordo | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Forte Accordo",,,,,,,,,,,,
 fss_9,fatigue_severity_scale,,radio,"9. La fatica interferisce con il mio lavoro, la mia famiglia o la mia vita sociale.","1,1 Forte disaccordo |2,2|3,3|4,4|5,5|6,6|7,7 Forte Accordo",,,,,,,,,,,,
-fss_ts,fatigue_severity_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ids_1,ids_sr,"Si prega di indicare l'unica risposta per ciascun campo che meglio ti descrive negli ultimi sette giorni",radio,"1. Addormentamento","0, Non impiego mai più di 30 minuti per addormentarmi. | 1, Impiego almeno 30 minuti per addormentarmi meno della metà delle notti. | 2, Impiego più di 30 minuti per addormentarmi più della metà  delle notti. | 3, Impiego più di 60 minuti per addormentarmi più della metà  delle notti.",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Sonno durante la notte:","0, Non mi sveglio durante la notte. | 1, Ho un sonno agitato e leggero con pochi brevi risvegli ogni notte. | 2, Mi sveglio almeno una volta durante la notte, ma mi riaddormento facilmente. | 3, Mi sveglio più di una volta durante la notte e rimango sveglio per 20 minuti o più, più della metà  delle notti.",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Risveglio precoce:","0, La maggior parte delle notti ml sveglio non più di 30 minuti prima di alzarmi. | 1, Più di metà  delle notti mi sveglio più di 30 minuti prima del momento di alzarmi. | 2, Mi sveglio quasi sempre almeno un'ora o quasi prima del necessario, ma alla fine riprendo a dormire. | 3, Mi sveglio almeno un'ora prima del necessario ma non riesco a riaddormentarmi.",,,,,,,y,,,,,
@@ -170,7 +163,6 @@ ids_27,ids_sr,,radio,"29. Panico e sintomi fobici:","0, Non ho attacchi di panic
 ids_28,ids_sr,,radio,"30. Stipsi o diarrea:","0, Nessun cambiamento nelle mie abitudini intestinali. | 1, Soffro di stipsi o diarrea intermittente, che è però lieve. | 2, Soffro di stipsi o diarrea la maggior parte del tempo, ma non limitano le mie attività quotidiane. | 3, Soffro di stipsi o diarrea per le quali devo prendere farmaci o che limitano le mie attività quotidiane.",,,,,,,y,,,,,
 ids_29,ids_sr,,radio,"31. Sensibilità  interpersonale:","0, Non mi sono mai sentito facilmente respinto, sminuito, criticato o ferito da altri. | 1, Talvolta mi sono sentito respinto, sminuito, criticato o ferito da altri. | 2, Spesso mi sono sentito respinto, sminuito, criticato o ferito da altri, ma questo ha avuto poco effetto sulle mie relazioni e sul mio lavoro. | 3, Spesso mi sono sentito respinto, sminuito, criticato o ferito da altri e questo ha danneggiato le mie relazioni e il mio lavoro.",,,,,,,y,,,,,
 ids_30,ids_sr,,radio,"32. Pesantezza/Energia fisica:","0, Non ho mai avuto la sensazione fisica di sentirmi appesantito e senza energia fisica. | 1, Talvolta ho attraversato periodi in cui mi sentivo fisicamente appesantito e senza energia fisica, ma senza un effetto negativo sul lavoro, scuola o livello di attività . | 2, Mi sento fisicamente appesantito (senza energie fisiche) più della metà  del tempo. | 3, Mi sento fisicamente appesantito (senza energie fisiche) la maggior parte del tempo, molte ore al giorno, molti giorni della settimana.",,,,,,,y,,,,,
-ids_sr_ts,ids_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cidi_1,cidi_sf,"Queste domande riguardano periodi di tristezza o depressione che potrebbe aver vissuto dalla Sua ultima valutazione.",radio,"1. Dalla sua ultima valutazione, Lei ha avuto dei periodi in cui si sentiva triste, svuotato/a o depresso/a per due settimane o più?","0, Si | 1, No",,,,,,,y,,,,,
 cidi_2,cidi_sf,,radio,"2. Per la prossima domanda, pensi ad un periodo di due settimane dalla sua ultima valutazione in cui questi sentimenti sono peggiorati. Durante questo periodo di due settimane, quanto spesso si è sentito/a in questo modo?","0, Quasi ogni giorno, per la gran parte della giornata | 1, Meno spesso",,,,,,"[cidi_1]=""0""",y,,,,,
 cidi_3,cidi_sf,,radio,"3. Dalla sua ultima valutazione, c'è stato un periodo di due settimane o più in cui ha perso interesse per la maggior parte delle cose come il lavoro, gli hobbies e altre attività che invece di solito Le davano piacere? ","0, Si | 1, No",,,,,,"[cidi_1] = '1' or [cidi_2]='1'",y,,,,,
@@ -204,7 +196,6 @@ cidi_28a,cidi_sf,,text,Specificare:,,,,,,,"[cidi_28(12)]=""1""",y,,,,,
 cidi_29,cidi_sf,,checkbox,"29. Dalla sua ultima valutazione, ha ricevuto uno dei seguenti trattamenti: Può scegliere più di una risposta.","0, Antidepressivi | 1, Psicoterapia (ad esempio terapia cognitiva comportamentale, terapia interpersonale o altri trattamenti con uno psicologo o uno psicoterapeuta) | 2, Programma di aiuto online o intervento di salute online | 3, Programmi di attività  fisica | 4, Terapia della luce | 5, Ricovero in ospedale psichiatrico | 6, Terapia elettroconvulsivante (ECT) | 7, Altro | 8, Nessuno di questi trattamenti",,,,,,"[cidi_28(0)] = '1' or [cidi_28(1)] = '1' or [cidi_28(2)] = '1' or [cidi_28(3)] = '1' or [cidi_28(4)] = '1' or [cidi_28(5)] = '1' or [cidi_28(6)] = '1' or [cidi_28(7)] = '1' or [cidi_28(8)] = '1' or [cidi_28(9)] = '1' or [cidi_28(10)] = '1' or [cidi_28(11)] = '1' or [cidi_28(12)] = '1' or [cidi_28(13)] = '1' or [cidi_27(13)] = '1'",y,,,,,
 cidi_29a,cidi_sf,,text,Specificare:,,,,,,,"[cidi_29(7)]=""1""",y,,,,,
 cidi_30,cidi_sf,,text,"30. Qual è il suo peso in Kg? Si prega di arrotondare la risposta al numero intero più vicino.",,kg,integer,,,,"[cidi_29(0)] = '1' or [cidi_29(1)] = '1' or [cidi_29(2)] = '1' or [cidi_29(3)] = '1' or [cidi_29(4)] = '1' or [cidi_29(5)] = '1' or [cidi_29(6)] = '1' or [cidi_29(7)] = '1' or [cidi_29(8)] = '1'",y,,,,,
-cidi_sf_ts,cidi_sf,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 gad7_1,gad7,"Nelle ultime 2 settimane, con quale frequenza le ha dato fastidio ciascuno dei seguenti problemi?",radio,"1. Sentirsi nervoso/a, ansioso/a o teso/a.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
 gad7_2,gad7,,radio,"2. Non riuscire a smettere di preoccuparsi o a tenere sotto controllo le preoccupazioni.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
 gad7_3,gad7,,radio,"3. Preoccuparsi troppo per varie cose.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
@@ -212,14 +203,12 @@ gad7_4,gad7,,radio,"4. Avere difficoltà a rilassarsi.","0, Mai | 1, Alcuni gio
 gad7_5,gad7,,radio,"5. Essere talmente irrequieto/a da far fatica a stare seduto/a fermo/a.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
 gad7_6,gad7,,radio,"6. Infastidirsi o irritarsi facilmente.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
 gad7_7,gad7,,radio,"7. Avere paura che possa succedere qualcosa di terribile.","0, Mai | 1, Alcuni giorni | 2, Per oltre la metà dei giorni | 3, Quasi ogni giorno",,,,,,,y,,,gad7,,
-gad7_ts,gad7,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 wsas_0,wsas,,radio,"Lei è in pensione o ha scelto di non lavorare per ragioni non legate alla tua sclerosi multipla (SM)?","0, Si | 1, No",,,,,,,y,,,,,
 wsas_1,wsas,,radio,"1. A causa della mia SM, la mia capacità  di lavorare è compromessa.","0, 0 Per niente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Severamente, tanto da non riuscire a lavorare",,,,,,"[wsas_0] = '1'",y,,,,,
 wsas_2,wsas,,radio,"2. A causa della mia SM, la gestione della casa (pulire, riordinare, fare shopping, cucinare, curare i bambini, pagare le bollette) è compromessa.","0, 0 Per niente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Molto",,,,,,"[wsas_0] = '1'",y,,,,,
 wsas_3,wsas,,radio,"3. A causa della mia SM, le mie attività di svago in compagnia (ossia svolte con altre persone, come ad esempio andare a feste, nei bar, in discoteca, uscire, fare visite, avere appuntamenti o intrattenersi in casa in compagnia di amici) sono compromesse","0, 0 Per niente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Molto",,,,,,"[wsas_0] = '1'",y,,,,,
 wsas_4,wsas,,radio,"4. A causa della mia SM, le mie attività di svago personali (ossia svolte da solo/a, come leggere, fare giardinaggio, fare collezionismo, cucire o fare una passeggiata da solo) sono compromesse.","0, 0 Per niente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Molto",,,,,,"[wsas_0] = '1'",y,,,,,
 wsas_5,wsas,,radio,"5. A causa della mia SM, la mia capacità  di intraprendere e mantenere rapporti stretti con alter persone, incluse quelle con cui vivo, è compromessa.","0, 0 Per niente | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8  Molto",,,,,,"[wsas_0] = '1'",y,,,,,
-wsas_ts,wsas,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sf36_1,sf_36,,radio,"1. In generale, direbbe che la Sua salute è:","1, Eccellente | 2, Molto buona | 3, Buona | 4, Passabile | 5, Scadente",,,,,,,y,,,,,
 sf36_2,sf_36,,radio,"2. Rispetto ad un anno fa, come giudicherebbe, ora, la Sua salute in generale?","1, Decisamente migliore adesso rispetto ad un anno fa | 2, Un po' migliore adesso rispetto ad un anno fa | 3, Più o meno uguale rispetto ad un anno fa | 4, Un po' peggiore adesso rispetto ad un anno fa | 5, Decisamente peggiore adesso rispetto ad un anno fa",,,,,,,y,,,,,
 sf36_3a,sf_36,"3. Le seguenti domande riguardano alcune attività  che potrebbe svolgere nel corso di una qualsiasi giornata. La Sua salute La limita attualmente nello svolgimento di queste attività ?",radio,"a. Attività  fisicamente impegnative, come correre, sollevare oggetti pesanti, praticare sport faticosi","1, SI, mi limita parecchio | 2, SI, mi limita parzialmente | 3, NO, non mi limita per nulla",,,,,,,y,,,sf36_3,,
@@ -256,7 +245,6 @@ sf36_11a,sf_36,"11. Per Lei, quanto VERA o FALSA è la seguente affermazione?",r
 sf36_11b,sf_36,,radio,"b. La mia salute è come quella degli altri","1, Certamente vero | 2, In gran parte vero | 3, Non so | 4, In gran parte falso | 5, Certamente falso",,,,,,,y,,,sf36_11,,
 sf36_11c,sf_36,,radio,"c. Mi  aspetto  che  la  mia  salute  andrà  peggiorando","1, Certamente vero | 2, In gran parte vero | 3, Non so | 4, In gran parte falso | 5, Certamente falso",,,,,,,y,,,sf36_11,,
 sf36_11d,sf_36,,radio,"d. Godo di ottima salute","1, Certamente vero | 2, In gran parte vero | 3, Non so | 4, In gran parte falso | 5, Certamente falso",,,,,,,y,,,sf36_11,,
-sf_36_ts,sf_36,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 bipq_1,bipq,"Per le seguenti domande, per favore indichi il numero che meglio corrisponde al suo punto di vista.",radio,"1. Quanto la sua malattia Sclerosi Multipla (SM) influenza la sua vita?","0, 0 Non l'influenza per nulla | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10  La influenza gravemente",,,,,,,y,,,,,
 bipq_2,bipq,,radio,"2. Per quanto tempo pensa che durerà  la sua SM?","0, 0 Per un tempo molto breve | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Per sempre",,,,,,,y,,,,,
 bipq_3,bipq,,radio,"3. Quanto controllo crede di avere sulla sua SM?","0, 0 Assolutamente nessun controllo | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Un completo controllo",,,,,,,y,,,,,
@@ -265,7 +253,6 @@ bipq_5,bipq,,radio,"5. Quanto intensamente avverte i sintomi della sua SM?","0, 
 bipq_6,bipq,,radio,"6. Quanto è preoccupato per la sua SM?","0, 0 Per nulla preoccupato | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Estremamente preoccupato",,,,,,,y,,,,,
 bipq_7,bipq,,radio,"7. Quanto crede di capire bene la sua SM?","0, 0 Per nulla | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Molto",,,,,,,y,,,,,
 bipq_8,bipq,,radio,"8. Quanto la sua malattia ha cambiato le sue emozioni? (ad es. la fa sentire arrabbiato/a, spaventato/a, turbato/a, depresso/a?)","0, 0 Non ha cambiato per nulla le mie emozioni | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Ha cambiato estremamente le mie emozioni",,,,,,,y,,,,,
-bipq_ts,bipq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 csri_1_1a,csri,"1. Negli ultimi 3 mesi, quali tra le seguenti figure professionali ha consultato:",radio,"Medico di base","0, No | 1, Si",,,,,,,y,,,csri_1_1,,
 csri_1_1b,csri,,radio,Neurologo,"0, No | 1, Si",,,,,,,y,,,csri_1_1,,
 csri_1_1c,csri,,radio,Psichiatra,"0, No | 1, Si",,,,,,,y,,,csri_1_1,,
@@ -408,7 +395,6 @@ csri_7,csri,"6. Attuale stato occupazionale",radio,"Qual è il suo attuale stato
 csri_7a,csri,,text,"Se il Suo stato occupazionale è ''Altro'', per favore specifichi",,,,,,,"[csri_7]=""12""",y,,,,,
 csri_8,csri,"7. Quanti giorni (se ci sono stati) Lei non è andata/o a lavoro negli ultimi 3 mesi a causa di problemi di",text,"a. Salute fisica?",,,integer,,,,,y,,,,,
 csri_9,csri,,text,"b. Salute mentale?",,,integer,,,,,y,,,,,
-csri_ts,csri,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 lte_1,lte_sr,"Dall'ultima valutazione (visita), Le è accaduto uno dei seguenti eventi:",radio,"Ha avuto una grave malattia, un infortunio o un aggressione","0, No | 1, Si",,,,,,,y,,,lte,,
 lte_2,lte_sr,,radio,"Un Suo parente stretto ha subito una grave malattia, infortunio o un aggressione.","0, No | 1, Si",,,,,,,y,,,lte,,
 lte_3,lte_sr,,radio,"Un Suo parente, figlio/a o compagno/a è morto.","0, No | 1, Si",,,,,,,y,,,lte,,
@@ -422,7 +408,6 @@ lte_10,lte_sr,,radio,"Ha avuto gravi problem finanziari","0, No | 1, Si",,,,,,,
 lte_11,lte_sr,,radio,"Lei ha avuto problem con la polizia o giudiziari.","0, No | 1, Si",,,,,,,y,,,lte,,
 lte_12a,lte_sr,,radio,"Qualcosa a cui tenevi molto è stato perso o derubato: Almeno uno di questi eventi negli ultimi 3 mesi","0, No | 1, Si",,,,,,,y,,,lte,,
 lte_12b,lte_sr,,radio,"Qualcosa a cui tenevi molto è stato perso o derubato: Almeno uno di questi eventi negli ultimi 6 mesi","0, No | 1, Si",,,,,,,y,,,lte,,
-lte_sr_ts,lte_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cl_info_conc_medications,clinical_information_baseline,"Concomitant medication",radio,"Are you currently taking any concomitant medication other than for MS?","0, No | 1, Yes",,,,,,,,,,,,
 cl_info_conc_med_medic,clinical_information_baseline,,text,Medication:,,,,,,,,,,,,,
 cl_info_conc_med_dose,clinical_information_baseline,,text,Dose:,,,,,,,,,,,,,
@@ -451,7 +436,7 @@ cl_info_sympt_therapy_reason,clinical_information_baseline,,text,Reason:,,,,,,,,
 cl_info_sympt_therapy_indication,clinical_information_baseline,,text,Indication:,,,,,,,,,,,,,
 cl_info_sympt_therapy_star_dat,clinical_information_baseline,,text,"Start Date:",,,date_dmy,,,,,,,,,,
 cl_info_sympt_therapy_end_date,clinical_information_baseline,,text,"End date:",,,date_dmy,,,,,,,,,,
-cl_info_bl_ts,clinical_information_baseline,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+cl_info_bl_ts,clinical_information_baseline,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 cl_info_conc_medications_fu,clinical_information_follow_up,"Concomitant medication",radio,"Did you change any concomitant medication since your last visit?","0, No | 1, Yes",,,,,,,,,,,,
 cl_info_conc_med_medic_fu,clinical_information_follow_up,,text,Medication:,,,,,,,,,,,,,
 cl_info_conc_med_dose_fu,clinical_information_follow_up,,text,Dose:,,,,,,,,,,,,,
@@ -480,20 +465,20 @@ cl_info_sympt_therapy_reason_fu,clinical_information_follow_up,,text,Reason:,,,,
 cl_info_sympt_therapy_indication_fu,clinical_information_follow_up,,text,Indication:,,,,,,,,,,,,,
 cl_info_sympt_therapy_star_dat_fu,clinical_information_follow_up,,text,"Start Date:",,,date_dmy,,,,,,,,,,
 cl_info_sympt_therapy_end_date_fu,clinical_information_follow_up,,text,"End date:",,,date_dmy,,,,,,,,,,
-cl_info_fu_ts,clinical_information_follow_up,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+cl_info_fu_ts,clinical_information_follow_up,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ch_ms_tr_med_adh,changes_in_ms_treatment_and_medication_adherence,,radio,"Are you currently take DMT?","0, No | 1, Yes",,,,,,,,,,,,
 ch_ms_tr_med_adh_percentage,changes_in_ms_treatment_and_medication_adherence,,slider,"People often do not take their medication for several reasons. In the past (3) month(s), what percentage of the time have you taken your medication as prescribed?","0 | 100",,number,,,,"[ch_ms_tr_med_adh] = '1'",,RH,,,,
 ch_ms_tr_med_adh_dmt_change,changes_in_ms_treatment_and_medication_adherence,,radio,"Did the DMT changed from previous visit?","0, No | 1, Yes",,,,,,,,,,,,
 ch_ms_tr_med_adh_reason_chang,changes_in_ms_treatment_and_medication_adherence,,radio,"What was the reasons of the change:","0, Inefficacy | 1, Side Effects | 2, Patient decision | 3, Other",,,,,,"[ch_ms_tr_med_adh_dmt_change] = '1'",,,,,,
 ch_ms_tr_med_adh_specify,changes_in_ms_treatment_and_medication_adherence,,text,Specify:,,,,,,,"[ch_ms_tr_med_adh_reason_chang] = '3'",,,,,,
-ch_ms_tr_med_ts,changes_in_ms_treatment_and_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ch_ms_tr_med_ts,changes_in_ms_treatment_and_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ms_sympt_relap_ass,ms_symptomatology_relapse_assessment,,radio,"1. Did you experienced any relapse since the last visit (diagnosed by your neurologist)? ","0, No | 1, Yes",,,,,,,,,,,,
 ms_sympt_relap_ass_dat_onset,ms_symptomatology_relapse_assessment,,text,"Date of onset symptoms",,,date_dmy,,,,"[ms_sympt_relap_ass] = '1'",,,,,,
 ms_sympt_relap_ass_neu_func_aff,ms_symptomatology_relapse_assessment,,radio,"Neuorological functions affected:","0, Visual | 1, Pyramidal | 2, Cerebellar | 3, Sensory | 4, Other",,,,,,"[ms_sympt_relap_ass] = '1'",,,,,,
 ms_sympt_relap_ass_specify,ms_symptomatology_relapse_assessment,,text,Specify:,,,,,,,"[ms_sympt_relap_ass_neu_func_aff] = '4'",,,,,,
 ms_sympt_relap_ass_steroids,ms_symptomatology_relapse_assessment,,radio,"2. Did you received any steroids treatment since the last visit? ","0, No | 1, Yes",,,,,,,,,,,,
 ms_sympt_relap_ass_specify2,ms_symptomatology_relapse_assessment,,descriptive,"**********If Yes please fill ''comncomitant medication'' in ""clinical information instrument""**********",,,,,,,"[ms_sympt_relap_ass_steroids] = '1'",,,,,,
-ms_sympt_relap_ts,ms_symptomatology_relapse_assessment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ms_sympt_relap_ts,ms_symptomatology_relapse_assessment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 adv_event_experienced,adverse_event,,radio,"1. Did you experienced any adverse event since the last visit?","0, No | 1, Yes",,,,,,,,,,,,
 adv_event_diagnosis,adverse_event,,text,Diagnosis:,,,,,,,"[adv_event_experienced] = '1'",,,,,,
 adv_event_severity,adverse_event,,radio,Severity:,"0, Moderate | 1, Mild | 2, Severe",,,,,,"[adv_event_experienced] = '1'",,,,,,
@@ -506,7 +491,7 @@ adv_event_fill2,adverse_event,,descriptive,"**********Please fill ''concomitant 
 adv_event_serious_event,adverse_event,,radio,"It is a serious adverse event? ","0, No | 1, Yes",,,,,,"[adv_event_experienced] = '1'",,,,,,
 adv_event_study_technology,adverse_event,,radio,"2. Did you encounter any problem related to use the study technology?","0, No | 1, Yes",,,,,,,,,,,,
 adv_event_problem_techn,adverse_event,,descriptive,"**********If Yes fill ''Technological Issues'' instrument**********",,,,,,,"[adv_event_study_technology] = '1'",,,,,,
-adv_event_ts,adverse_event,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+adv_event_ts,adverse_event,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 techn_issues_probl,technological_issues,,radio,"Lei ha incontrato qualche tipo di problema nell'uso della tecnologia?","0, No | 1, Si",,,,,,,,,,,,
 techn_issues_type_probl,technological_issues,,radio,"Tipo di problema:","0, Caricamento dati | 1, Connessione Wi-Fi | 2, Configurazione Dispositivi | 3,  Carica della batteria | 4, Altro",,,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_type_probl_specfy,technological_issues,,text,Specificare:,,,,,,,"[techn_issues_type_probl] = '4'",,,,,,
@@ -514,9 +499,8 @@ techn_issues_probl_st_date,technological_issues,,text,"Data inizio:",,,date_dmy,
 techn_issues_probl_end_date,technological_issues,,text,"Data fine:",,,date_dmy,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_probl_act_taken,technological_issues,,radio,"Azioni prese:","0, Ri-aggiornamento | 1, Riconfigurazione dei dispositivi, | 2, Sostituzione dispositivi | 3, Altro",,,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_probl_act_taken_specify,technological_issues,,text,"Specificare altro:",,,,,,,"[techn_issues_probl_act_taken] = '3'",,,,,,
-technological_issues_ts,technological_issues,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sdm_score,symbol_digit_modality_test,,text,"Symbol Digit Modality test score",,,integer,,,,,,,,,,
-sdm_ts,symbol_digit_modality_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+sdm_ts,symbol_digit_modality_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 t_25_f_w_visit_date,time_25_foot_walk_msfc,,text,"Visit Date",,,date_mdy,,,,,,,,,,
 t_25_f_w_afo,time_25_foot_walk_msfc,,radio,"Did patient wear an AFO?","0, Yes | 1, No",,,,,,,,,,,,
 t_25_f_w_deviceused,time_25_foot_walk_msfc,,radio,"Was assistive device used?","0, Yes | 1, No",,,,,,,,,,,,
@@ -533,7 +517,7 @@ t_25_f_w_tr2_specify3,time_25_foot_walk_msfc,,text,"Specify Physical limitations
 t_25_f_w_tr2_specify4,time_25_foot_walk_msfc,,text,"Specify other",,,,,,,"[t_25_f_w_nocompltrial2] = '1'",,,,,,
 t_25_f_w_twoattempts,time_25_foot_walk_msfc,,radio,"Did it make more than two attempts to get two successful trials?","0, Yes | 1, No",,,,,,,,,,,,
 t_25_f_w_reason_twoattempt,time_25_foot_walk_msfc,,text,"If yes, please specify reason(s) for more than two attempted trials:",,,,,,,"[t_25_f_w_twoattempts] = '0'",,,,,,
-t_25_f_w_ts,time_25_foot_walk_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+t_25_f_w_ts,time_25_foot_walk_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 h_p_t_visit_date,hole_peg_test_msfc,,text,"Visit Date",,,date_mdy,,,,,,,,,,
 h_p_t,hole_peg_test_msfc,,radio,"Dominant Hand  (check one)","0, Right | 1, Left",,,,,,,,,,,,
 h_p_t_dh_trial1_time,hole_peg_test_msfc,,text,"Dominant hand (D-H) TRIAL1--> Time (seconds)",,,,,,,,,,,,,
@@ -560,7 +544,7 @@ h_p_t_specify7,hole_peg_test_msfc,,text,"Specify Physical limitations",,,,,,,"[h
 h_p_t_specify8,hole_peg_test_msfc,,text,"Specify other",,,,,,,"[h_p_t_ndh_nocompl_trial2] = '1'",,,,,,
 h_p_t_ndh_twoattemp,hole_peg_test_msfc,,radio,"N-D-H. Did it take more than two attemps tp get two sucessful trials?","0, Yes | 1, No",,,,,,,,,,,,
 h_p_t_nhd_ifyes,hole_peg_test_msfc,,text,"If yes, please specify reason (s) for more than two attempted trials",,,,,,,"[h_p_t_ndh_twoattemp] = '0'",,,,,,
-h_p_t_ts,hole_peg_test_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+h_p_t_ts,hole_peg_test_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 pasat,pasat_msfc,,radio,"Was a PASAT performed?","0, No | 1, Yes",,,,,,,,,,,,
 pasat_date,pasat_msfc,,text,"Date of Assessment:",,,date_dmy,,,,"[pasat] = '1'",,,,,,
 pasat_formed_used,pasat_msfc,,radio,"Form used (check one)","0, Form A | 1, Form B",,,,,,,,,,,,
@@ -569,9 +553,9 @@ pasat_trial_completed,pasat_msfc,,text,"For a complete PASAT 3'', record any cir
 pasat_trial_no_completed_reasons,pasat_msfc,,radio,"If PASAT 3'' was not completed (mark one):","0, Unable to complete trial due to Physical limitations | 1, Other",,,,,,,,,,,,
 pasat_trial_no_completed_reason_spec1,pasat_msfc,,text,"Specify physical limitation",,,,,,,"[pasat_trial_no_completed_reasons] = '0'",,,,,,
 pasat_trial_no_completed_reason_spec2,pasat_msfc,,text,"Specify Other",,,,,,,"[pasat_trial_no_completed_reasons] = '1'",,,,,,
-pasat_msfc_ts,pasat_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+pasat_msfc_ts,pasat_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 six_min_walk_test_score,mw6,,text,"Score in meter",,,,,,,,,,,,,
-mw6_ts,mw6,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+mw6_ts,mw6,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 pyramidal_score,expanded_disability_status_scale,,radio,"Pyramidal functions (weakness)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score,expanded_disability_status_scale,,radio,"Cerebellar functions (ataxia, loss of coordination)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score_x,expanded_disability_status_scale,,checkbox,"Pyramidal weakness (BMRC grade 3 or worse in limb strength) or sensory deficits interfere with cerebellar testing","1, X",,,,,,,,RH,,,,
@@ -588,21 +572,21 @@ ambulation_aid_spec,expanded_disability_status_scale,,dropdown,"Walking aid","1,
 specify_walking_aid,expanded_disability_status_scale,,text,"Specify walking aid(s)",,,,,,,"[ambulation_aid]='1' and [ambulation_aid_spec]='9'",,,,,,
 ambulation_index,expanded_disability_status_scale,,radio,"Ambulation Index","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 | 11, 11 | 12, 12",,,,,,,,RH,,,,
 edds_score,expanded_disability_status_scale,,radio,"Overall score","0, 0 | 1, 1.0 | 2, 1.5 | 3, 2.0 | 4, 2.5 | 5, 3.0 | 6, 3.5 | 7, 4.0 | 8, 4.5 | 9, 5.0 | 10, 5.5 | 11, 6.0 | 12, 6.5 | 13, 7.0 | 14, 7.5 | 15, 8.0 | 16, 8.5 | 17, 9.0 | 18, 9.5 | 19, 10",,,,,,,,,,,,
-edss_ts,expanded_disability_status_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+edss_ts,expanded_disability_status_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 unsch_visit_date,unscheduled_visit,,text,"Date of visit:",,,date_dmy,,,,,,,,,,
 unsch_visit_type_cont,unscheduled_visit,,radio,"Type of contact:","0, Face to face | 1, Phone contact | 2, Other",,,,,,,,,,,,
 unsch_visit_type_cont_speci,unscheduled_visit,,text,"Specify other:",,,,,,,"[unsch_visit_type_cont] = '2'",,,,,,
 unsch_visit_reason,unscheduled_visit,,radio,Reason:,"0, MS relapse | 1, Technological Issue | 2, Adverse Event | 3, Depressive symptomatology",,,,,,,,,,,,
 unsch_visit_message1,unscheduled_visit,,descriptive,"Please fill ''Technological Issues'' instrument",,,,,,,"[unsch_visit_reason] = '1'",,,,,,
 unsch_visit_meassage2,unscheduled_visit,,descriptive,"Please fill ''Adverse event'' instrument",,,,,,,"[unsch_visit_reason] = '2'",,,,,,
-unscheduled_visit_ts,unscheduled_visit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+unscheduled_visit_ts,unscheduled_visit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 contact_date,contact_log,"Extra Contact",text,"Contact Date",,,datetime_ymd,,,,,y,,,,,"Add Date and Time of Contact"
 comms_method,contact_log,,dropdown,"Communication Method","1, Phone | 2, Text | 3, Email | 4, In-Person | 5, Other",,,,,,,y,,,,,
 initiated_by,contact_log,,dropdown,"Initiated By","0, Participant | 1, Study Team | 2, Other",,,,,,,y,,,,,"Who imitated this contact?"
 team_member,contact_log,,text,"Team Member",,,,,,,"[enrolment_arm_1][initiated_by] <> 0",y,,,,,
 subject,contact_log,,text,Subject,,,,,,,,,,,,,
 contact_notes,contact_log,,notes,"Contact Notes",,,,,,,,,,,,,"Add Any extra details about the contact here"
-contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 fitbit_email,study_devices,FitBit,text,"FitBit email di registrazione",,,,,,,,,,,,,
 fitbit_password,study_devices,,text,"FitBit email Password",,,,,,,,,,,,,
 fitbit_firstname,study_devices,,text,"FitBit email nome",,,,,,,,,,,,,
@@ -625,10 +609,10 @@ thincit_installed,study_devices,,radio,"Installazione THINC-it app","1, Si | 0, 
 mindstrong_installed,study_devices,,radio,"Installazione Discovery by Mindstrong","1, Si | 0, No",,,,,,,,,,,,
 apps_notes,study_devices,,notes,"Note sulle App installate",,,,,,,,,,,,,
 tech_literacy_notes,study_devices,,notes,"Conoscenza tecnologica",,,,,,,,,,,,,
-study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 feedback_date,participant_feedback,,text,"Data feedback",,,date_dmy,,,,,,,,,,
 feedback_title,participant_feedback,,text,"Tema feedback",,,,,,,,,,,,,
 feedback_collected,participant_feedback,,dropdown,"Quando è stato registrato il feedback?","1, visita basale | 2, chiamata telefonica 3 giorni | 3, chiamata telefonica 1 settimana | 4, chiamata telefonica 1 mese | 5, chiamata telefonica 3 mesi | 6, chiamata telefonica 6 mesi | 7, chiamata telefonica 9 mesi | 8, chiamata telefonica 12 mesi | 9, chiamata telefonica 15 mesi | 10, chimata del partecipante | 11, durante l'intervista",,,,,,,,,,,,
 type_of_feedback,participant_feedback,,dropdown,"Tipo di feedback","1, Testo | 2, Email | 3, Verbale",,,,,,,,,,,,
 feedback_subject,participant_feedback,,notes,Feedback,,,,,,,,,,,,,
-participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"

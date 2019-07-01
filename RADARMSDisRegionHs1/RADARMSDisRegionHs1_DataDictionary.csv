@@ -6,7 +6,7 @@ human_readable_id,radar_integration,,text,"Human Readable ID",,"Human Readable F
 name,contact_info,,text,Patientnummer,,"Skal overenstemmes med omsætnings-excelarket",,,,y,,y,,,,,Navn
 email,contact_info,,text,"Email Adresse",,"Email til at distribuere spørgeskema invitation til deltageren.",email,,,y,,y,,,,,
 hospital_num,contact_info,,text,Hospitalsnummer,,,,,,,,,,,,,
-contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 yob,socio_demographics,"Deltager-ID: [subject_id]",dropdown,"Hvad er dit fødselsår?","0, 1999 | 1, 1998 | 2, 1997 | 3, 1996 | 4, 1995 | 5, 1994 | 6, 1993 | 7, 1992 | 8, 1991 | 9, 1990 | 10, 1989 | 11, 1988 | 12, 1987 | 13, 1986 | 14, 1985 | 15, 1984 | 16, 1983 | 17, 1982 | 18, 1981 | 19, 1980 | 20, 1979 | 21, 1978 | 22, 1977 | 23, 1976 | 24, 1975 | 25, 1974 | 26, 1973 | 27, 1972 | 28, 1971 | 29, 1970 | 30, 1969 | 31, 1968 | 32, 1967 | 33, 1966 | 34, 1965 | 35, 1964 | 36, 1963 | 37, 1962 | 38, 1961 | 39, 1960 | 40, 1959 | 41, 1958 | 42, 1957 | 43, 1956 | 44, 1955 | 45, 1954 | 46, 1953 | 47, 1952 | 48, 1951 | 49, 1950 | 50, 1949 | 51, 1948 | 52, 1947 | 53, 1946 | 54, 1945 | 55, 1944 | 56, 1943 | 57, 1942 | 58, 1941 | 59, 1940 | 60, 1939 | 61, 1938 | 62, 1937",,autocomplete,,,,,y,,,,,
 age,socio_demographics,,text,"Hvad var din alder ved studie start?",,,integer,18,,,,y,,,,,
 gender,socio_demographics,,radio,"Er du:","0, Mand | 1, Kvinde | 2, Andet",,,,,,,y,,,,,
@@ -28,28 +28,25 @@ income_contribution,socio_demographics,,text,"Hvor mange personer bidrager til d
 accommodation,socio_demographics,Boligforhold,radio,"På hvilken af disse måder besidder du din bolig?","0, Ejet og udbetalt | 1, Købt med realkreditlån eller andet lån | 2, Andelsbolig | 3, Almennyttig lejebolig | 4, Lejet fra den frivillige sektor(anvendes ikke i Danmark) | 5, Lejet fra privat udlejer | 6, Bor gratis (inklusiv gratis husleje i pårørende/venners bolig) | 7, Uretmæssig brug(fx besættelse)",,,,,,,y,,,,,
 accommodation_satisfaction,socio_demographics,,radio,"Hvor tilfreds er du med din boligsituation?","0,Meget utilfreds|1,Lettere utilfreds|2,Hverken tilfreds eller utilfreds|3,Rimelig tilfreds|4,Meget tilfreds",,,,,,,y,,,,,
 utilities,socio_demographics,,checkbox,"Har der været tidspunkter i løbet af det seneste år hvor du har været alvorligt bagud med betalingerne inden for nogen af disse emner;","0,Husleje|1,Gas|2,Electricitet|3,Vand|4,Vare på afbetaling|5,Realkreditlån|6,Ejendomsskat|7,Kreditkort betalinger|8,Telefon|9,Andre lån|10,Ingen af disse",,,,,,,y,,,,,
-socio_demographics_ts,socio_demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 study,study,,radio,Studie,"1, MDD | 2, Epilepsi | 3, MS (Depression) | 4, MS (Disability) | 5, Test",,,,,,,y,,,,,
 enrolment_date,study,,text,"Dato for studie start",,"Dato DD-MM-YY for indskrivning til studie(Dette felt bruges til at udregne kalender for besøg)",date_dmy,,,,,y,,,,,
 enable_survey_invite,study,,yesno,"Send automatisk spørgeskema invitation?",,"Angiv ""Nej"" til dette hvis deltageren ikke skal modtage spørgeskema invitationer via e-mail/SMS",,,,,,y,,,,,
 visit,study,,text,Besøg,,,integer,,,,,,,,,,
 month,study,,text,"Måned i studiet",,,integer,,,,,,,,,,
-study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 contacts_weekly,social_environment,,checkbox,"I løbet af en gennemsnitlig uge, hvor mange af de følgende personer kommer du i kontakt med? Med kontakt menes samtale enten i telefon eller i egen person","0,Bror/Søster|1,Svigerforældre|2,Andre pårørende|3,Tætte venner|4,Naboer|5,Kollegaer|6,Chef/Tilsynsførende|7,Andre bekendtskaber|8,Professionelle hjælpere|9,Medlemmer af samme forening/klub",,,,,,,y,,,,,
 contacts_help,social_environment,,radio,"Hvis du kom i problemer eller havde brug for hjælp, er der nogen du ville kunne kontakte, som kunne hjælpe dig?","0, Nej |1, Ja",,,,,,,y,,,,,
-social_environment_ts,social_environment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 mh_psycond_clincond,medical_history,,radio,"1. Har du nogensinde haft en psykiatrisk lidelse eller har du indenfor de seneste 2 år haft en enten psykisk eller fysisk lidelse?","0, Nej |1, Ja",,,,,,,y,,,,,
 mh_diagnosis,medical_history,,text,Diagnose:,,,,,,,"[mh_psycond_clincond] = '1'",y,,,,,
 mh_date_onset,medical_history,,text,"Dato for diagnose:",,,date_dmy,,,,"[mh_psycond_clincond] = '1'",y,,,,,
 mh_end_date,medical_history,,text,"Slut dato:",,,date_dmy,,,,"[mh_psycond_clincond] = '1'",y,,,,,
-mh_ts,medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ms_mh_first_sympt,ms_medical_history,,text,"1. Dato for første MS symptomer:",,,date_dmy,,,,,y,,,,,
 ms_mh_diagnos_date,ms_medical_history,,text,"2. Dato for MS diagnose(hvis relevant)",,,date_dmy,,,,,y,,,,,
 ms_mh_phenotype,ms_medical_history,,radio,"3.MS fænotype:","0, RRMS | 1, SPMS",,,,,,,y,,,,,
 ms_mh_date_onset_progress,ms_medical_history,,text,"Date of Onset of Progression",,,date_dmy,,,,"[ms_mh_phenotype] = '1'",y,,,,,
 ms_mh_date_most_recent_ms_relapse,ms_medical_history,,text,"4.Dato for seneste MS relaps",,,date_dmy,,,,,y,,,,,
 ms_mh_date_last_steroids,ms_medical_history,,text,"Date of last course of steroids",,,date_dmy,,,,,y,,,,,
-ms_mh_ts,ms_medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ms_mh_ts,ms_medical_history,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 own_smartphone,technology_usage,,radio,"1.Ejer du en smartphone i øjeblikket?","0, Nej|1, Ja",,,,,,,y,,,,,
 smartphone_type,technology_usage,,radio,"2.Hvis ja, hvilken slags smartphone ejer du?","0,Android|1,iPhone",,,,,,"[own_smartphone]=""1""",y,,,,,
 android_model,technology_usage,,text,"2a. Ved Android smartphone, uddyb venligst mærke/model",,,,,,,"[smartphone_type]=""0""",y,,,,,
@@ -66,7 +63,6 @@ fitness_tracker_stopped,technology_usage,,text,"12. Hvis nej, hvorfor stoppede d
 fitness_tracker_st_time,technology_usage,,text,"13. Hvor lang tid siden stoppede du med at bruge din aktivitetsmåler?",,,,,,,"[fitness_tracker_used]=""1"" and [fitness_tracker_using]=""0""",y,,,,,
 wearable_at_job,technology_usage,,radio,"14. Har du et job som ville forhindre dig i at bruge en aktivitetsmåler, der skal bæres på håndleddet i din arbejdstid?","0, Nej|1, Ja",,,,,,,y,,,,,
 mobile_phone_at_job,technology_usage,,radio,"15. Har du et job som forhindrer dig i at bruge en mobiltelefon i lange perioder af dagen?","0, Nej|1, Ja",,,,,,,y,,,,,
-technology_usage_ts,technology_usage,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 pssuq_1,pssuq,,radio,"1. Jeg er overordnet set tilfreds med, hvor let det er at bruge systemet.","1, 1 Meget enig | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Meget uenig",,,,,,,y,,,,,
 pssuq_1_c,pssuq,,text,Kommentarer:,,,,,,,,y,,,,,
 pssuq_2,pssuq,,radio,"2. Det var simpelt at bruge systemet.","1, 1 Meget enig | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Meget uenig",,,,,,,y,,,,,
@@ -105,7 +101,6 @@ pssuq_18,pssuq,,radio,"18. Systemet har alle de funktioner, som jeg forventer.",
 pssuq_18_c,pssuq,,text,Kommentarer:,,,,,,,,y,,,,,
 pssuq_19,pssuq,,radio,"19. Jeg er overordnet set tilfreds med systemet.","1, 1 Meget enig | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Meget uenig",,,,,,,y,,,,,
 pssuq_19_c,pssuq,,text,Kommentarer:,,,,,,,,y,,,,,
-pssuq_ts,pssuq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 tam_usefulness_1,technology_assessment_measurement_fast_form,"Opfattet Brugbarhed.",radio,"Overordnet set føler jeg at RADAR-CNS systemet er:","0, 0 Effektivt | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Ineffektivt",,,,,,,y,,,,,
 tam_usefulness_2,technology_assessment_measurement_fast_form,,radio,"Overordnet set føler jeg at RADAR-CNS systemet er:","0, 0 Præstationsfremmende | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Præstationshæmmende",,,,,,,y,,,,,
 tam_usefulness_3,technology_assessment_measurement_fast_form,,radio,"Overordnet set føler jeg at RADAR-CNS systemet:","0, 0 Fremmer produktivitet | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7  Hæmmer produktivitet",,,,,,,y,,,,,
@@ -122,7 +117,6 @@ tam_usage_1,technology_assessment_measurement_fast_form,"Anslået brug. Svar ven
 tam_usage_2,technology_assessment_measurement_fast_form,,radio,"2. Hvis jeg havde brug for at overvåge mit helbred, og hvis jeg selv skulle vælge,  ville jeg forvente at bruge RADAR-CNS","0, Enig | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Uenig",,,,,,,y,,,tam_usage,,
 tam_usage_3,technology_assessment_measurement_fast_form,,radio,"3. Hvis jeg blev spurgt ville jeg sandsynligvis anbefale RADAR-CNS som en platform til helbredsovervågning","0, Enig | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Uenig",,,,,,,y,,,tam_usage,,
 tam_usage_4,technology_assessment_measurement_fast_form,,radio,"4. Ved fremtidig helbredsovervågning som jeg selv kontrollerer, ville jeg sandsynligvis benytte RADAR-CNS som platform","0, Enig | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, Uenig",,,,,,,y,,,tam_usage,,
-tam_ts,technology_assessment_measurement_fast_form,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 fss_1,fatigue_severity_scale,"I løbet af den seneste uge har jeg oplevet at:",radio,"1. Min motivation er lavere, når jeg er udmattet","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
 fss_2,fatigue_severity_scale,,radio,"2. Motion fremkalder kvalme hos mig","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
 fss_3,fatigue_severity_scale,,radio,"3. Jeg bliver nemt udmattet","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
@@ -132,7 +126,6 @@ fss_6,fatigue_severity_scale,,radio,"6. Min træthed hindrer mig i at udføre l�
 fss_7,fatigue_severity_scale,,radio,"7. Min træthed hindrer mig i at udføre visse opgaver og gøremål","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
 fss_8,fatigue_severity_scale,,radio,"8. Træthed er et af mine tre mest begrænsende symptomer","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
 fss_9,fatigue_severity_scale,,radio,"9. Min træthed lægger hindringer i vejen for mit arbejde, familieliv eller sociale liv","1,1 Passer slet ikke | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 Passer fuldstændigt",,,,,,,,,,,,
-fss_ts,fatigue_severity_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 ids_1,ids_sr,"Indikér venligst den svarmulighed for hvert emne, der bedst beskriver dig i de sidste syv dage.",radio,"1. Besvær med at falde i søvn","0, Det tager mig aldrig længere end 30 minutter at falde i søvn | 1,Op til 3 aftner om ugen tager det mig mere end 30 minutter at falde i søvn | 2, De fleste aftner tager det mig mere end 30 minutter at falde i søvn | 3,De fleste aftner tager det mig mere end 60 minutter at falde i søvn",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Besvær med at sove om natten","0, Jeg vågner ikke i løbet af natten | 1, Jeg har en urolig, let søvn med kortvarig opvågnen nogle få gange hver nat | 2,Jeg vågner mindst en gang hver nat, men falder let i søvn igen | 3, De fleste nætter vågner jeg mere end en gang om natten og ligger vågen i 20 minutter eller længere.",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Tendens til at vågne for tidligt","0, For det meste vågner jeg højst 30 minutter før jeg skal op | 1, Mere end halvdelen af nætterne vågner jeg mere end 30 minutter før jeg skal op. | 2, Jeg vågner næsten altid mere end en times tid før jeg skal op, men jeg falder til sidst i søvn igen. | 3, Jeg vågner mindst én time før jeg skal op og kan ikke falde i søvn igen.",,,,,,,y,,,,,
@@ -165,7 +158,6 @@ ids_27,ids_sr,,radio,"29. Symptomer forbundet med panik/fobier","0, Jeg får ikk
 ids_28,ids_sr,,radio,"30. Forstoppelse/diarré","0, Der er ingen ændring i mine sædvanlige afføringsvaner | 1, Jeg har ind imellem forstoppelse eller diarré, men kun i let grad | 2, Jeg har diarré eller forstoppelse det meste af tiden, men det har ingen indvirkning på min funktionsevne i det daglige | 3, Jeg har forstoppelse eller diarré, som jeg tager medicin for eller som går ud over mine daglige aktiviteter",,,,,,,y,,,,,
 ids_29,ids_sr,,radio,"31. Overfølsomhed i omgang med andre mennesker","0, Jeg har slet ikke været tilbøjelig til at føle mig afvist, forbigået, kritiseret eller såret af andre | 1, Jeg har af og til følt mig afvist, forbigået, kritiseret eller såret af andre | 2, Jeg har ofte følt mig afvist, forbigået, kritiseret eller såret af andre, men sådanne følelser har haft meget lidt indflydelse på mit forhold til andre mennesker eller på mit arbejde | 3, Jeg har ofte følt mig afvist, forbigået, kritiseret eller såret af andre, og disse følelser har forstyrret mit forhold til andre mennesker og til mit arbejde",,,,,,,y,,,,,
 ids_30,ids_sr,,radio,"32. Kraftesløshed/blytunghed/fysisk energi","0, Jeg har ikke oplevet en fysisk fornemmelse af at være tynget ned og uden fysisk energi | 1, Jeg har en gang imellem haft perioder hvor jeg følte mig fysisk tynget ned og uden fysisk energi,men uden at dette havde en negativ indvirkning på arbejde, skolegang eller aktivitetsniveau | 2, Jeg føler mig fysisk tynget ned (uden fysisk energi) mere end halvdelen af tiden | 3, Jeg føler mig fysisk tynget ned (uden fysisk energi) det meste af tiden, adskillige timer dagligt, flere dage om ugen",,,,,,,y,,,,,
-ids_sr_ts,ids_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cidi_1,cidi_sf,"Disse spørgsmål omhandler perioder af tristhed eller depression som du kan have oplevet siden din sidste vurdering.",radio,"1. Har der været en periode hvor du har følt dig trist, tom eller deprimeret i to uger eller længere siden sidste vurdering?","0,Ja|1,Nej",,,,,,,y,,,,,
 cidi_2,cidi_sf,,radio,"2. Tænk på en periode på 2 uger siden din sidste vurdering hvor følelsen af tristhed, tomhed eller depression var værst. Hvor ofte havde du det på denne måde i løbet af disse to uger?","0,Næsten hver dag og hele dagen|1,Mindre ofte",,,,,,"[cidi_1]=""0""",y,,,,,
 cidi_3,cidi_sf,,radio,"3. Siden din seneste vurdering, har der så været en periode på to uger eller mere, hvor du mistede interessen for de fleste ting såsom hobbyer, arbejde eller andre aktiviteter, som normalt giver dig glæde?","0,Ja|1,Nej",,,,,,"[cidi_1] = '1' or [cidi_2]='1'",y,,,,,
@@ -199,7 +191,6 @@ cidi_28a,cidi_sf,,text,"Hvis du siden din seneste vurdering har modtaget behandl
 cidi_29,cidi_sf,,checkbox,"29. Har du modtaget nogen af følgende behandlinger? Du kan vælge mere end ét svar.","0,Antidepressiva|1,Psykoterapi (for eksempel kognitiv terapi, interpersonel terapi, eller andre konsultationer med en psykolog eller psykoterapeut)|2,Online hjælp eller sundhedshjælp over internettet|3,Løbeterapi eller fysisk aktivitets-terapi|4,Lysterapi|5,Indlæggelse på psykiatrisk afdeling|6,Elektrochockterapi (ECT)|7,Anden behandling|8,Ingen af disse",,,,,,"[cidi_28(0)] = '1' or [cidi_28(1)] = '1' or [cidi_28(2)] = '1' or [cidi_28(3)] = '1' or [cidi_28(4)] = '1' or [cidi_28(5)] = '1' or [cidi_28(6)] = '1' or [cidi_28(7)] = '1' or [cidi_28(8)] = '1' or [cidi_28(9)] = '1' or [cidi_28(10)] = '1' or [cidi_28(11)] = '1' or [cidi_28(12)] = '1' or [cidi_28(13)] = '1' or [cidi_27(13)] = '1'",y,,,,,
 cidi_29a,cidi_sf,,text,"Hvis du siden din seneste vurdering har fået anden behandling, angiv da venligst.",,,,,,,"[cidi_29(7)]=""1""",y,,,,,
 cidi_30,cidi_sf,,text,"30. Hvad er din vægt i kg? (Afrund venligst svaret til nærmeste hele tal.)",,kg,integer,,,,"[cidi_29(0)] = '1' or [cidi_29(1)] = '1' or [cidi_29(2)] = '1' or [cidi_29(3)] = '1' or [cidi_29(4)] = '1' or [cidi_29(5)] = '1' or [cidi_29(6)] = '1' or [cidi_29(7)] = '1' or [cidi_29(8)] = '1'",y,,,,,
-cidi_sf_ts,cidi_sf,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 gad7_1,gad7,"Hvor ofte i de sidste 14 dage har du været generet af følgende problemer",radio,"1. Følt dig nervøs, ængstelig eller anspændt","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
 gad7_2,gad7,,radio,"2. Ikke kunnet holde op med at bekymre dig eller ikke kunnet styre din bekymring","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
 gad7_3,gad7,,radio,"3. Bekymret dig for meget om alt muligt","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
@@ -207,14 +198,12 @@ gad7_4,gad7,,radio,"4. Haft svært ved at slappe af","0,Slet ikke|1,Flere dage|2
 gad7_5,gad7,,radio,"5. Været så rastløs, at du har haft svært ved at sidde stille","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
 gad7_6,gad7,,radio,"6. Haft let ved at blive sur eller irritabel","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
 gad7_7,gad7,,radio,"7. Været bange, som om noget frygteligt kunne ske","0,Slet ikke|1,Flere dage|2,Mere end halvdelen af dagene|3,Næsten hver dag",,,,,,,y,,,gad7,,
-gad7_ts,gad7,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 wsas_0,wsas,,radio,"Er du pensioneret eller vælger du ikke at have et arbejde af grunde som ikke er relateret til din MS(Multipel Sclerose)?","0, Ja | 1, Nej",,,,,,,y,,,,,
 wsas_1,wsas,,radio,"1. Som følge af min MS er min evne til at arbejde forringet","0, 0 Slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 Meget alvorligt, kan ikke arbejde",,,,,,,y,,,,,
 wsas_2,wsas,,radio,"2. Som følge af min MS er min evne til at udføre praktisk husarbejde (gøre rent, rydde op, købe ind, lave mad, passe børn, betale regninger) forringet","0, 0 Slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 Meget alvorligt",,,,,,,y,,,,,
 wsas_3,wsas,,radio,"3. Som følge af min MS er min evne til at dyrke fritidsaktiviteter sammen med andre(for eksempel fester, bar-besøg, natklubber, tage på udflugter, besøg, stævnemøder, underholde gæster) forringet.","0, 0 Slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 Meget alvorligt",,,,,,,y,,,,,
 wsas_4,wsas,,radio,"4. Som følge af min MS er min evne til at gennemføre individuelle fritidsaktiviteter alene (for eksempel læse en bog, ordne have, sy, gå en tur, hobbyaktiviteter) forringet","0, 0 Slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 Meget alvorligt",,,,,,,y,,,,,
 wsas_5,wsas,,radio,"5. Som følge af min MS er min evne til at skabe og opretholde tætte relationer til familien, herunder dem jeg lever/bor sammen med, forringet","0, 0 Slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 Meget alvorligt",,,,,,,y,,,,,
-wsas_ts,wsas,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sf36_1,sf_36,,radio,"1. Hvordan synes du overordnet set at dit helbred er?","1, Fremragende | 2, Vældig godt | 3, Godt | 4, Mindre godt | 5, Dårligt",,,,,,,y,,,,,
 sf36_2,sf_36,,radio,"2. Sammenlignet med for ét år siden, hvordan er dit helbred overordnet set nu?","1, Meget bedre nu end for ét år siden | 2, Noget bedre nu end for ét år siden | 3, Nogenlunde det samme | 4, Noget dårligere nu end for et år siden | 5, Meget dårligere nu end for et år siden",,,,,,,y,,,,,
 sf36_3a,sf_36,"3. De følgende spørgsmål handler om aktiviteter i dagligdagen. Er du på grund af dit helbred begrænset i disse aktiviteter? I så fald hvor meget?",radio,"a. Krævende aktiviteter, som fx at løbe, løfte tunge ting, deltage ianstrengende sport","1, Ja, meget begrænset | 2, Ja, lidt begrænset | 3, No, Nej, slet ikke begrænset",,,,,,,y,,,sf36_3,,
@@ -251,7 +240,6 @@ sf36_11a,sf_36,"11. Hvor RIGTIGE eller FORKERTE er de følgende udsagn for dit v
 sf36_11b,sf_36,,radio,"b. Jeg er lige så rask som enhver anden, jeg kender","1,Helt rigtigt|2,Overvejende rigtigt|3,Ved ikke|4,Overvejende forkert|5,Helt forkert",,,,,,,y,,,sf36_11,,
 sf36_11c,sf_36,,radio,"c. Jeg forventer, at mit helbred bliver dårligere","1,Helt rigtigt|2,Overvejende rigtigt|3,Ved ikke|4,Overvejende forkert|5,Helt forkert",,,,,,,y,,,sf36_11,,
 sf36_11d,sf_36,,radio,"d. Mit helbred er fremragende","1,Helt rigtigt|2,Overvejende rigtigt|3,Ved ikke|4,Overvejende forkert|5,Helt forkert",,,,,,,y,,,sf36_11,,
-sf_36_ts,sf_36,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 bipq_1,bipq,"Ved hvert spørgsmål bedes du venligst markere det tal, som stemmer bedst overens med din oplevelse:",radio,"1. Hvor meget påvirker din MS(Multipel Sclerose) dit liv?","0, 0 Slet ingen påvirkning | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10  Alvorlig påvirkning",,,,,,,y,,,,,
 bipq_2,bipq,,radio,"2. Hvor lang tid tror du, at du vil være syg med MS? ","0, 0 Meget kort tid | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Altid",,,,,,,y,,,,,
 bipq_3,bipq,,radio,"3. Føler du, at du har kontrol over din MS?","0, 0 Ingen kontrol overhovedet | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Meget stor kontrol",,,,,,,y,,,,,
@@ -260,7 +248,6 @@ bipq_5,bipq,,radio,"5. I hvor høj grad oplever du symptomer pga. din MS?","0, 0
 bipq_6,bipq,,radio,"6. Er du bekymret over din MS?","0, 0 Slet ikke bekymret | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Meget bekymret",,,,,,,y,,,,,
 bipq_7,bipq,,radio,"7. Føler du, at du forstår din MS?","0, 0 Forstår den slet ikke | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Forstår den meget klart",,,,,,,y,,,,,
 bipq_8,bipq,,radio,"8. Påvirker din MS dig følelsesmæssigt? (Dvs. gør den dig vred, bange, urolig ellerdeprimeret?) ","0, 0 Slet ingen påvirkning | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Meget stor påvirkning",,,,,,,y,,,,,
-bipq_ts,bipq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 csri_1_1a,csri,"1. Har du i løbet af de sidste 3 måneder benyttet dig af en:",radio,"Almen praktiserende læge","0,Nej|1,Ja","Angiv kun en-til-en kontakter her.",,,,,,y,,,csri_1_1,,
 csri_1_1b,csri,,radio,Neurolog,"0,Nej|1,Ja","Angiv kun en-til-en kontakter her.",,,,,,y,,,csri_1_1,,
 csri_1_1c,csri,,radio,Psykiater,"0,Nej|1,Ja","Angiv kun en-til-en kontakter her.",,,,,,y,,,csri_1_1,,
@@ -402,7 +389,6 @@ csri_7,csri,"7. Nuværende arbejdsforhold",radio,"Hvad er din nuværende tilknyt
 csri_7a,csri,,text,"Hvis din tilknytning til arbejdsmarkedet er ""Andet"", angiv venligst hvilken",,,,,,,"[csri_7]=""12""",y,,,,,
 csri_8,csri,"Hvor mange dage(hvis nogen) har du været sygemeldt i løbet af de sidste 3 måneder grundet",text,"8. Fysiske helbredsproblemer?",,,integer,,,,,y,,,,,
 csri_9,csri,,text,"9. Mentale helbredsproblemer?",,,integer,,,,,y,,,,,
-csri_ts,csri,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 lte_1,lte_sr,"Har nogen af følgende begivenheder fundet sted, siden din sidste vurdering?",radio,"Du er personligt blevet ramt af alvorlig sygdom, skade eller et overfald.","0, Nej | 1, Ja",,,,,,,y,,,lte,,
 lte_2,lte_sr,,radio,"En tæt pårørende er blevet ramt af en alvorlig sygdom, skade eller overfald","0, Nej | 1, Ja",,,,,,,y,,,lte,,
 lte_3,lte_sr,,radio,"Din(e) forældre, dit barn eller din partner er død","0, Nej | 1, Ja",,,,,,,y,,,lte,,
@@ -416,7 +402,6 @@ lte_10,lte_sr,,radio,"Du har haft en alvorlig finansiel krise.","0, Nej | 1, Ja"
 lte_11,lte_sr,,radio,"Du har haft problemer med politiet og været stillet for en domstol.","0, Nej | 1, Ja",,,,,,,y,,,lte,,
 lte_12a,lte_sr,,radio,"Noget du værdsatte er blevet væk eller stjålet: mindst én af sådanne hændelser i de sidste 3 måneder","0, Nej | 1, Ja",,,,,,,y,,,lte,,
 lte_12b,lte_sr,,radio,"Noget du værdsatte er blevet væk eller stjålet: mindst én af sådanne hændelser i de sidste 6 måneder","0, Nej | 1, Ja",,,,,,,y,,,lte,,
-lte_sr_ts,lte_sr,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 cl_info_conc_medications,clinical_information_baseline,"Concomitant medication",radio,"Are you currently taking any concomitant medication other than for MS?","0, No | 1, Yes",,,,,,,,,,,,
 cl_info_conc_med_medic,clinical_information_baseline,,text,Medication:,,,,,,,"[cl_info_conc_medications] = '1'",,,,,,
 cl_info_conc_med_dose,clinical_information_baseline,,text,Dose:,,,,,,,"[cl_info_conc_medications] = '1'",,,,,,
@@ -445,7 +430,7 @@ cl_info_sympt_therapy_reason,clinical_information_baseline,,text,Reason:,,,,,,,"
 cl_info_sympt_therapy_indication,clinical_information_baseline,,text,Indication:,,,,,,,"[cl_info_sympt_therapy] = '1'",,,,,,
 cl_info_sympt_therapy_star_dat,clinical_information_baseline,,text,"Start Date:",,,date_dmy,,,,"[cl_info_sympt_therapy] = '1'",,,,,,
 cl_info_sympt_therapy_end_date,clinical_information_baseline,,text,"End date:",,,date_dmy,,,,"[cl_info_sympt_therapy] = '1'",,,,,,
-cl_info_bl_ts,clinical_information_baseline,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+cl_info_bl_ts,clinical_information_baseline,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 cl_info_conc_medications_fu,clinical_information_follow_up,"Concomitant medication",radio,"Did you change any concomitant medication since your last visit?","0, No | 1, Yes",,,,,,,,,,,,
 cl_info_conc_med_medic_fu,clinical_information_follow_up,,text,Medication:,,,,,,,"[cl_info_conc_medications_fu] = '1'",,,,,,
 cl_info_conc_med_dose_fu,clinical_information_follow_up,,text,Dose:,,,,,,,"[cl_info_conc_medications_fu] = '1'",,,,,,
@@ -474,20 +459,20 @@ cl_info_sympt_therapy_reason_fu,clinical_information_follow_up,,text,Reason:,,,,
 cl_info_sympt_therapy_indication_fu,clinical_information_follow_up,,text,Indication:,,,,,,,"[cl_info_sympt_therapy_fu] = '1'",,,,,,
 cl_info_sympt_therapy_star_dat_fu,clinical_information_follow_up,,text,"Start Date:",,,date_dmy,,,,"[cl_info_sympt_therapy_fu] = '1'",,,,,,
 cl_info_sympt_therapy_end_date_fu,clinical_information_follow_up,,text,"End date:",,,date_dmy,,,,"[cl_info_sympt_therapy_fu] = '1'",,,,,,
-cl_info_fu_ts,clinical_information_follow_up,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+cl_info_fu_ts,clinical_information_follow_up,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ch_ms_tr_med_adh,changes_in_ms_treatment_and_medication_adherence,,radio,"Tager du i øjeblikket medicin for din MS(Multipel Sclerose)?:","0, Nej | 1, Ja",,,,,,,,,,,,
 ch_ms_tr_med_adh_percentage,changes_in_ms_treatment_and_medication_adherence,,slider,"Folk undlader ofte at indtage sin medicin af adskillige grunde. I løbet af de seneste (3) måned(er), hvor stor en procentdel af tiden har du taget din medicin som ordineret?","1 | 100",,number,,,,"[ch_ms_tr_med_adh] = '1'",,RH,,,,
 ch_ms_tr_med_adh_dmt_change,changes_in_ms_treatment_and_medication_adherence,,radio,"Er din medicin for MS ændret siden sidste besøg?","0, Nej | 1, Ja",,,,,,,,,,,,
 ch_ms_tr_med_adh_reason_chang,changes_in_ms_treatment_and_medication_adherence,,radio,"Hvad var grunden til ændringen:","0, Ineffektiv behandling | 1, Bivirkninger | 2, Patientens beslutning | 3, Anden",,,,,,"[ch_ms_tr_med_adh_dmt_change] = '1'",,,,,,
 ch_ms_tr_med_adh_specify,changes_in_ms_treatment_and_medication_adherence,,text,"Specificér venligst:",,,,,,,"[ch_ms_tr_med_adh_reason_chang] = '3'",,,,,,
-ch_ms_tr_med_ts,changes_in_ms_treatment_and_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ch_ms_tr_med_ts,changes_in_ms_treatment_and_medication_adherence,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ms_sympt_relap_ass,ms_symptomatology_relapse_assessment,,radio,"1. Har du oplevet nogen attaker siden sidste besøg (som blev diagnosticeret af en neurolog)?","0, Nej | 1, Ja",,,,,,,,,,,,
 ms_sympt_relap_ass_dat_onset,ms_symptomatology_relapse_assessment,,text,"Dato for symptomdebut",,,date_dmy,,,,"[ms_sympt_relap_ass] = '1'",,,,,,
 ms_sympt_relap_ass_neu_func_aff,ms_symptomatology_relapse_assessment,,radio,"Påvirkede neurologiske funktioner:","0, Synet/Visuelle system | 1, Motoriske/Pyramidale system | 2, Koordination/Cerebellare system | 3, Følesans/Sensoriske system | 4, Anden",,,,,,"[ms_sympt_relap_ass] = '1'",,,,,,
 ms_sympt_relap_ass_specify,ms_symptomatology_relapse_assessment,,text,"Specificér venligst:",,,,,,,"[ms_sympt_relap_ass_neu_func_aff] = '4'",,,,,,
 ms_sympt_relap_ass_steroids,ms_symptomatology_relapse_assessment,,radio,"2. Har du modtaget nogen steroid-behandling siden dit sidste besøg?","0, Nej | 1, Ja",,,,,,,,,,,,
 ms_sympt_relap_ass_specify2,ms_symptomatology_relapse_assessment,,descriptive,"**********Hvis Ja: udfyld venligst ""anden medicin"" under ""clinical information skema""**********",,,,,,,"[ms_sympt_relap_ass_steroids] = '1'",,,,,,
-ms_sympt_relap_ts,ms_symptomatology_relapse_assessment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+ms_sympt_relap_ts,ms_symptomatology_relapse_assessment,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 adv_event_experienced,adverse_event,,radio,"1. Har du oplevet nogen bivirkninger/""uønskede hændelser"" siden sidste besøg?","0, Nej | 1, Ja",,,,,,,,,,,,
 adv_event_diagnosis,adverse_event,,text,Bivirknings-Type:,,,,,,,"[adv_event_experienced] = '1'",,,,,,
 adv_event_severity,adverse_event,,radio,Sværhedsgrad:,"0, Mild | 1, Mellem | 2, Svær",,,,,,"[adv_event_experienced] = '1'",,,,,,
@@ -500,7 +485,7 @@ adv_event_fill2,adverse_event,,descriptive,"**********Udfyld venligst ""andre pr
 adv_event_serious_event,adverse_event,,radio,"Er det en alvorlig bivirkning/uønsket hændelse?","0, Nej | 1, Ja",,,,,,"[adv_event_experienced] = '1'",,,,,,
 adv_event_study_technology,adverse_event,,radio,"2. Har du oplevet nogen problemer relateret til brugen af studiets teknologier (app, devices, telefon, dataoverførsel)?","0, Nej | 1, Ja",,,,,,,,,,,,
 adv_event_problem_techn,adverse_event,,descriptive,"**********Hvis ja, udfyld venligst under ""Technological Issues""-skemaet i REDCap""**********",,,,,,,"[adv_event_study_technology] = '1'",,,,,,
-adv_event_ts,adverse_event,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+adv_event_ts,adverse_event,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 techn_issues_probl,technological_issues,,radio,"Har du oplevet nogen problemer relateret til brugen af studiets teknologier?","0, Nej | 1, Ja",,,,,,,,,,,,
 techn_issues_type_probl,technological_issues,,radio,"Type af problem:","0, Data upload | 1, Wi-Fi forbindelse | 2, Konfiguration af aktivitetsmåler | 3, Batteri opladning | 4, Andet",,,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_type_probl_specfy,technological_issues,,text,"Specificér venligst:",,,,,,,"[techn_issues_type_probl] = '4'",,,,,,
@@ -508,9 +493,8 @@ techn_issues_probl_st_date,technological_issues,,text,"Start dato:",,,date_dmy,,
 techn_issues_probl_end_date,technological_issues,,text,"Slut dato:",,,date_dmy,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_probl_act_taken,technological_issues,,radio,"Handling udført:","0, Gen-instruering | 1, Rekonfiguration af aktivitetsmåler | 2, Udskiftning af aktivitetsmåler| 3, Anden",,,,,,"[techn_issues_probl] = '1'",,,,,,
 techn_issues_probl_act_taken_specify,technological_issues,,text,"Specificér anden handling:",,,,,,,"[techn_issues_probl_act_taken] = '3'",,,,,,
-technological_issues_ts,technological_issues,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 sdm_score,symbol_digit_modality_test,,text,"Symbol Digit Modality test score (SDMT)",,,integer,,,,,,,,,,
-sdm_ts,symbol_digit_modality_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+sdm_ts,symbol_digit_modality_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 t_25_f_w_visit_date,time_25_foot_walk_msfc,,text,Besøgsdato,,,date_mdy,,,,,,,,,,
 t_25_f_w_afo,time_25_foot_walk_msfc,,radio,"Benyttede patienten en fodskinne?","0, Ja | 1, Nej",,,,,,,,,,,,
 t_25_f_w_deviceused,time_25_foot_walk_msfc,,radio,"Benyttede patienten et gangredskab?","0, Ja | 1, Nej",,,,,,,,,,,,
@@ -527,7 +511,7 @@ t_25_f_w_tr2_specify3,time_25_foot_walk_msfc,,text,"TEST 2-->Specificér Fysiske
 t_25_f_w_tr2_specify4,time_25_foot_walk_msfc,,text,"TEST 2-->Specificér Anden",,,,,,,"[t_25_f_w_nocompltrial2] = '1'",,,,,,
 t_25_f_w_twoattempts,time_25_foot_walk_msfc,,radio,"Tog det mere end to forsøg at opnå to fuldførte tests?","0, Ja | 1, Nej",,,,,,,,,,,,
 t_25_f_w_reason_twoattempt,time_25_foot_walk_msfc,,text,"Hvis ja, specificér venligst årsag(er) til mere end to forsøg",,,,,,,"[t_25_f_w_twoattempts] = '0'",,,,,,
-t_25_f_w_ts,time_25_foot_walk_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+t_25_f_w_ts,time_25_foot_walk_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 h_p_t_visit_date,hole_peg_test_msfc,,text,Besøgsdato,,,date_mdy,,,,,,,,,,
 h_p_t,hole_peg_test_msfc,,radio,"Dominant hånd (vælg en)","0, Højre | 1, Venstre",,,,,,,,,,,,
 h_p_t_dh_trial1_time,hole_peg_test_msfc,,text,"Dominant hånd (D-H) TEST 1 --> Tid (sekunder)",,,,,,,,,,,,,
@@ -554,7 +538,7 @@ h_p_t_specify7,hole_peg_test_msfc,,text,"Specificér fysiske begrænsninger",,,,
 h_p_t_specify8,hole_peg_test_msfc,,text,"Specificer anden",,,,,,,"[h_p_t_ndh_nocompl_trial2] = '1'",,,,,,
 h_p_t_ndh_twoattemp,hole_peg_test_msfc,,radio,"N-D-H. Tog det mere end to forsøg at få to fuldførte tests?","0, Ja | 1, Nej",,,,,,,,,,,,
 h_p_t_nhd_ifyes,hole_peg_test_msfc,,text,"Hvis ja, specificér venligst årsag(er) til mere end to forsøg",,,,,,,"[h_p_t_ndh_twoattemp] = '0'",,,,,,
-h_p_t_ts,hole_peg_test_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+h_p_t_ts,hole_peg_test_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 pasat,pasat_msfc,,radio,"Blev en PASAT test udført?","0, Nej | 1, Ja",,,,,,,,,,,,
 pasat_date,pasat_msfc,,text,"Dato for udførsel:",,,date_dmy,,,,"[pasat] = '1'",,,,,,
 pasat_formed_used,pasat_msfc,,radio,"Version benyttet(markér en)","0, Form A | 1, Form B",,,,,,,,,,,,
@@ -563,9 +547,9 @@ pasat_trial_completed,pasat_msfc,,text,"For en fuldført PASAT 3"", angiv alle o
 pasat_trial_no_completed_reasons,pasat_msfc,,radio,"Hvis PASAT 3"" ikke blev fuldført(marker én)","0, Ude af stand grundet fysiske begrænsninger | 1, Anden",,,,,,,,,,,,
 pasat_trial_no_completed_reason_spec1,pasat_msfc,,text,"Specificer fysiske begrænsninger",,,,,,,"[pasat_trial_no_completed_reasons] = '0'",,,,,,
 pasat_trial_no_completed_reason_spec2,pasat_msfc,,text,"Specificer anden",,,,,,,"[pasat_trial_no_completed_reasons] = '1'",,,,,,
-pasat_msfc_ts,pasat_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+pasat_msfc_ts,pasat_msfc,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 six_min_walk_test_score,mw6,,text,"Score i meter",,,,,,,,,,,,,
-mw6_ts,mw6,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+mw6_ts,mw6,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 pyramidal_score,expanded_disability_status_scale,,radio,"Pyramidal functions (weakness)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score,expanded_disability_status_scale,,radio,"Cerebellar functions (ataxia, loss of coordination)","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 cerebellar_score_x,expanded_disability_status_scale,,checkbox,"Pyramidal weakness (BMRC grade 3 or worse in limb strength) or sensory deficits interfere with cerebellar testing","1, X",,,,,,,,RH,,,,
@@ -582,7 +566,7 @@ ambulation_aid_spec,expanded_disability_status_scale,,dropdown,"Walking aid","1,
 specify_walking_aid,expanded_disability_status_scale,,text,"Specify walking aid(s)",,,,,,,"[ambulation_aid]='1' and [ambulation_aid_spec]='9'",,,,,,
 ambulation_index,expanded_disability_status_scale,,radio,"Ambulation Index","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 | 11, 11 | 12, 12",,,,,,,,RH,,,,
 edds_score,expanded_disability_status_scale,,radio,"Overall score","0, 0 | 1, 1.0 | 2, 1.5 | 3, 2.0 | 4, 2.5 | 5, 3.0 | 6, 3.5 | 7, 4.0 | 8, 4.5 | 9, 5.0 | 10, 5.5 | 11, 6.0 | 12, 6.5 | 13, 7.0 | 14, 7.5 | 15, 8.0 | 16, 8.5 | 17, 9.0 | 18, 9.5 | 19, 10",,,,,,,,,,,,
-edss_ts,expanded_disability_status_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+edss_ts,expanded_disability_status_scale,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 fitbit_email,study_devices,FitBit,text,"FitBit Email Registration",,,email,,,,,,,,,,
 fitbit_password,study_devices,,text,"FitBit email Password",,,,,,,,,,,,,
 fitbit_firstname,study_devices,,text,"FitBit email first name",,,,,,,,,,,,,
@@ -605,24 +589,24 @@ thincit_installed,study_devices,,yesno,"THINC-it app installed",,,,,,,,,,,,,
 mindstrong_installed,study_devices,,yesno,"Discovery by Mindstrong installed",,,,,,,,,,,,,
 apps_notes,study_devices,,notes,"Notes on apps installed",,,,,,,,,,,,,
 tech_literacy_notes,study_devices,,notes,"Tech literacy",,,,,,,,,,,,,
-study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 feedback_date,participant_feedback,,text,"Feedback date",,,date_dmy,,,,,,,,,,
 feedback_title,participant_feedback,,text,"Feedback subject",,,,,,,,,,,,,
 feedback_collected,participant_feedback,,dropdown,"When was the feedback collected?","1, at enrolment | 2, 3 day call | 3, 1 week call | 4, 1 month call | 5, 3 month call | 6, 6 month call | 7, 9 month call | 8, 1 year call | 9, 15 month call | 10, participant contact | 11, during interview",,,,,,,,,,,,
 type_of_feedback,participant_feedback,,dropdown,"Type of feedback","1, Text | 2, Email | 3, Verbal",,,,,,,,,,,,
 feedback_subject,participant_feedback,,notes,Feedback,,,,,,,,,,,,,
-participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 unsch_visit_date,unscheduled_visit,,text,"Dato for besøg:",,,date_dmy,,,,,,,,,,
 unsch_visit_type_cont,unscheduled_visit,,radio,"Type af kontakt:","0, Face to face | 1, Telefon | 2, Anden",,,,,,,,,,,,
 unsch_visit_type_cont_speci,unscheduled_visit,,text,"Specificér anden:",,,,,,,"[unsch_visit_type_cont] = '2'",,,,,,
 unsch_visit_reason,unscheduled_visit,,radio,Årsag:,"0, MS attak | 1, Teknologisk problem | 2, Uønsket hændelse/Bivirkning | 3, Depressive symptomer",,,,,,,,,,,,
 unsch_visit_message1,unscheduled_visit,,descriptive,"Udfyld venligst ""Technological issues"" skema:",,,,,,,"[unsch_visit_reason] = '1'",,,,,,
 unsch_visit_meassage2,unscheduled_visit,,descriptive,"Udfyld venligst ""Adverse event"" skema.",,,,,,,"[unsch_visit_reason] = '2'",,,,,,
-unscheduled_visit_ts,unscheduled_visit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+unscheduled_visit_ts,unscheduled_visit,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 contact_date,contact_log,"Extra Contact",text,"Contact Date",,,datetime_ymd,,,,,y,,,,,"Add Date and Time of Contact"
 comms_method,contact_log,,dropdown,"Communication Method","1, Phone | 2, Text | 3, Email | 4, In-Person | 5, Other",,,,,,,y,,,,,
 initiated_by,contact_log,,dropdown,"Initiated By","0, Participant | 1, Study Team | 2, Other",,,,,,,y,,,,,"Who imitated this contact?"
 team_member,contact_log,,text,"Team Member",,,,,,,"[enrolment_arm_1][initiated_by] <> 0",y,,,,,
 subject,contact_log,,text,Subject,,,,,,,,,,,,,
 contact_notes,contact_log,,notes,"Contact Notes",,,,,,,,,,,,,"Add Any extra details about the contact here"
-contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"

@@ -46,7 +46,7 @@ date_data_entry,study_information,,text,"Date of data entry",,,date_dmy,,,,,,,,,
 study_comments,study_information,,text,"Study Comments",,"comments on enrolment/data collection/procedure/etc...",,,,,,,,,,,
 seizure_recorded,study_information,,text,"Number of Seizure recorded",,,number,0,100,,,,,,,,
 seizure_presented,study_information,,text,"Number of Seizure presented",,,number,0,100,,,,,,,,
-study_information_ts,study_information,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+study_information_ts,study_information,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 rep_seizure_type,seizures,"Seizure Type Information",checkbox,"Seizure Type","1, Focal Electrographic | 2, Focal with motor features | 3, Focal with autonomic features | 4, Focal with dyscognitive features | 5, Focal with secondary generalisation | 6, Generalised Tonic-clonic | 7, Generalised Tonic | 8, Generalised Atonic | 9, Generalised Myoclonic | 10, Generalised Absence | 11, Generalised other | 12, Aura | 13, Epileptic Arousal | 14, Other | 15, Unknown","Branching Logic Exists",,,,,,,,,,,
 second_electrographic_start,seizures,"FS Electrographic",text,"Start Time FS Electrographic",,,datetime_seconds_ymd,,,,"[rep_seizure_type(1)] = '1'",,,,,,
 second_electrographic_end,seizures,,text,"End Time FS Electrographic",,,datetime_seconds_ymd,,,,"[rep_seizure_type(1)] = '1'",,,,,,
@@ -192,7 +192,7 @@ rep_seizure_empatica,seizures,"Seizure recorded by device...",yesno,"Recorded by
 rep_seizure_imec,seizures,,yesno,"Recorded by IMEC",,,,,,,,,RH,,,,
 rep_seizure_biovotion,seizures,,yesno,"Recorded by Biovotion",,,,,,,,,RH,,,,
 rep_seizure_other,seizures,,yesno,"Recorded by other device",,,,,,,,,RH,,,,
-seizures_ts,seizures,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+seizures_ts,seizures,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 age,demographics,,text,"Age at enrolment?",,,integer,18,,,,,,,,,
 gender,demographics,,radio,Gender,"0,Male|1,Female|2,Transgender|3,Other",,,,,,,,,,,,
 handedness,demographics,,dropdown,Handedness,"1, Right Handed | 2, Left Handed | 3, Both",,autocomplete,,,,,,,,,,
@@ -207,7 +207,7 @@ job,demographics,,radio,Job,"1, employed full time | 2, employed part-time | 3, 
 otherjob,demographics,,text,"Please describe the most recent employment",,,,,,,,,,,,,
 previously_exp,demographics,,yesno,"Do you have previous experience with smartwatches/wearable devices?",,,,,,,,,,,,,
 time_prev_exp,demographics,,text,"How long is this experience (months)?",,,number,1,120,,,,,,,,
-demographics_ts,demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+demographics_ts,demographics,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 age_onset,clinical_information,,text,"Age at seizure oneset (years)",,,number,0,100,,,,,,,,
 disease_duration,clinical_information,,text,"Disease duration (years)",,,number,0,100,,,,,,,,
 families_epilepsy,clinical_information,,radio,"Other family members with epilepsy ?","1, no | 2, yes",,,,,,,,,,,,
@@ -283,7 +283,7 @@ specify_other_como,clinical_information,,text,"Please specify the other co-morbi
 other_medications,clinical_information,,text,"Please specify the other medications taken",,,,,,,,,,,,,
 smoke_status,clinical_information,,radio,"Smoke Status","0, never smoked|1,Former Smoker |2, Current Smoker",,,,,,,,,,,,
 alcoholic_status,clinical_information,,radio,"Alcoholic Drinking Status","1, never | 2, daily | 3, weekly/monthly",,,,,,,,,,,,
-clinical_information_ts,clinical_information,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+clinical_information_ts,clinical_information,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 walking_start_pla,calibration_test,,text,"Walking (PLATFORM TIME) Start",,,datetime_seconds_dmy,,,,,,,,,,
 walking_end_pla,calibration_test,,text,"Walking (PLATFORM TIME) End",,,datetime_seconds_dmy,,,,,,,,,,
 walking_start_eeg,calibration_test,,text,"Walking (EEG TIME) Start",,,datetime_seconds_dmy,,,,,,,,,,
@@ -304,7 +304,7 @@ start_eat_pla,calibration_test,,text,"Eating/Drinking (PLATFORM TIME) Start",,,d
 end_eat_pla,calibration_test,,text,"Eating/Drinking (PLATFORM TIME) End",,,datetime_seconds_dmy,,,,,,,,,,
 start_eat_eeg,calibration_test,,text,"Eating/Drinking (EEG TIME) Start",,,datetime_seconds_dmy,,,,,,,,,,
 end_eat_eeg,calibration_test,,text,"Eating/Drinking (EEG TIME) End",,,datetime_seconds_dmy,,,,,,,,,,
-calibration_test_ts,calibration_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+calibration_test_ts,calibration_test,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 change_date1_empatica,empatica4_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 change_date2_empatica,empatica4_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 change_date3_empatica,empatica4_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
@@ -329,7 +329,7 @@ change_date21_empatica,empatica4_diary,,text,"Changing Device Date",,,datetime_d
 change_date22_empatica,empatica4_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 seizure_t_d_t_empatica,empatica4_diary,,notes,"SEIZURES (Describe Tipe, Data and Time)",,,,,,,,,,,,,
 annotation_empatica,empatica4_diary,,text,ANNOTATION,,,,,,,,,,,,,
-empatica4_diary_ts,empatica4_diary,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+empatica4_diary_ts,empatica4_diary,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 change_date1_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 change_date2_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 change_date3_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
@@ -345,7 +345,7 @@ change_date12_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_
 change_date13_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 change_date14_biovotion,biovotion_diary,,text,"Changing Device Date",,,datetime_dmy,,,,,,,,,,
 annotation_biovotion,biovotion_diary,,notes,"ANNOTATION ",,,,,,,,,,,,,
-biovotion_diary_ts,biovotion_diary,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+biovotion_diary_ts,biovotion_diary,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 bipq_1,bipq,"For the following questions, please mark the number that best corresponds to your views: ",radio,"How much does your epilepsy affect your life?","0, 0 No affect at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10  Severely affects my life",,,,,,,,,,,,
 bipq_2,bipq,,radio,"How long do you think your epilepsy will continue?","0, 0 A very short time |1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Forever",,,,,,,,,,,,
 bipq_3,bipq,,radio,"How much control do you feel you have over your epilepsy?","0, 0 Absolutely no control | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Extreme amount of control",,,,,,,,,,,,
@@ -355,7 +355,6 @@ bipq_6,bipq,,radio,"How concerned are you about your epilepsy?","0, 0 Not at all
 bipq_7,bipq,,radio,"How well do you feel you understand your epilepsy?","0, 0 Do not understand it at all | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Understand very clearly",,,,,,,,,,,,
 bipq_8,bipq,,radio,"How much does your epilepsy affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?","0, 0 Not at all affected emotionally | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, 6 | 7, 7 | 8, 8 | 9, 9 | 10, 10 Extremely affected emotionally",,,,,,,,,,,,
 bipg_tot_score,bipq,,text,"BIPQ Total Score",,,,,,,,,,,,,
-bipq_ts,bipq,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
 tam_data_empatica,tam_fast_form_empatica,,text,"Day of administration",,,date_dmy,,,,,,,,,,
 tam_acceptable_1_empatica,tam_fast_form_empatica,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_empatica,tam_fast_form_empatica,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
@@ -379,7 +378,7 @@ tam_usage_2_empatica,tam_fast_form_empatica,,radio,"2. If I need to monitor my s
 tam_usage_3_empatica,tam_fast_form_empatica,,radio,"3. If asked, I would likely recommend this wearable device as a seizure detection.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_usage_4_empatica,tam_fast_form_empatica,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_empatica,tam_fast_form_empatica,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
-tam_empatica_ts,tam_fast_form_empatica,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_empatica_ts,tam_fast_form_empatica,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 tam_data_imec,tam_fast_form_imec,,text,"Day of administration",,,date_dmy,,,,,,,,,,
 tam_acceptable_1_imec,tam_fast_form_imec,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_imec,tam_fast_form_imec,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
@@ -403,7 +402,7 @@ tam_usage_2_imec,tam_fast_form_imec,,radio,"2. If I need to monitor my seizure a
 tam_usage_3_imec,tam_fast_form_imec,,radio,"3. If asked, I would likely recommend this wearable device as a seizure detection.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_usage_4_imec,tam_fast_form_imec,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_imec,tam_fast_form_imec,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
-tam_imec_ts,tam_fast_form_imec,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_imec_ts,tam_fast_form_imec,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 tam_data_biov,tam_fast_form_biovotion,,text,"Day of administration",,,date_dmy,,,,,,,,,,
 tam_acceptable_1_biov,tam_fast_form_biovotion,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_biov,tam_fast_form_biovotion,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
@@ -427,7 +426,7 @@ tam_usage_2_biov,tam_fast_form_biovotion,,radio,"2. If I need to monitor my seiz
 tam_usage_3_biov,tam_fast_form_biovotion,,radio,"3. If asked, I would likely recommend this wearable device as a seizure detection.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_usage_4_biov,tam_fast_form_biovotion,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_biov,tam_fast_form_biovotion,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
-tam_biovotion_ts,tam_fast_form_biovotion,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_biovotion_ts,tam_fast_form_biovotion,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 tam_data_byteflies,tam_fast_form_byteflies,,text,"Day of administration",,,date_dmy,,,,,,,,,,
 tam_acceptable_1_byteflies,tam_fast_form_byteflies,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_byteflies,tam_fast_form_byteflies,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
@@ -451,7 +450,7 @@ tam_usage_2_byteflies,tam_fast_form_byteflies,,radio,"2. If I need to monitor my
 tam_usage_3_byteflies,tam_fast_form_byteflies,,radio,"3. If asked, I would likely recommend this wearable device as a seizure detection.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_usage_4_byteflies,tam_fast_form_byteflies,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_byteflies,tam_fast_form_byteflies,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
-tam_byteflies_ts,tam_fast_form_byteflies,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_byteflies_ts,tam_fast_form_byteflies,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 tam_data_epilog,tam_fast_form_epilog,,text,"Day of administration",,,date_dmy,,,,,,,,,,
 tam_acceptable_1_epilog,tam_fast_form_epilog,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_epilog,tam_fast_form_epilog,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
@@ -476,7 +475,7 @@ tam_usage_3_epilog,tam_fast_form_epilog,,radio,"3. If asked, I would likely reco
 tam_usage_4_epilog,tam_fast_form_epilog,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_epilog,tam_fast_form_epilog,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
 tam_data_other,tam_fast_form_epilog,,text,"Day of administration",,,date_dmy,,,,,,,,,,
-tam_epilog_ts,tam_fast_form_epilog,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_epilog_ts,tam_fast_form_epilog,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 tam_acceptable_1_other,tam_fast_form_other,,text,"If you experienced to wear more than one device, which one did you find more acceptable ?",,,,,,,,,,,,,
 tam_acceptable_2_other,tam_fast_form_other,,text,"Why the other/others was/were less acceptable or unacceptable ?",,,,,,,,,,,,,
 tam_usefulness_1_other,tam_fast_form_other,"Perceived Usefulness.",radio,"Overall, I feel the wearable device is:","1,1 Efficient |2,2|3,3|4,4|5,5|6,6|7,7 Inefficient",,,,,,,,RH,,,,
@@ -499,7 +498,7 @@ tam_usage_2_other,tam_fast_form_other,,radio,"2. If I need to monitor my seizure
 tam_usage_3_other,tam_fast_form_other,,radio,"3. If asked, I would likely recommend this wearable device as a seizure detection.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_usage_4_other,tam_fast_form_other,,radio,"4. For future health monitoring tasks that are totally within my control, I would probably use this wearable device.","1,1 Agree |2,2|3,3|4,4|5,5|6,6|7,7  Disagree",,,,,,,,RH,,,,
 tam_summarise_other,tam_fast_form_other,,text,"How would you overall summarise your experience with the wearable device ?",,,,,,,,,,,,,
-tam_other_ts,tam_fast_form_other,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
+tam_other_ts,tam_fast_form_other,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 interview_1,interviewquestionnaire,"Experience of taking part in the study",radio,"1. Were you familiar with wearable devices before you started wearing one as part of this study?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 interview_2,interviewquestionnaire,,radio,"2. Was the device comfortable to wear on your wrist/upper arm?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 interview_3,interviewquestionnaire,,radio,"3. Did you feel positive about the data being collected without you needing to interact with the device?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
@@ -527,8 +526,8 @@ interview_24,interviewquestionnaire,,radio,"24. Do you think that wearing a devi
 interview_25,interviewquestionnaire,,radio,"25. Would it be helpful if the device had an additional use or function?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5",,,,,,,,RH,,,,
 interview_26,interviewquestionnaire,"Extra questions for people who dropped out",notes,"26. Were there any other reasons why you stopped wearing the device on your wrist/upper arm?",,,,,,,,,RH,,,,
 interview_27,interviewquestionnaire,,notes,"27. What could we have done to help you to continue to take part in this study?",,,,,,,,,RH,,,,
-interview_ts,interviewquestionnaire,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@HIDDEN @NOW"
-integration_warning,radar_integration,,descriptive,"This form is for integration of Redcap with the RADAR-Platform. 
+interview_ts,interviewquestionnaire,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
+ntegration_warning,radar_integration,,descriptive,"This form is for integration of Redcap with the RADAR-Platform. 
 ********************************** WARNING **********************************
 The fields here are not intended to be edited!",,,,,,,,,,,,,
 subject_id,radar_integration,,text,"Participant ID",,"RADAR-platform (generated ID by Radar Platform)",,,,,,,,,,,"Integration Fields"
