@@ -10,11 +10,13 @@ initiated_by,contact_log,,dropdown,"Iniciado por","0, Participante | 1, Miembro 
 team_member,contact_log,,text,"Miembro del estudio",,,,,,,"[enrolment_arm_1][initiated_by] <> 0",y,,,,,
 subject,contact_log,,text,Asunto,,,,,,,,,,,,,
 contact_notes,contact_log,,notes,"Notas de contacto",,,,,,,,,,,,,"Add Any extra details about the contact here"
+contact_log_ts,contact_log,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 feedback_date,participant_feedback,,text,"Fecha del feedback",,,date_dmy,,,,,,,,,,
 feedback_title,participant_feedback,,text,"Tema del feedback",,,,,,,,,,,,,
 feedback_collected,participant_feedback,,dropdown,"¿Cuándo fue recogido el feedback?","1, visita basal | 2, llamada 3 días | 3, llamada 1 semana| 4, llamada 1 mes | 5, llamada 3 meses | 6, llamada 6 meses| 7, llamada 9 meses | 8, llamada 1 años | 9, llamada 15 meses| 10, participante ha contactado | 11, durante la entrevista",,,,,,,,,,,,
 type_of_feedback,participant_feedback,,dropdown,"Tipo de feedback","1, Texto | 2, Email | 3, Verbal",,,,,,,,,,,,
 feedback_subject,participant_feedback,,notes,Feedback,,,,,,,,,,,,,
+participant_feedback_ts,participant_feedback,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 surname,contact_info,,text,Apellidos,,Apellido,,,,y,,,,,,,Apellidos
 name,contact_info,,text,Nombre,,"Nombre (nombre usado en correos electrónicos generados automáticamente)",,,,y,,y,,,,,"Nombre (nombre empleado en los correos electrónicos automáticos)"
 pref_name,contact_info,,text,"Nombre preferido",,"Nombre preferido (podría ser utilizado en el correo electrónico autogenerado por la encuesta)",,,,y,,,,,,,"Nombre que prefiere usarse (podría utilizarse en el correo electrónico generado automáticamente por la encuesta)"
@@ -111,12 +113,14 @@ withdrawal_interview_interested,contact_info,"Entrevista por abandonar el estudi
 withdrawal_interview_booked,contact_info,,yesno,"¿Se ha reservado para la entrevista?",,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_by,contact_info,,dropdown,"Entrevistado por","1, Sara | 3, Federica",,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
 withdrawal_interview_notes,contact_info,,notes,Notas,,,,,,,"[withdrawal_interview_interested] = '1'",,,,,,
+contact_info_ts,contact_info,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 study,study,,radio,Estudio,"1, Trastorno depresivo mayor (TDM) | 2, Epilepsia | 3, Esclerosis múltiple (depresión) | 4, Esclerosis múltiple (discapacidad) | 5, Test",,,,,,,y,,,,,
 enrolment_date,study,,text,"Fecha de inclusión en el estudio",,"Fecha (día-mes-año) de la inclusión en el estudio (este campo se utilizará para calcular los calendarios de las encuestas)",date_dmy,,,,,y,,,,,
 main_contact_person,study,,radio,"Contacto principal:","1, Sara | 2, Paula | 3, Federica",,,,,,,,,,,,
 enable_survey_invite,study,,yesno,"¿Enviar una invitación automática a la encuesta?",,"Seleccione <<no>> en caso de que el participante no deba recibir encuestas",,,,,,y,,,,,
 visit,study,,text,Visita,,,integer,,,,,,,,,,
 month,study,,text,"Mes en el estudio",,,integer,,,,,,,,,,
+study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 fitbit_email,study_devices,FitBit,text,"FitBit Email Usuario",,,email,,,,,,,,,,
 fitbit_password,study_devices,,text,"FitBit email Contraseña",,,,,,,,,,,,,
 fitbit_firstname,study_devices,,text,"FitBit email Nombre",,,,,,,,,,,,,
@@ -140,9 +144,11 @@ prmt_installed,study_devices,,yesno,"Instalación pRMT",,,,,,,,,,,,,
 thincit_installed,study_devices,,yesno,"Instalación THINC-it app",,,,,,,,,,,,,
 apps_notes,study_devices,,notes,"Notas sobre apps instaladas",,,,,,,,,,,,,
 tech_literacy_notes,study_devices,,notes,"Conocimientos tecnológicos",,,,,,,,,,,,,
+study_devices_ts,study_devices,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 adv_react_contact_date,adverse_reaction,,text,"Fecha de contacto",,,date_dmy,,,,,,,,,,
 adv_react_subj_id,adverse_reaction,,text,Sujeto,,,,,,,,,,,,,
 adv_react_notes,adverse_reaction,,notes,Notas,,,,,,,,,,,,,
+adv_react_contact_ts,adverse_reaction,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 dob,socio_demographics,"Código Participante: [subject_id]",text,"¿Cuál es su fecha de nacimiento?",,,date_dmy,,1999-10-15,,,y,,,,,
 age,socio_demographics,,text,"¿Qué edad tenía al empezar el estudio?",,,integer,18,,,,y,,,,,
 gender,socio_demographics,,radio,"Usted es:","0, Hombre | 1, Mujer",,,,,,,y,,,,,
@@ -287,6 +293,7 @@ phys_ill,suicidality,,text,"Justo antes de que comenzara este período, ¿Estaba
 epi_medication,suicidality,,yesno,"¿Estaba tomando algúna medicación?",,,,,,,"[depressed_frequently] = '1'",,,,,,
 med_change,suicidality,,text,"¿Ha habido algún cambio en la cantidad que estaba tomando?",,,,,,,"[epi_medication] = '1'",,,,,,
 depri_help,suicidality,,text,"¿Ha buscado la ayuda de alguien para ayudar a lidiar con estos sentimientos (por ejemplo, psiquiatra psicólogo)? ¿Tiene planeado buscar ayuda?",,,,,,,"[depressed_frequently] = '1'",,,,,,
+suicidality_ts,suicidality,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
 ids_1,ids_sr,"Por favor, indique la respuesta a cada cuestión que mejor define su experiencia de los últimos siete días. ",radio,"1. A la hora de dormirse:","0, Nunca tardo más de 30 minutos en dormirme | 1, Menos de la mitad de las veces (máximo 3 de los 7 días), tardo como mínimo 30 minutos en quedarme dormido/a | 2, Más de la mitad de las veces (mínimo 4 de los 7 días), tardo como mínimo 30 minutos en quedarme dormido/a | 3, Más de la mitad de las veces, tardo más de 60 minutos en quedarme dormido/a.",,,,,,,y,,,,,
 ids_2,ids_sr,,radio,"2. Sueño nocturno:","0, No me despierto por la noche | 1, Tengo un sueño intranquilo y ligero, de hecho todas las noches me despierto momentáneamente unas pocas veces | 2, Me despierto al menos una vez cada noche pero me vuelvo a dormir con facilidad | 3, Me despierto más de una vez por la noche y tardo 20 minutos o más en volver a dormirme, más de la mitad de las veces",,,,,,,y,,,,,
 ids_3,ids_sr,,radio,"3. Despertarse demasiado pronto:","0, La mayoría de las veces no me despierto con más de 30 minutos de antelación a la hora que necesito levantarme. | 1, Más de la mitad de las veces, me despierto con más de 30 minutos de antelación a la hora que necesito levantarme. | 2, Casi siempre me despierto por lo menos una hora antes de lo necesario, pero al final me vuelvo a dormir. | 3, Me despierto por lo menos una hora antes de lo necesario y soy incapaz de quedarme dormido/a otra vez",,,,,,,y,,,,,
