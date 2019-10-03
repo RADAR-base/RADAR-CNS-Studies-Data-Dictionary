@@ -1,4 +1,4 @@
-﻿"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
 record_id,radar_integration,,text,"Record ID",,"Campo de identificación de Redcap (autogenerado por Redcap)",,,,,,,,,,,
 integration_warning,radar_integration,,descriptive,"Este campo es para la integración de Redcap con la plataforma RADAR. ********************************** ADVERTENCIA *************** ******************* ¡Los campos no deben ser editados!",,,,,,,,,,,,,
 subject_id,radar_integration,,text,"ID del participante",,"Plataforma RADAR (código generado por la plataforma Radar",,,,,,,,,,,"Campo de Integración "
@@ -121,23 +121,23 @@ enable_survey_invite,study,,yesno,"¿Enviar una invitación automática a la enc
 visit,study,,text,Visita,,,integer,,,,,,,,,,
 month,study,,text,"Mes en el estudio",,,integer,,,,,,,,,,
 study_ts,study,,text,"Form first saved on",,,datetime_seconds_ymd,,,,,,,,,,"@NOW @READONLY"
-fitbit_email,study_devices,FitBit,text,"FitBit Email Usuario",,,email,,,,,,,,,,
-fitbit_password,study_devices,,text,"FitBit email Contraseña",,,,,,,,,,,,,
-fitbit_firstname,study_devices,,text,"FitBit email Nombre",,,,,,,,,,,,,
-fitbit_lastname,study_devices,,text,"FitBit email Apellido/s",,,,,,,,,,,,,
-fitbit_dob,study_devices,,text,"FitBit Fecha de Nacimiento",,,date_dmy,,,,,,,,,,
+fitbit_email,study_devices,FitBit,text,"FitBit Email Usuario",,,email,,,y,,,,,,,
+fitbit_password,study_devices,,text,"FitBit email Contraseña",,,,,,y,,,,,,,
+fitbit_firstname,study_devices,,text,"FitBit email Nombre",,,,,,y,,,,,,,
+fitbit_lastname,study_devices,,text,"FitBit email Apellido/s",,,,,,y,,,,,,,
+fitbit_dob,study_devices,,text,"FitBit Fecha de Nacimiento",,,date_dmy,,,y,,,,,,,
 fitbit_serial,study_devices,,text,"FitBit Número de serie",,,,,,,,,,,,,
 phone_status,study_devices,Móvil,radio,"Status móvil","0, Android previo | 1, Cambio desde iPhone | 2, Cambio desde móvil no smartphone | 3, Mejoría en la versión de Android",,,,,,,,,,,,
 phone_brand,study_devices,,dropdown,"Marca móvil","1, Samsung | 2, HTC | 3, Sony | 4, Motorola | 5, Google | 6, OnePlus | 7, Nokia | 8, Otra","p.e. ",,,,,,y,,,,,
 phone_model,study_devices,,text,"Modelo móvil",,,,,,,,y,,,,,"Si ha contestado ""Otra marca"" especificar aquí la marca y el modelo"
 old_mobile_device,study_devices,,text,"Modelo móvil previo",,"(si el paciente ha cambiado su móvil)",,,,,,,,,,,
-phone_imei_number,study_devices,,text,"Número IMEI del télefono del estudio",,,,,,,"[phone_status] = '1' or [phone_status] = '2' or [phone_status] = '3'",y,,,,,
+phone_imei_number,study_devices,,text,"Número IMEI del télefono del estudio",,,,,,y,"[phone_status] = '1' or [phone_status] = '2' or [phone_status] = '3'",y,,,,,
 android_version,study_devices,,text,"Número de versión de Android
 ",,,,,,,,,,,,,
 phone_email_used,study_devices,,radio,"Mail cuenta móvil","1, Email estudio | 2, Gmail personal","Primer email utilizado para utilizar el móvil",,,,,"[phone_status] = '1' or [phone_status] = '2'",,,,,,
 contract_provided,study_devices,,radio,"¿Se ha dado contrato móvil?","0, No | 1, Sí",,,,,,,,,,,,
 contract_start,study_devices,,text,"Día de inicio del contrato móvil",,,date_dmy,2017-11-28,2022-11-28,,"[contract_provided] = '1'",,,,,,
-username,study_devices,,text,"Indicar la compañia Telefónica ",,,,,,,"[contract_provided] = '1'",,,,,,
+username,study_devices,,text,"Indicar la compañia Telefónica ",,,,,,y,"[contract_provided] = '1'",,,,,,
 armt_installed,study_devices,Apps,yesno,"Instalación aRMT",,,,,,,,,,,,,
 armt_version,study_devices,,text,"Número versión aRMT",,,,,,,,,,,,,
 prmt_installed,study_devices,,yesno,"Instalación pRMT",,,,,,,,,,,,,
